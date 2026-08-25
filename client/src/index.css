@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Outfit:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  /* Fonts */
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+  --radius: 0.5rem;
+}
+
+/* Dark Theme (Default) */
+.dark, :root {
+  /* Base - Dark Slate/Black */
+  --background: 222 47% 11%;
+  --foreground: 210 40% 98%;
+
+  /* Primary - Secure Blue */
+  --primary: 217 91% 60%;
+  --primary-foreground: 222 47% 11%;
+
+  /* Secondary - Steel */
+  --secondary: 215 19% 35%;
+  --secondary-foreground: 210 40% 98%;
+
+  /* Muted - Subtle text */
+  --muted: 217 33% 17%;
+  --muted-foreground: 215 20% 65%;
+
+  /* Accents - Trust/Safety */
+  --accent: 217 91% 60%;
+  --accent-foreground: 222 47% 11%;
+
+  /* Destructive */
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Borders & Inputs */
+  --border: 217 33% 20%;
+  --input: 217 33% 17%;
+  --ring: 224 76% 48%;
+
+  /* Cards - Slightly lighter than bg */
+  --card: 222 47% 13%;
+  --card-foreground: 210 40% 98%;
+
+  /* Header */
+  --header-bg: 240 6% 12%;
+}
+
+/* Light Theme - Professional & Readable */
+.light {
+  /* Base - Clean White/Light Gray */
+  --background: 210 40% 98%;
+  --foreground: 222 47% 11%;
+
+  /* Primary - Secure Blue (slightly darker for contrast) */
+  --primary: 217 91% 50%;
+  --primary-foreground: 210 40% 98%;
+
+  /* Secondary - Light Steel */
+  --secondary: 215 25% 90%;
+  --secondary-foreground: 222 47% 20%;
+
+  /* Muted - Subtle text (good contrast) */
+  --muted: 215 20% 92%;
+  --muted-foreground: 215 25% 40%;
+
+  /* Accents */
+  --accent: 217 91% 50%;
+  --accent-foreground: 210 40% 98%;
+
+  /* Destructive */
+  --destructive: 0 72% 51%;
+  --destructive-foreground: 210 40% 98%;
+
+  /* Borders & Inputs */
+  --border: 215 25% 85%;
+  --input: 215 20% 92%;
+  --ring: 217 91% 50%;
+
+  /* Cards - Slightly elevated */
+  --card: 0 0% 100%;
+  --card-foreground: 222 47% 11%;
+
+  /* Header */
+  --header-bg: 215 25% 95%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground antialiased selection:bg-primary/30 selection:text-primary-foreground;
+    font-family: var(--font-sans);
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-display);
+    @apply tracking-tight font-bold;
+  }
+  /* Global button animations */
+  button, .button, [role="button"], a.btn, .btn-animate {
+    @apply transition-all duration-500 ease-out cursor-pointer !important;
+  }
+  
+  button:hover, .button:hover, [role="button"]:hover, a.btn:hover, .btn-animate:hover {
+    @apply scale-105 brightness-125 shadow-2xl -translate-y-1 !important;
+    filter: drop-shadow(0 0 15px rgba(59, 130, 246, 0.5));
+  }
+  
+  button:active, .button:active, [role="button"]:active, a.btn:active {
+    @apply scale-95 translate-y-0 duration-100 !important;
+  }
+}
+
+@layer utilities {
+  .text-gradient {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-foreground via-primary to-primary/70;
+  }
+
+  .dark .text-gradient {
+    @apply bg-gradient-to-r from-white via-blue-100 to-blue-400;
+  }
+  
+  .glass-card {
+    @apply bg-card/80 backdrop-blur-md border border-border shadow-xl;
+  }
+
+  .dark .glass-card {
+    @apply bg-card/50 border-white/5;
+  }
+  
+  .glass-nav {
+    @apply bg-card/90 backdrop-blur-lg border-b border-border;
+  }
+
+  .dark .glass-nav {
+    @apply bg-background/80 border-white/5;
+  }
+}

@@ -119,14 +119,14 @@ export function Navigation() {
       </div>
       {/* Mobile Menu */}
       {isMobileMenuOpen && (
-        <div className="md:hidden absolute top-full left-0 w-full bg-background/98 backdrop-blur-xl border-b border-border p-5 flex flex-col gap-1 shadow-xl animate-in slide-in-from-top-3">
+        <div className="md:hidden absolute top-full left-0 z-50 w-full bg-card border-b border-border p-5 flex flex-col gap-1 shadow-2xl animate-in slide-in-from-top-3">
           {links.map((link) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
-                "text-base font-semibold p-3 rounded-xl hover:bg-secondary dark:hover:bg-white/5",
-                location === link.href ? "text-primary bg-secondary dark:bg-white/5" : "text-muted-foreground"
+                "text-base font-semibold p-3 rounded-xl hover:bg-secondary",
+                location === link.href ? "text-primary bg-secondary" : "text-muted-foreground"
               )}
               onClick={() => setIsMobileMenuOpen(false)}
             >

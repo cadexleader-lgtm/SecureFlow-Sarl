@@ -90,7 +90,7 @@ export default function Home() {
     <div className="flex flex-col">
       <SEO {...seoConfig.home} />
       {/* Hero Section with Slider */}
-      <section className="relative h-[50vh] md:h-[85vh] flex items-center pt-12 overflow-hidden bg-black">
+      <section className="relative min-h-[620px] h-[78vh] max-h-[820px] flex items-center pt-16 overflow-hidden bg-black">
         <AnimatePresence initial={false}>
           <motion.div
             key={currentSlide}
@@ -111,27 +111,27 @@ export default function Home() {
           </motion.div>
         </AnimatePresence>
 
-        <div className="container px-4 mx-auto relative z-10">
+        <div className="container px-5 md:px-8 mx-auto max-w-7xl relative z-10">
           <motion.div
             key={currentSlide}
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-3xl"
+            className="max-w-2xl"
           >
             <div className="mb-6 overflow-hidden">
               <motion.div
                 initial={{ y: "100%" }}
                 animate={{ y: 0 }}
                 transition={{ duration: 0.5, delay: 0.4 }}
-                className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/20 border border-primary/30 text-primary text-xs font-bold uppercase tracking-widest"
+                className="inline-flex items-center gap-2 px-3.5 py-2 rounded-full bg-primary/15 border border-primary/30 text-primary-foreground text-[11px] font-semibold uppercase tracking-[0.16em]"
               >
                 <Globe className="w-3 h-3" />
                 {t("home.hero.badge")}
               </motion.div>
             </div>
 
-            <h1 className="text-2xl sm:text-4xl md:text-7xl font-display font-bold text-white mb-4 md:mb-8 leading-[1.1] tracking-tight">
+            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-semibold text-white mb-5 md:mb-7 leading-[1.02] tracking-[-0.04em]">
               {heroSlides[currentSlide].title.split('&')[0]}
               {heroSlides[currentSlide].title.includes('&') && (
                 <>
@@ -141,18 +141,18 @@ export default function Home() {
               )}
             </h1>
             
-            <p className="text-sm md:text-xl text-white/70 mb-6 md:mb-12 leading-relaxed max-w-2xl border-l-4 border-primary/50 pl-4 md:pl-8">
+            <p className="text-base md:text-lg text-white/75 mb-8 md:mb-10 leading-relaxed max-w-xl border-l-2 border-primary pl-4 md:pl-5">
               {heroSlides[currentSlide].description}
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-4 md:gap-6">
-              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-11 md:h-16 px-6 md:px-10 text-sm md:text-lg rounded-full shadow-2xl shadow-primary/30 group w-full sm:w-auto" asChild>
+            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
+              <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 md:h-14 px-6 md:px-8 text-sm md:text-base rounded-full shadow-lg shadow-primary/20 group w-full sm:w-auto" asChild>
                 <Link href="/services">
                   {t("home.hero.cta1")}
                   <ArrowRight className="ml-2 w-4 h-4 md:w-5 md:h-5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </Button>
-              <Button size="lg" variant="outline" className="h-11 md:h-16 px-6 md:px-10 text-sm md:text-lg rounded-full border-white/20 text-white hover:bg-white/10 backdrop-blur-md w-full sm:w-auto" asChild>
+              <Button size="lg" variant="outline" className="h-12 md:h-14 px-6 md:px-8 text-sm md:text-base rounded-full border-white/30 text-white hover:bg-white/10 backdrop-blur-md w-full sm:w-auto" asChild>
                 <Link href="/contact">{t("home.hero.cta2")}</Link>
               </Button>
             </div>
@@ -164,22 +164,22 @@ export default function Home() {
           <motion.div
             animate={{ y: [0, -20, 0] }}
             transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
-            className="glass-card p-6 rounded-3xl border-white/10 backdrop-blur-xl"
+            className="bg-slate-950/85 p-5 rounded-2xl border border-white/15 shadow-2xl backdrop-blur-xl"
           >
             <ShieldCheck className="w-10 h-10 text-primary mb-2" />
-            <div className="text-white font-bold text-sm">{t("home.hero.security")}</div>
-            <div className="text-white/40 text-[10px] uppercase tracking-tighter">{t("home.hero.certification")}</div>
+            <div className="text-white font-semibold text-sm">{t("home.hero.security")}</div>
+            <div className="text-white/60 text-[10px] uppercase tracking-[0.12em]">{t("home.hero.certification")}</div>
           </motion.div>
         </div>
 
         {/* Slider Indicators */}
-        <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-20 flex gap-2">
+        <div className="absolute bottom-8 left-1/2 -translate-x-1/2 z-20 flex gap-2">
           {heroSlides.map((_, i) => (
             <button
               key={i}
               onClick={() => setCurrentSlide(i)}
-              className={`h-1.5 rounded-full transition-all ${
-                currentSlide === i ? "w-8 bg-primary" : "w-4 bg-white/20"
+              className={`h-1 rounded-full transition-all ${
+                currentSlide === i ? "w-8 bg-primary" : "w-3 bg-white/30"
               }`}
             />
           ))}
@@ -187,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* 1. Message de Bienvenue */}
-      <section className="py-8 md:py-16 relative overflow-hidden bg-background">
+      <section className="section-shell relative overflow-hidden bg-background">
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-full h-full bg-[radial-gradient(circle_at_center,rgba(var(--primary-rgb),0.05)_0%,transparent_70%)] pointer-events-none"></div>
         <div className="container px-4 mx-auto text-center max-w-5xl relative z-10">
           <motion.div
@@ -197,7 +197,7 @@ export default function Home() {
             className="space-y-10"
           >
             <div className="inline-block">
-              <Badge className="whitespace-nowrap inline-flex items-center rounded-full border transition-all hover:scale-105 shadow-lg shadow-primary/20 bg-primary/10 text-primary border-primary/20 px-8 py-3 text-lg font-bold tracking-tight">
+              <Badge className="whitespace-nowrap inline-flex items-center rounded-full border bg-primary/10 text-primary border-primary/20 px-4 py-2 text-xs font-semibold tracking-[0.12em] uppercase">
                 <span className="relative flex h-2 w-2 mr-3">
                   <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-primary opacity-75"></span>
                   <span className="relative inline-flex rounded-full h-2 w-2 bg-primary"></span>
@@ -207,7 +207,7 @@ export default function Home() {
             </div>
             
             <div className="space-y-6">
-              <h2 className="text-xl md:text-5xl font-display font-bold text-foreground leading-tight">
+              <h2 className="text-3xl md:text-5xl font-display font-semibold text-foreground leading-[1.08]">
                 {t("home.welcome.title1")} <br/>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
                   {t("home.welcome.title2")}
@@ -215,10 +215,10 @@ export default function Home() {
               </h2>
               
               <div className="max-w-3xl mx-auto space-y-6">
-                <p className="text-sm md:text-2xl text-foreground/90 font-medium leading-relaxed">
+                <p className="text-base md:text-xl text-foreground/90 font-medium leading-relaxed">
                   {t("home.welcome.text1")}
                 </p>
-                <p className="text-xs md:text-xl text-muted-foreground leading-relaxed">
+                <p className="text-sm md:text-lg text-muted-foreground leading-relaxed">
                   {t("home.welcome.text2")}
                 </p>
               </div>
@@ -243,7 +243,7 @@ export default function Home() {
       </section>
 
       {/* 2. What We Do */}
-      <section className="py-12 relative overflow-hidden">
+      <section className="section-shell relative overflow-hidden">
         <div className="absolute top-1/2 right-0 -translate-y-1/2 w-1/3 h-full bg-primary/5 blur-[120px] rounded-full pointer-events-none"></div>
         <div className="container px-4 mx-auto relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
@@ -251,9 +251,9 @@ export default function Home() {
               initial={{ opacity: 0, x: -40 }}
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
-              className="relative space-y-8"
+              className="relative space-y-7"
             >
-              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary dark:bg-white/5 border border-border dark:border-white/10 text-primary uppercase tracking-wider font-bold text-[24px] pl-[19px] pr-[19px]">
+              <div className="inline-flex items-center gap-3 px-4 py-2 rounded-full bg-secondary dark:bg-white/5 border border-border dark:border-white/10 text-primary uppercase tracking-[0.14em] font-semibold text-xs">
                 <div className="h-1.5 w-1.5 rounded-full bg-primary animate-pulse" />
                 {t("home.mission.badge")}
               </div>

@@ -8,7 +8,7 @@ interface SectionHeadingProps {
 
 export function SectionHeading({ title, subtitle, align = "center" }: SectionHeadingProps) {
   return (
-    <div className={`mb-12 ${align === "center" ? "text-center" : "text-left"}`}>
+    <div className={`mb-10 md:mb-14 ${align === "center" ? "text-center" : "text-left"}`}>
       <motion.div
         initial={{ opacity: 0, y: 20 }}
         whileInView={{ opacity: 1, y: 0 }}
@@ -16,14 +16,14 @@ export function SectionHeading({ title, subtitle, align = "center" }: SectionHea
         transition={{ duration: 0.5 }}
       >
         {subtitle && (
-          <span className="text-primary font-semibold tracking-wider uppercase text-xs mb-3 block">
+          <span className="eyebrow mb-4 block">
             {subtitle}
           </span>
         )}
-        <h2 className="text-xl md:text-4xl lg:text-5xl font-display font-bold text-foreground mb-4">
+        <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-5 leading-[1.05]">
           {title}
         </h2>
-        <div className={`h-1.5 w-24 bg-primary rounded-full mt-2 ${align === "center" ? "mx-auto" : ""}`} />
+        <div className={`h-1 w-12 bg-primary rounded-full mt-2 ${align === "center" ? "mx-auto" : ""}`} />
       </motion.div>
     </div>
   );

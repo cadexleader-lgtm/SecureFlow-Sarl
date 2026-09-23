@@ -20,7 +20,7 @@ export function SectionHeading({ title, subtitle, align = "center" }: SectionHea
             {subtitle}
           </span>
         )}
-        <h2 className="text-3xl md:text-5xl lg:text-6xl font-display font-semibold text-foreground mb-5 leading-[1.05]">
+        <h2 className="text-2xl md:text-4xl lg:text-5xl font-display font-semibold text-foreground mb-5 leading-[1.1]">
           {title}
         </h2>
         <div className={`h-1 w-12 bg-primary rounded-full mt-2 ${align === "center" ? "mx-auto" : ""}`} />

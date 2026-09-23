@@ -14,6 +14,7 @@ import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { LinkedinButton } from "@/components/LinkedinButton";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import { FloatingNewsletterBell } from "@/components/NewsletterSubscription";
+import { MotionConfig } from "framer-motion";
 
 // Pages
 import Home from "@/pages/Home";
@@ -97,18 +98,20 @@ function Router() {
 
 function App() {
   return (
-    <HelmetProvider>
-      <QueryClientProvider client={queryClient}>
-        <LanguageProvider>
-          <ThemeProvider>
-            <TooltipProvider>
-              <Toaster />
-              <Router />
-            </TooltipProvider>
-          </ThemeProvider>
-        </LanguageProvider>
-      </QueryClientProvider>
-    </HelmetProvider>
+    <MotionConfig reducedMotion="always">
+      <HelmetProvider>
+        <QueryClientProvider client={queryClient}>
+          <LanguageProvider>
+            <ThemeProvider>
+              <TooltipProvider>
+                <Toaster />
+                <Router />
+              </TooltipProvider>
+            </ThemeProvider>
+          </LanguageProvider>
+        </QueryClientProvider>
+      </HelmetProvider>
+    </MotionConfig>
   );
 }
 

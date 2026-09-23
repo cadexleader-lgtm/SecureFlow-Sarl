@@ -2,7 +2,7 @@
 
 ## Direction
 
-SecureFlow adopte une direction institutionnelle premium, inspirée des infrastructures maritimes et du commerce international : calme, précise, crédible et lisible. La photographie réelle reste l’élément de reconnaissance principal ; l’interface accompagne les images sans les concurrencer.
+SecureFlow adopte une direction institutionnelle premium, inspirée des infrastructures maritimes et du commerce international : calme, précise, crédible et lisible. La photographie réelle reste l’élément de reconnaissance principal ; l’interface accompagne les images sans les concurrencer. Le système privilégie des surfaces solides, une hiérarchie éditoriale et des interactions discrètes plutôt que des effets décoratifs.
 
 ## Assets de marque
 
@@ -38,13 +38,14 @@ Les couples foreground/background respectent une cible WCAG AA. Le bleu clair es
 - Grille 8 px.
 - Container principal `max-w-7xl` avec padding responsive 20–32 px.
 - Sections : `py-20` sur mobile, `py-28` sur desktop.
-- Rayon principal : 20–28 px pour les surfaces éditoriales ; 12–16 px pour les contrôles.
-- Ombres discrètes, bordures fines, pas de glassmorphism généralisé.
+- Rayon principal : 16–20 px pour les surfaces éditoriales ; 10–14 px pour les contrôles.
+- Ombres discrètes, bordures fines, aucun glassmorphism par défaut.
 
 ## Motion
 
-- Entrées : opacity + translateY 12 px, 500–700 ms.
-- Hover : translateY -2 px, 180–220 ms.
-- Aucun zoom global automatique.
-- Les animations permanentes sont limitées au carrousel hero et aux indicateurs utiles.
-- `prefers-reduced-motion` neutralise les transformations et transitions longues.
+- Motion intensity : 1/10.
+- Entrées : fondu court uniquement lorsque le contexte le justifie.
+- Hover : variation de couleur ou translateY -1 à -2 px, 180 ms.
+- Aucun zoom global, pulse, ping ou halo permanent.
+- Les transformations Framer Motion sont réduites globalement avec `MotionConfig`.
+- `prefers-reduced-motion` neutralise les transitions restantes.

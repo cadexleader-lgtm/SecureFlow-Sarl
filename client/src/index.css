@@ -99,7 +99,14 @@
   }
   h1, h2, h3, h4, h5, h6 {
     font-family: var(--font-display);
-    @apply tracking-tight font-bold;
+    @apply tracking-tight font-semibold;
+  }
+
+  h1 { letter-spacing: -0.035em; }
+  h2 { letter-spacing: -0.025em; }
+
+  p {
+    text-wrap: pretty;
   }
   /* Calm, intentional interaction language */
   button, .button, [role="button"], a.btn, .btn-animate {
@@ -140,8 +147,30 @@
     @apply bg-background/90 border-white/10;
   }
 
+  /* The interface uses solid editorial surfaces by default. Blur remains reserved for dialogs. */
+  .glass-card,
+  .glass-nav,
+  [class*="backdrop-blur"] {
+    backdrop-filter: none !important;
+    -webkit-backdrop-filter: none !important;
+  }
+
+  .glass-card {
+    @apply bg-card border-border shadow-sm;
+  }
+
+  .dark .glass-card {
+    @apply bg-card border-white/10 shadow-sm;
+  }
+
+  /* Remove decorative pulses and keep only meaningful state transitions. */
+  .animate-pulse,
+  .animate-ping {
+    animation: none !important;
+  }
+
   .section-shell {
-    @apply py-20 md:py-28;
+    @apply py-16 md:py-24;
   }
 
   .eyebrow {

@@ -131,7 +131,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <h1 className="text-4xl sm:text-5xl md:text-7xl font-display font-semibold text-white mb-5 md:mb-7 leading-[1.02] tracking-[-0.04em]">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-semibold text-white mb-5 md:mb-7 leading-[1.08] tracking-[-0.035em]">
               {heroSlides[currentSlide].title.split('&')[0]}
               {heroSlides[currentSlide].title.includes('&') && (
                 <>
@@ -207,7 +207,7 @@ export default function Home() {
             </div>
             
             <div className="space-y-6">
-              <h2 className="text-3xl md:text-5xl font-display font-semibold text-foreground leading-[1.08]">
+              <h2 className="text-2xl md:text-4xl font-display font-semibold text-foreground leading-[1.12]">
                 {t("home.welcome.title1")} <br/>
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400">
                   {t("home.welcome.title2")}
@@ -258,7 +258,7 @@ export default function Home() {
                 {t("home.mission.badge")}
               </div>
               
-            <h2 className="text-3xl sm:text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
+            <h2 className="text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-foreground leading-[1.12]">
               {t("home.mission.title")} <span className="text-primary italic">{t("home.mission.titleHighlight")}</span>
             </h2>
             

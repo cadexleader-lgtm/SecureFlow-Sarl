@@ -15,17 +15,18 @@ SecureFlow adopte une direction institutionnelle premium, inspirée des infrastr
 
 ## Palette
 
-- Navy 950: `#0B1220` — fond institutionnel sombre
-- Navy 900: `#111C2E` — surfaces élevées
-- Blue 700: `#1D4ED8` — actions fortes et liens
-- Blue 600: `#2563EB` — couleur primaire
-- Sky 400: `#38BDF8` — accent et focus visuel
-- Slate 50: `#F8FAFC` — fond clair
-- Slate 100: `#F1F5F9` — surfaces secondaires
-- Slate 500: `#64748B` — texte secondaire
-- Slate 700: `#334155` — texte courant clair
+- Brand 50–950 : échelle bleue SecureFlow dérivée de `#2563EB`, exposée dans `client/src/index.css`.
+- Navy 950 : `#0B1220` — fond institutionnel sombre.
+- Navy 900 : `#111C2E` — surfaces élevées en mode sombre.
+- Blue 700 : `#1D4ED8` — actions fortes et liens.
+- Blue 600 : `#2563EB` — couleur de marque et actions principales.
+- Grey canvas clair : `hsl(220 14% 93%)` — fond général du mode clair, volontairement gris pour réduire la luminosité.
+- Grey surface : `hsl(220 14% 87%)` — zones secondaires et contrôles.
+- White card : `#FFFFFF` — cartes et formulaires uniquement, pour créer une hiérarchie nette.
+- Slate 500 : `#64748B` — texte secondaire.
+- Slate 700 : `#334155` — texte courant clair.
 
-Les couples foreground/background respectent une cible WCAG AA. Le bleu clair est réservé aux accents graphiques et ne sert pas de texte courant sur fond blanc.
+Les couples foreground/background respectent une cible WCAG AA. Le bleu clair est réservé aux accents graphiques ; le texte courant utilise le navy ou le gris foncé. Le mode clair n’utilise plus le blanc comme fond global.
 
 ## Typographie
 

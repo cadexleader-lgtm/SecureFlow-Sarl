@@ -117,7 +117,7 @@ export default function Home() {
             initial={{ opacity: 0, x: -30 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, delay: 0.2 }}
-            className="max-w-2xl"
+            className="max-w-4xl mx-auto text-center"
           >
             <div className="mb-6 overflow-hidden">
               <motion.div
@@ -141,11 +141,11 @@ export default function Home() {
               )}
             </h1>
             
-            <p className="text-base md:text-lg text-white/75 mb-8 md:mb-10 leading-relaxed max-w-xl border-l-2 border-primary pl-4 md:pl-5">
+            <p className="text-base md:text-lg text-white/75 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto">
               {heroSlides[currentSlide].description}
             </p>
 
-            <div className="flex flex-col sm:flex-row flex-wrap gap-3 md:gap-4">
+            <div className="flex flex-col sm:flex-row flex-wrap justify-center gap-3 md:gap-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90 text-primary-foreground h-12 md:h-14 px-6 md:px-8 text-sm md:text-base rounded-full shadow-lg shadow-primary/20 group w-full sm:w-auto" asChild>
                 <Link href="/services">
                   {t("home.hero.cta1")}

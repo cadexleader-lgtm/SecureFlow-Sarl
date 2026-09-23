@@ -176,6 +176,21 @@
   .eyebrow {
     @apply text-xs font-semibold uppercase tracking-[0.18em] text-primary;
   }
+
+  .secureflow-carousel-track {
+    width: max-content;
+    animation: secureflow-carousel 42s linear infinite;
+    will-change: transform;
+  }
+
+  .secureflow-carousel-track:hover {
+    animation-play-state: paused;
+  }
+}
+
+@keyframes secureflow-carousel {
+  from { transform: translateX(0); }
+  to { transform: translateX(-50%); }
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -184,5 +199,9 @@
     animation-iteration-count: 1 !important;
     scroll-behavior: auto !important;
     transition-duration: 0.01ms !important;
+  }
+
+  .secureflow-carousel-track {
+    animation: none !important;
   }
 }

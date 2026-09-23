@@ -439,15 +439,18 @@ export default function Home() {
       </section>
 
       {/* Image Carousel Section - Compact */}
-      <section className="py-12 bg-black/40 overflow-hidden relative">
-        <div className="container px-4 mx-auto mb-6">
-          <div className="flex items-center justify-center gap-4">
-            <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-primary/30 to-transparent"></div>
+      <section className="relative overflow-hidden border-y border-border bg-slate-100/90 dark:bg-slate-950/80 py-10 md:py-14">
+        <div className="absolute inset-0 secureflow-technical-grid opacity-60" aria-hidden="true" />
+        <div className="relative z-10 container px-5 md:px-8 mx-auto mb-6 max-w-7xl">
+          <div className="flex items-center gap-4">
+            <span className="eyebrow whitespace-nowrap">{t("footer.partners")}</span>
+            <div className="h-px flex-1 bg-border"></div>
+            <span className="hidden sm:block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">SecureFlow / 01</span>
           </div>
         </div>
         <div className="relative">
-          <div className="absolute left-0 top-0 bottom-0 w-32 bg-gradient-to-r from-background to-transparent z-10"></div>
-          <div className="absolute right-0 top-0 bottom-0 w-32 bg-gradient-to-l from-background to-transparent z-10"></div>
+          <div className="absolute left-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-r from-slate-100 dark:from-slate-950 to-transparent z-10"></div>
+          <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-slate-100 dark:from-slate-950 to-transparent z-10"></div>
           <div className="secureflow-carousel-track flex gap-4">
             {[...carouselImages, ...carouselImages].map((img, i) => (
               <div key={i} className="shrink-0 w-48 h-32 md:w-64 md:h-44 rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all group">

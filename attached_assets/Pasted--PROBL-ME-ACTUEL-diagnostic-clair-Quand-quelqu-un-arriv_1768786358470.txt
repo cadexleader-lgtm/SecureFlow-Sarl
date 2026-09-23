@@ -1,0 +1,119 @@
+🎯 PROBLÈME ACTUEL (diagnostic clair)
+
+Quand quelqu’un arrive sur la page d’accueil :
+
+❌ Il ne sait pas qui vous êtes
+
+❌ Il ne comprend pas ce que vous faites concrètement
+
+❌ Il ne sait pas à qui vous vous adressez
+
+❌ Il ne sait pas pourquoi vous êtes différents
+
+👉 Donc il quitte.
+
+✅ SOLUTION : STRUCTURER LE MESSAGE (pas le design)
+
+Je te donne maintenant CE QU’IL FAUT AJOUTER, dans l’ordre, avec les textes exacts.
+
+🏠 PAGE D’ACCUEIL — VERSION CLAIRE & COMPREHENSIBLE
+1️⃣ MESSAGE DE BIENVENUE (OBLIGATOIRE)
+
+👉 À placer tout en haut, juste après le menu.
+
+🧾 Texte à mettre (copier-coller) :
+
+Bienvenue chez SecureFlow
+
+SecureFlow est une société spécialisée dans la sécurisation du commerce international et des opérations logistiques sensibles.
+Nous aidons les entreprises, traders et investisseurs à sécuriser leurs transactions, vérifier leurs partenaires et protéger leurs flux, de la source jusqu’à la livraison finale.
+
+➡️ En 5 secondes, on comprend déjà.
+
+2️⃣ CE QUE NOUS FAISONS (EXPLICATION SIMPLE)
+🧾 Titre :
+
+What We Do
+
+🧾 Texte clair :
+
+Dans un contexte où les fraudes, les faux fournisseurs et les pertes financières sont fréquents, SecureFlow agit comme un tiers de confiance.
+
+Nous intervenons pour vérifier, sécuriser et superviser les opérations de commerce international, en combinant logistique, sécurité et gestion des risques.
+
+3️⃣ NOS SERVICES (TRÈS CONCRET)
+
+👉 Pas de grands mots, mais des actions.
+
+🧾 Titre :
+
+Nos services principaux
+
+🧾 Blocs (ou liste) :
+
+Vérification des fournisseurs
+Nous identifions et vérifions les fournisseurs afin d'éliminer les fraudes et les faux partenaires.
+
+Inspection et certification sur site
+Nous nous rendons sur place lorsque cela est nécessaire pour confirmer l'existence, la capacité et la conformité du fournisseur.
+
+Sécurité des transactions
+Nous sécurisons les transactions commerciales et protégeons les intérêts financiers de nos clients.
+
+Supervision logistique
+Nous supervisons le transport maritime, portuaire et aérien jusqu'à la livraison finale.
+
+Gestion des risques
+Nous identifions et réduisons les risques opérationnels, juridiques et logistiques.
+
+4️⃣ POURQUOI SECUREFLOW EXISTE
+🧾 Titre :
+
+Pourquoi SecureFlow existe
+
+🧾 Texte :
+
+SecureFlow est née d’un constat simple :
+trop d’entreprises et d’investisseurs perdent de l’argent à cause d’arnaques, de partenaires non fiables et d’opérations mal sécurisées.
+
+Nous avons créé SecureFlow pour apporter de la certitude là où il n’y avait que de la confiance aveugle.
+
+5️⃣ À QUI NOUS NOUS ADRESSONS
+🧾 Titre :
+
+Avec qui nous travaillons
+
+🧾 Liste :
+
+Traders internationaux
+
+Importateurs et exportateurs
+
+Investisseurs
+
+Sociétés minières et énergétiques
+
+Entreprises logistiques
+
+Acheteurs de matières premières
+
+6️⃣ PHRASE FORTE (CRÉDIBILITÉ)
+
+👉 À placer avant le footer.
+
+Nous ne transportons pas de marchandises.
+Nous sécurisons la valeur.
+
+🎯 RÈGLE D’OR POUR LA PAGE D’ACCUEIL
+
+Si un visiteur ne lit que :
+
+le message de bienvenue
+
+la section « Ce que nous faisons »
+
+la section « Nos services »
+
+👉 Il doit comprendre à 100 % ce que fait SecureFlow.
+
+Traduit avec DeepL (https://dee.pl/apps)

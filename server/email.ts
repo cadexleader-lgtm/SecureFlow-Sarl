@@ -1,36 +1,17 @@
 import { Resend } from 'resend';
 import type { BlogArticle, NewsletterSubscriber } from '@shared/schema';
 
-let connectionSettings: any;
-
 async function getCredentials() {
-  const hostname = process.env.REPLIT_CONNECTORS_HOSTNAME;
-  const xReplitToken = process.env.REPL_IDENTITY 
-    ? 'repl ' + process.env.REPL_IDENTITY 
-    : process.env.WEB_REPL_RENEWAL 
-    ? 'depl ' + process.env.WEB_REPL_RENEWAL 
-    : null;
+  const apiKey = process.env.RESEND_API_KEY;
+  const fromEmail = process.env.RESEND_FROM_EMAIL;
 
-  if (!xReplitToken) {
-    throw new Error('X_REPLIT_TOKEN not found for repl/depl');
+  if (!apiKey || !fromEmail) {
+    throw new Error('RESEND_API_KEY and RESEND_FROM_EMAIL must be set');
   }
 
-  connectionSettings = await fetch(
-    'https://' + hostname + '/api/v2/connection?include_secrets=true&connector_names=resend',
-    {
-      headers: {
-        'Accept': 'application/json',
-        'X_REPLIT_TOKEN': xReplitToken
-      }
-    }
-  ).then(res => res.json()).then(data => data.items?.[0]);
-
-  if (!connectionSettings || (!connectionSettings.settings.api_key)) {
-    throw new Error('Resend not connected');
-  }
   return {
-    apiKey: connectionSettings.settings.api_key, 
-    fromEmail: connectionSettings.settings.from_email
+    apiKey,
+    fromEmail,
   };
 }
 
@@ -55,9 +36,7 @@ export async function sendNewsletterToSubscribers(
   try {
     const { client, fromEmail } = await getResendClient();
     
-    const siteUrl = process.env.REPLIT_DEV_DOMAIN 
-      ? `https://${process.env.REPLIT_DEV_DOMAIN}`
-      : 'https://secureflow.solutions';
+    const siteUrl = process.env.SITE_URL || 'http://localhost:5000';
     
     const articleUrl = `${siteUrl}/blog/${article.slug}`;
     

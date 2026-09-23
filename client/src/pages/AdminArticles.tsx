@@ -107,35 +107,21 @@ export default function AdminArticles() {
     setUploadError(null);
 
     try {
-      // Step 1: Request presigned URL
-      const urlResponse = await fetch("/api/uploads/request-url", {
+      const token = localStorage.getItem("admin_token");
+      const formData = new FormData();
+      formData.append("file", file);
+
+      const uploadResponse = await fetch("/api/uploads", {
         method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          name: file.name,
-          size: file.size,
-          contentType: file.type,
-        }),
-      });
-
-      if (!urlResponse.ok) {
-        throw new Error("Impossible d'obtenir l'URL d'upload");
-      }
-
-      const { uploadURL, objectPath } = await urlResponse.json();
-
-      // Step 2: Upload file directly to presigned URL
-      const uploadResponse = await fetch(uploadURL, {
-        method: "PUT",
-        body: file,
-        headers: { "Content-Type": file.type },
+        headers: { Authorization: `Bearer ${token}` },
+        body: formData,
       });
 
       if (!uploadResponse.ok) {
-        throw new Error("Échec de l'upload de l'image");
+        throw new Error("Échec de l’upload de l’image");
       }
 
-      // Set the object path as the image URL
+      const { objectPath } = await uploadResponse.json();
       setFormData(prev => ({ ...prev, imageUrl: objectPath }));
     } catch (err) {
       console.error("Upload error:", err);

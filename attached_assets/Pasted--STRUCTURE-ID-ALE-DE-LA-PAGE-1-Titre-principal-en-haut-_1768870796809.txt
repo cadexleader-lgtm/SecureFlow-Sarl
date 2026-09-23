@@ -1,0 +1,166 @@
+🧱 STRUCTURE IDÉALE DE LA PAGE
+1️⃣ Titre principal (en haut)
+
+Nos secteurs d’intervention
+
+Sous-titre :
+
+SecureFlow sécurise les opérations commerciales et logistiques dans des secteurs stratégiques à haut risque.
+
+2️⃣ Grille de secteurs (cards professionnelles)
+
+👉 Chaque secteur = 1 carte cliquable
+
+Chaque carte contient :
+
+✅ Icône ou image illustrative
+
+✅ Nom du secteur
+
+✅ 2–3 lignes claires
+
+✅ Bouton « En savoir plus »
+
+📦 CONTENU PAR SECTEUR (EXEMPLES CONCRETS)
+🌾 AGRICULTURE & AGRO-INDUSTRIE
+
+Ce qu’on montre :
+Image : champs, export de produits agricoles, conteneurs
+
+Texte :
+
+Sécurisation des flux agricoles, de la production à l’exportation.
+Vérification des fournisseurs, supervision des contrats, sécurisation des paiements et de la livraison.
+
+Actions SecureFlow :
+
+Vérification des producteurs et exportateurs
+
+Sécurisation des contrats d’achat
+
+Supervision logistique (ports, transit, livraison)
+
+Réduction des fraudes et pertes à l’export
+
+🔘 Bouton : En savoir plus →
+➡️ Page détaillée ou article blog
+
+⛏️ MINES & RESSOURCES NATURELLES
+
+Texte :
+
+Un secteur à haut risque nécessitant un contrôle strict des flux financiers, contractuels et logistiques.
+
+Actions SecureFlow :
+
+Due diligence des partenaires miniers
+
+Sécurisation des transactions internationales
+
+Supervision du transport et de la documentation
+
+Protection contre les faux intermédiaires
+
+🔘 Bouton : Découvrir notre approche →
+
+⚡ ÉNERGIE & ÉLECTRICITÉ
+
+Texte :
+
+Sécurisation des projets énergétiques, équipements industriels et flux financiers associés.
+
+Actions SecureFlow :
+
+Vérification des fournisseurs d’équipements
+
+Sécurisation des paiements internationaux
+
+Supervision des livraisons sensibles
+
+Gestion des risques contractuels
+
+🔘 Bouton : Voir les solutions →
+
+🏥 SANTÉ & ÉQUIPEMENTS MÉDICAUX
+
+Texte :
+
+Protection des importations sensibles : médicaments, équipements médicaux, dispositifs critiques.
+
+Actions SecureFlow :
+
+Contrôle des fournisseurs certifiés
+
+Sécurisation des chaînes logistiques
+
+Prévention des contrefaçons
+
+Traçabilité des livraisons
+
+🔘 Bouton : En savoir plus →
+
+✈️ AVIATION & TRANSPORT SPÉCIALISÉ
+
+Texte :
+
+Gestion sécurisée des flux aéronautiques et logistiques à haute valeur.
+
+Actions SecureFlow :
+
+Sécurisation des pièces et équipements
+
+Supervision du fret aérien
+
+Gestion des documents internationaux
+
+Protection des paiements et délais
+
+🔘 Bouton : Découvrir →
+
+🏗️ INFRASTRUCTURES & PROJETS
+
+Texte :
+
+Sécurisation des projets complexes impliquant plusieurs acteurs et pays.
+
+Actions SecureFlow :
+
+Coordination des parties prenantes
+
+Sécurisation financière des projets
+
+Supervision contractuelle
+
+Réduction des risques opérationnels
+
+🔘 Bouton : Voir comment nous intervenons →
+
+🔘 TYPES DE BOUTONS À UTILISER
+
+Tu peux alterner entre :
+
+En savoir plus
+
+Découvrir notre approche
+
+Voir les solutions
+
+Accéder au cas sectoriel
+
+👉 Chaque bouton mène vers :
+
+une page dédiée au secteur
+
+ou un article blog détaillé
+
+ou une page contact sectorielle
+
+💡 BONUS PRO (TRÈS IMPORTANT)
+En bas de page, ajoute :
+
+Un CTA global
+
+Vous opérez dans un secteur à risque ?
+SecureFlow analyse et sécurise votre opération.
+
+🔘 Parler à un expert SecureFlow

@@ -1,12 +1,14 @@
-import type { Express, Request, Response, NextFunction } from "express";
+import express, { type Express, Request, Response, NextFunction } from "express";
 import type { Server } from "http";
+import path from "path";
+import { mkdir } from "fs/promises";
+import multer from "multer";
 import { storage } from "./storage";
 import { api } from "@shared/routes";
 import { z } from "zod";
 import bcrypt from "bcryptjs";
 import { randomBytes } from "crypto";
 import { insertBlogArticleSchema } from "@shared/schema";
-import { registerObjectStorageRoutes } from "./replit_integrations/object_storage";
 import { sendNewsletterToSubscribers } from "./email";
 
 // Simple session store (in production, use Redis or database)
@@ -37,8 +39,24 @@ export async function registerRoutes(
   app: Express
 ): Promise<Server> {
   
-  // Register object storage routes for image uploads
-  registerObjectStorageRoutes(app);
+  // Standalone local uploads. In production, replace this directory with a
+  // Supabase Storage adapter or another object store without changing the API.
+  const uploadDir = path.resolve(process.cwd(), "uploads");
+  await mkdir(uploadDir, { recursive: true });
+  const upload = multer({
+    dest: uploadDir,
+    limits: { fileSize: 10 * 1024 * 1024, files: 1 },
+    fileFilter: (_req, file, cb) => {
+      cb(null, /^image\/(jpeg|png|gif|webp|avif)$/.test(file.mimetype));
+    },
+  });
+  app.use("/uploads", express.static(uploadDir));
+  app.post("/api/uploads", requireAdmin, upload.single("file"), (req, res) => {
+    if (!req.file) {
+      return res.status(400).json({ message: "Une image valide est requise" });
+    }
+    res.status(201).json({ objectPath: `/uploads/${req.file.filename}` });
+  });
   
   // ===== PUBLIC ROUTES =====
   

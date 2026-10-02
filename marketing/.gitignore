@@ -1,0 +1,10 @@
+node_modules/
+video/frames/
+video/stills/
+video/*.raw
+video/vo_edit.wav
+video/mix.wav
+video/music_sfx_only.wav
+video/video_silent.mp4
+video/motion.html
+brochure/brochure.html

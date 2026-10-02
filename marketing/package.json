@@ -1,0 +1,18 @@
+{
+  "name": "secureflow-marketing",
+  "private": true,
+  "description": "Supports marketing SecureFlow : brochure PDF et vidéo motion design (générés à partir du code)",
+  "type": "module",
+  "scripts": {
+    "brochure": "node brochure/build.mjs",
+    "video:frames": "cd video && node motion.mjs",
+    "video:son": "cd video && python3 soundtrack.py"
+  },
+  "dependencies": {
+    "@fontsource/manrope": "^5.0.0",
+    "@fontsource/playfair-display": "^5.0.0",
+    "gsap": "^3.12.0",
+    "lucide-static": "^1.0.0",
+    "playwright": "^1.40.0"
+  }
+}

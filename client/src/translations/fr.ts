@@ -566,6 +566,25 @@ const translations: Record<string, string> = {
   "legal.activities": "Activités déclarées",
   "legal.activitiesText": "Import-export de produits alimentaires, agricoles, agropastoraux et vivriers ; logistique intégrée maritime, portuaire et aérienne ; sécurisation des flux de marchandises, de personnes, de données et de capitaux ; énergie, pétrole, gaz et ressources minières ; financement de projets et investissement ; extraction, sécurité et transport minier ; santé et produits pharmaceutiques ; aviation et services aéronautiques ; commerce international, représentation commerciale, conseil, audit, formation et assistance technique ; monétisation d'instruments bancaires ; assurance des flux commerciaux ; agriculture, éducation, machines agricoles et d'extraction minière ; collecte, transport et recyclage des déchets ; équipements de santé ; e-commerce ; bâtiment et travaux publics.",
 
+  // FAQ accueil (affichée + balisage FAQPage)
+  "home.h1": "SecureFlow — Sécurisation du commerce international à Cotonou, Bénin",
+  "home.faq.title": "Questions fréquentes",
+  "home.faq.subtitle": "Tout savoir sur SecureFlow",
+  "home.faq.q1": "Que fait SecureFlow ?",
+  "home.faq.a1": "SecureFlow sécurise le commerce international : nous vérifions vos fournisseurs, inspectons sur site, sécurisons vos transactions et supervisons vos marchandises du port à la livraison finale. Nous accompagnons aussi le financement de projets et le commerce international.",
+  "home.faq.q2": "Où est basée SecureFlow ?",
+  "home.faq.a2": "Le siège de SECUREFLOW SARL est à Cotonou, au Bénin (Ilot 1480, quartier Kouhounou). Le groupe est aussi présent en Tanzanie avec SecureFlow Tanzania Ltd.",
+  "home.faq.q3": "Comment vérifiez-vous un fournisseur ?",
+  "home.faq.a3": "Nous contrôlons son identité légale, vérifions qu'il existe physiquement, analysons sa capacité opérationnelle et auditons sa conformité et ses licences. Si nécessaire, nous nous rendons sur place et remettons un rapport avec preuves visuelles.",
+  "home.faq.q4": "Dans quels secteurs intervenez-vous ?",
+  "home.faq.a4": "Agriculture et agro-alimentaire, mines et or, énergie, pétrole et gaz, santé et pharmaceutique, aviation, BTP et infrastructures, environnement et recyclage, éducation et formation, ainsi que le financement de projets.",
+  "home.faq.q5": "Qu'est-ce que Terraminex ?",
+  "home.faq.a5": "Terraminex Trading Inspection and Investment Ltd est le pôle minier du groupe SecureFlow : or et ressources minières, extraction, sécurité et transport minier, et fourniture de machines d'extraction.",
+  "home.faq.q6": "SecureFlow garantit-il le paiement ou le résultat d'une opération ?",
+  "home.faq.a6": "Non. SecureFlow intervient comme tiers de confiance et facilitateur : nous réduisons fortement les risques, mais nous ne sommes ni assureur ni garant financier. Chaque intervention est encadrée par un contrat.",
+  "home.faq.q7": "Comment contacter SecureFlow ?",
+  "home.faq.a7": "Par téléphone au +229 50 63 63 63, sur WhatsApp au +229 50 36 36 36, par email à infosecureflowco@gmail.com ou via le formulaire de la page Contact. Toutes les demandes sont traitées en toute confidentialité.",
+
   // Common
   "common.loading": "Chargement...",
   "common.error": "Une erreur est survenue",

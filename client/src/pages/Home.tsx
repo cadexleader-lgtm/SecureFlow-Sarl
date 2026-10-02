@@ -29,6 +29,7 @@ import mining4 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.46_1768871869926
 export default function Home() {
   const { t } = useLanguage();
   const groupCompanies = useGroupCompanies();
+  const faqItems = [1, 2, 3, 4, 5, 6, 7].map((i) => ({ q: t(`home.faq.q${i}`), a: t(`home.faq.a${i}`) }));
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = [
@@ -96,7 +97,14 @@ export default function Home() {
 
   return (
     <div className="flex flex-col">
-      <SEO {...seoConfig.home} />
+      <SEO
+        {...seoConfig.home}
+        structuredData={{
+          "@type": "FAQPage",
+          mainEntity: faqItems.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+        }}
+      />
+      <h1 className="sr-only">{t("home.h1")}</h1>
       {/* Hero Section with Slider */}
       <section className="relative min-h-[620px] h-[78vh] max-h-[820px] flex items-center pt-16 overflow-hidden bg-black">
         <AnimatePresence initial={false}>
@@ -139,7 +147,7 @@ export default function Home() {
               </motion.div>
             </div>
 
-            <h1 className="text-3xl sm:text-4xl md:text-6xl font-display font-semibold text-white mb-5 md:mb-7 leading-[1.08] tracking-[-0.035em]">
+            <h2 className="text-3xl sm:text-4xl md:text-6xl font-display font-semibold text-white mb-5 md:mb-7 leading-[1.08] tracking-[-0.035em]">
               {heroSlides[currentSlide].title.split('&')[0]}
               {heroSlides[currentSlide].title.includes('&') && (
                 <>
@@ -147,7 +155,7 @@ export default function Home() {
                   <span className="text-primary">&</span> {heroSlides[currentSlide].title.split('&')[1]}
                 </>
               )}
-            </h1>
+            </h2>
             
             <p className="text-base md:text-lg text-white/75 mb-8 md:mb-10 leading-relaxed max-w-2xl mx-auto">
               {heroSlides[currentSlide].description}
@@ -507,6 +515,21 @@ export default function Home() {
                   alt={`SecureFlow operations ${i + 1}`}
                   className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${img === founderHelicopter ? "object-[50%_18%]" : ""}`}
                 />
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* FAQ — contenu visible, repris dans les données structurées FAQPage */}
+      <section className="py-16 md:py-20 relative bg-background" id="faq">
+        <div className="container px-4 mx-auto max-w-5xl">
+          <SectionHeading title={t("home.faq.title")} subtitle={t("home.faq.subtitle")} />
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
+            {faqItems.map((f) => (
+              <div key={f.q} className="rounded-2xl p-6 border border-border dark:border-white/10 bg-secondary dark:bg-white/5">
+                <h3 className="text-base md:text-lg font-display font-semibold text-foreground mb-2">{f.q}</h3>
+                <p className="text-sm md:text-base text-muted-foreground leading-relaxed">{f.a}</p>
               </div>
             ))}
           </div>

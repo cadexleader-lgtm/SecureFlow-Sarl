@@ -33,7 +33,7 @@ export default function Legal() {
           variants={fadeInUp}
           className="text-center mb-16"
         >
-          <SectionHeading
+          <SectionHeading as="h1"
             title={t("legal.hero.title")}
             subtitle={t("legal.hero.badge")}
           />

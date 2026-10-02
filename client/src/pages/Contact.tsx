@@ -52,7 +52,7 @@ export default function Contact() {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
         >
-          <SectionHeading 
+          <SectionHeading as="h1"
             title={t("contact.hero.title")} 
             subtitle={t("contact.hero.subtitle")} 
           />

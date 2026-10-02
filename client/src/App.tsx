@@ -1,10 +1,10 @@
-import { Switch, Route, useLocation } from "wouter";
+import { Switch, Route, useLocation, Router as WouterRouter } from "wouter";
 import { queryClient } from "./lib/queryClient";
 import { QueryClientProvider } from "@tanstack/react-query";
 import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import { HelmetProvider } from "react-helmet-async";
-import { useEffect } from "react";
+import { useEffect, lazy, Suspense } from "react";
 
 // Components
 import { Navigation } from "@/components/Navigation";
@@ -23,19 +23,21 @@ import Founder from "@/pages/Founder";
 import Services from "@/pages/Services";
 import Sectors from "@/pages/Sectors";
 import Blog from "@/pages/Blog";
-import BlogPost from "@/pages/BlogPost";
-import BlogArticlePage from "@/pages/BlogArticlePage";
+// Articles du blog : gros fichier, chargé seulement quand on ouvre un article
+export const loadBlogPost = () => import("@/pages/BlogPost");
+const BlogPost = lazy(loadBlogPost);
+const BlogArticlePage = lazy(() => import("@/pages/BlogArticlePage"));
 import Contact from "@/pages/Contact";
 import Legal from "@/pages/Legal";
 import Group from "@/pages/Group";
 import NotFound from "@/pages/not-found";
 
-// Admin Pages
-import AdminLogin from "@/pages/AdminLogin";
-import AdminDashboard from "@/pages/AdminDashboard";
-import AdminContacts from "@/pages/AdminContacts";
-import AdminSubscribers from "@/pages/AdminSubscribers";
-import AdminArticles from "@/pages/AdminArticles";
+// Admin : chargé à part, jamais téléchargé par les visiteurs du site public
+const AdminLogin = lazy(() => import("@/pages/AdminLogin"));
+const AdminDashboard = lazy(() => import("@/pages/AdminDashboard"));
+const AdminContacts = lazy(() => import("@/pages/AdminContacts"));
+const AdminSubscribers = lazy(() => import("@/pages/AdminSubscribers"));
+const AdminArticles = lazy(() => import("@/pages/AdminArticles"));
 
 function ScrollToTop() {
   const [location] = useLocation();
@@ -52,6 +54,7 @@ function PublicRouter() {
       <Navigation />
       
       <main className="flex-grow">
+        <Suspense fallback={<div className="min-h-screen" />}>
         <Switch>
           <Route path="/" component={Home} />
           <Route path="/about" component={About} />
@@ -66,6 +69,7 @@ function PublicRouter() {
           <Route path="/legal" component={Legal} />
           <Route component={NotFound} />
         </Switch>
+        </Suspense>
       </main>
 
       <Footer />
@@ -84,6 +88,7 @@ function Router() {
     return (
       <div className="font-sans bg-background text-foreground selection:bg-primary selection:text-white">
         <ScrollToTop />
+        <Suspense fallback={null}>
         <Switch>
           <Route path="/admin/login" component={AdminLogin} />
           <Route path="/admin/contacts" component={AdminContacts} />
@@ -91,6 +96,7 @@ function Router() {
           <Route path="/admin/articles" component={AdminArticles} />
           <Route path="/admin" component={AdminDashboard} />
         </Switch>
+        </Suspense>
       </div>
     );
   }
@@ -98,16 +104,24 @@ function Router() {
   return <PublicRouter />;
 }
 
-function App() {
+interface AppProps {
+  /** Rendu serveur (prérendu SEO) : URL à afficher et contexte où récupérer les balises <head>. */
+  ssrPath?: string;
+  helmetContext?: object;
+}
+
+function App({ ssrPath, helmetContext }: AppProps = {}) {
   return (
     <MotionConfig reducedMotion="always">
-      <HelmetProvider>
+      <HelmetProvider context={helmetContext}>
         <QueryClientProvider client={queryClient}>
           <LanguageProvider>
             <ThemeProvider>
               <TooltipProvider>
                 <Toaster />
-                <Router />
+                <WouterRouter ssrPath={ssrPath}>
+                  <Router />
+                </WouterRouter>
               </TooltipProvider>
             </ThemeProvider>
           </LanguageProvider>

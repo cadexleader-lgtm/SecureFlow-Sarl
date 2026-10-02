@@ -33,7 +33,7 @@ export default function Founder() {
 
   return (
     <div className="min-h-screen bg-background text-foreground overflow-hidden">
-      <SEO {...seoConfig.founder} />
+      <SEO {...seoConfig.founder} structuredData={{ "@type": "ProfilePage", mainEntity: { "@id": "https://secureflow.solutions/founder#person" } }} />
       {/* Hero Section */}
       <section className="relative pt-24 pb-12 md:pt-32 md:pb-16 overflow-hidden">
         <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_-20%,rgba(var(--primary-rgb),0.15),transparent_70%)] pointer-events-none"></div>

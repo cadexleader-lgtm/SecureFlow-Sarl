@@ -115,7 +115,7 @@ export default function Services() {
     <div className="min-h-screen pt-24 pb-16">
       <SEO {...seoConfig.services} />
       <div className="container px-4 mx-auto">
-        <SectionHeading 
+        <SectionHeading as="h1"
           title={t("services.hero.title")} 
           subtitle={t("services.hero.subtitle")} 
         />

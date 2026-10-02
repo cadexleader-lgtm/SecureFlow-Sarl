@@ -2,6 +2,9 @@ import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { Button } from "@/components/ui/button";
 import { Link, useParams } from "wouter";
+import { SEO, SITE_URL } from "@/components/SEO";
+import { useLanguage } from "@/contexts/LanguageContext";
+import { staticPost } from "@/lib/blog-posts";
 import { ArrowLeft, ShieldCheck, Search, Ship, CheckCircle2, Landmark, BarChart3, Globe, Handshake, TrendingUp, FileCheck, User, AlertTriangle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -92,6 +95,47 @@ import bitumeImg from "@assets/bitume-dans-un-tube-métallique-noir-liquide-cyli
 import petrochimieImg from "@assets/Maquette_froide_Eluxyl_Petrochimie_1769193078255.jpg";
 
 export default function BlogPost() {
+  const { id } = useParams();
+  return (
+    <>
+      <BlogPostSEO id={id} />
+      <BlogPostContent />
+    </>
+  );
+}
+
+function BlogPostSEO({ id }: { id?: string }) {
+  const { t } = useLanguage();
+  const post = id ? staticPost(id) : undefined;
+  if (!post) return <SEO title="Article introuvable" description="Cet article n'existe pas ou a été déplacé." canonical={`/blog/${id ?? ""}`} noindex />;
+  const title = t(post.titleKey);
+  const description = t(post.excerptKey);
+  const url = `${SITE_URL}/blog/${post.id}`;
+  return (
+    <SEO
+      title={title}
+      description={description}
+      canonical={`/blog/${post.id}`}
+      ogImage={post.image}
+      ogType="article"
+      breadcrumb={title}
+      structuredData={{
+        "@type": "Article",
+        "@id": `${url}#article`,
+        headline: title,
+        description,
+        image: post.image.startsWith("http") ? post.image : `${SITE_URL}${post.image}`,
+        inLanguage: "fr-FR",
+        mainEntityOfPage: url,
+        articleSection: t(post.categoryKey),
+        author: { "@type": "Person", name: "Éric Brunnel QUENUM", url: `${SITE_URL}/founder` },
+        publisher: { "@id": `${SITE_URL}/#organization` },
+      }}
+    />
+  );
+}
+
+function BlogPostContent() {
   const { id } = useParams();
 
   if (id === "8") {

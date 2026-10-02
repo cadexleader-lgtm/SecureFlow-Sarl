@@ -566,6 +566,25 @@ const translations: Record<string, string> = {
   "legal.activities": "Registered activities",
   "legal.activitiesText": "Import-export of food, agricultural, agro-pastoral and staple products; integrated maritime, port and air logistics; securing flows of goods, people, data and capital; energy, oil, gas and mineral resources; project finance and investment; mining extraction, security and transport; healthcare and pharmaceuticals; aviation and aeronautical services; international trade, commercial representation, advisory, audit, training and technical assistance; monetisation of bank instruments; trade flow insurance; agriculture, education, agricultural and mining machinery; waste collection, transport and recycling; medical equipment; e-commerce; building and public works.",
 
+  // FAQ accueil (affichée + balisage FAQPage)
+  "home.h1": "SecureFlow — Securing international trade from Cotonou, Benin",
+  "home.faq.title": "Frequently asked questions",
+  "home.faq.subtitle": "Everything about SecureFlow",
+  "home.faq.q1": "What does SecureFlow do?",
+  "home.faq.a1": "SecureFlow secures international trade: we verify your suppliers, inspect on site, secure your transactions and supervise your goods from port to final delivery. We also support project finance and international trade.",
+  "home.faq.q2": "Where is SecureFlow based?",
+  "home.faq.a2": "SECUREFLOW SARL is headquartered in Cotonou, Benin (Ilot 1480, Kouhounou district). The group is also present in Tanzania through SecureFlow Tanzania Ltd.",
+  "home.faq.q3": "How do you verify a supplier?",
+  "home.faq.a3": "We check its legal identity, confirm it physically exists, assess its operational capacity and audit its compliance and licences. When needed, we go on site and deliver a report with visual evidence.",
+  "home.faq.q4": "Which sectors do you work in?",
+  "home.faq.a4": "Agriculture and agri-food, mining and gold, energy, oil and gas, healthcare and pharmaceuticals, aviation, construction and infrastructure, environment and recycling, education and training, and project finance.",
+  "home.faq.q5": "What is Terraminex?",
+  "home.faq.a5": "Terraminex Trading Inspection and Investment Ltd is the SecureFlow group's mining division: gold and mineral resources, mining extraction, security and transport, and supply of extraction machinery.",
+  "home.faq.q6": "Does SecureFlow guarantee payment or the outcome of a deal?",
+  "home.faq.a6": "No. SecureFlow acts as a trusted third party and facilitator: we greatly reduce risk, but we are neither an insurer nor a financial guarantor. Every engagement is governed by a contract.",
+  "home.faq.q7": "How can I contact SecureFlow?",
+  "home.faq.a7": "By phone on +229 50 63 63 63, on WhatsApp on +229 50 36 36 36, by email at infosecureflowco@gmail.com or through the Contact page form. All requests are handled confidentially.",
+
   // Common
   "common.loading": "Loading...",
   "common.error": "An error occurred",

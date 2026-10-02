@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Wheat, Pickaxe, Zap, HeartPulse, Plane, Building2, ArrowRight, ShieldCheck, Globe, ChevronRight, Fuel, Landmark, Crown } from "lucide-react";
+import { Wheat, Pickaxe, Zap, HeartPulse, Plane, Building2, ArrowRight, ShieldCheck, Globe, ChevronRight, Fuel, TrendingUp, Recycle, GraduationCap } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { SEO, seoConfig } from "@/components/SEO";
@@ -33,9 +33,9 @@ export default function Sectors() {
         t("sectors.mining.a3"),
         t("sectors.mining.a4")
       ],
-      cta: t("sectors.learnMore"),
+      cta: t("sectors.mining.cta"),
       color: "from-amber-500/20 to-orange-500/5",
-      link: "/blog/9"
+      link: "/group"
     },
     {
       icon: Zap,
@@ -108,7 +108,32 @@ export default function Sectors() {
       link: "/blog/14"
     },
     {
-      icon: Crown,
+      icon: Recycle,
+      title: t("sectors.environment.title"),
+      desc: t("sectors.environment.desc"),
+      actions: [
+        t("sectors.environment.a1"),
+        t("sectors.environment.a2"),
+        t("sectors.environment.a3")
+      ],
+      cta: t("sectors.cta.button"),
+      color: "from-emerald-500/20 to-teal-500/5",
+      link: "/contact"
+    },
+    {
+      icon: GraduationCap,
+      title: t("sectors.education.title"),
+      desc: t("sectors.education.desc"),
+      actions: [
+        t("sectors.education.a1"),
+        t("sectors.education.a2")
+      ],
+      cta: t("sectors.cta.button"),
+      color: "from-sky-500/20 to-blue-500/5",
+      link: "/contact"
+    },
+    {
+      icon: TrendingUp,
       title: t("sectors.africa.title"),
       desc: t("sectors.africa.desc"),
       actions: [
@@ -164,7 +189,7 @@ export default function Sectors() {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ delay: idx * 0.1 }}
-                  className={`group relative flex flex-col h-full rounded-[2.5rem] bg-secondary dark:bg-white/5 border transition-all duration-500 overflow-hidden hover-elevate ${
+                  className={`group relative flex flex-col h-full rounded-[2.5rem] ${isFeatured ? 'md:col-span-2 lg:col-span-3' : ''} bg-secondary dark:bg-white/5 border transition-all duration-500 overflow-hidden hover-elevate ${
                     isFeatured 
                       ? 'border-primary/50 ring-2 ring-primary/20 shadow-lg shadow-primary/10' 
                       : 'border-border dark:border-white/5 hover:border-primary/30'
@@ -173,7 +198,7 @@ export default function Sectors() {
                   {/* Featured Badge */}
                   {isFeatured && (
                     <div className="absolute top-4 right-4 z-20 px-3 py-1 bg-primary text-primary-foreground text-xs font-bold rounded-full flex items-center gap-1">
-                      <Crown className="w-3 h-3" />
+                      <TrendingUp className="w-3 h-3" />
                       {t("sectors.africa.exclusive")}
                     </div>
                   )}

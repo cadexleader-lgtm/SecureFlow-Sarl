@@ -1,12 +1,14 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { Link } from "wouter";
-import { ShieldCheck, Globe, Zap, Ship, Activity, Lock, CheckCircle2, Award, Briefcase, Search, FileCheck, Landmark, BarChart3, Users, ShieldAlert, ArrowRight, Quote } from "lucide-react";
+import { ShieldCheck, Globe, Zap, Ship, Activity, Lock, CheckCircle2, Award, Briefcase, Search, FileCheck, Landmark, BarChart3, Users, ShieldAlert, ArrowRight, Quote, TrendingUp, ExternalLink, Layers } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SEO, seoConfig } from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
+import { useGroupCompanies } from "@/pages/Group";
+import founderHelicopter from "@assets/founder-helicopter.jpg";
 import heroImg from "@assets/stock_images/professional_cargo_i_20329aee.jpg";
 import goldImg from "@assets/stock_images/gold_bars_and_precio_1456b62f.jpg";
 import miningImg from "@assets/stock_images/mining_project_infra_8026ebfd.jpg";
@@ -26,6 +28,7 @@ import mining4 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.46_1768871869926
 
 export default function Home() {
   const { t } = useLanguage();
+  const groupCompanies = useGroupCompanies();
   const [currentSlide, setCurrentSlide] = useState(0);
 
   const heroSlides = [
@@ -81,10 +84,15 @@ export default function Home() {
       icon: BarChart3,
       title: t("home.services.risk.title"),
       desc: t("home.services.risk.desc")
+    },
+    {
+      icon: TrendingUp,
+      title: t("home.services.finance.title"),
+      desc: t("home.services.finance.desc")
     }
   ];
 
-  const carouselImages = [mining1, mining2, mining3, mining4, china1, china2, china3, china4, china5, goldImg, miningImg, securityImg, transactionImg];
+  const carouselImages = [founderHelicopter, mining1, mining2, mining3, mining4, china1, china2, china3, china4, china5, goldImg, miningImg, securityImg, transactionImg];
 
   return (
     <div className="flex flex-col">
@@ -380,6 +388,46 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Le Groupe */}
+      <section className="py-16 relative overflow-hidden bg-background">
+        <div className="container px-4 mx-auto max-w-6xl relative z-10">
+          <div className="text-center space-y-4 mb-10 md:mb-14">
+            <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest">
+              <Layers className="w-4 h-4" /> {t("group.badge")}
+            </div>
+            <h2 className="text-2xl md:text-4xl font-display font-semibold text-foreground">{t("group.home.title")}</h2>
+            <p className="text-muted-foreground md:text-lg">{t("group.home.subtitle")}</p>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-5">
+            {groupCompanies.map((c, idx) => (
+              <motion.div
+                key={c.id}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ delay: idx * 0.08 }}
+                className={`flex flex-col rounded-3xl p-6 border h-full ${c.highlight ? "border-amber-500/40 bg-gradient-to-br from-amber-500/10 to-transparent" : "border-border dark:border-white/10 bg-secondary dark:bg-white/5"}`}
+              >
+                <c.icon className={`w-8 h-8 mb-4 ${c.highlight ? "text-amber-500" : "text-primary"}`} />
+                <div className={`text-[10px] font-bold uppercase tracking-[0.16em] mb-1 ${c.highlight ? "text-amber-500" : "text-primary"}`}>{c.tag}</div>
+                <h3 className="text-sm font-display font-bold text-foreground leading-snug break-words mb-3">{c.name}</h3>
+                <p className="text-sm text-muted-foreground leading-relaxed flex-grow">{c.desc}</p>
+                {c.url && (
+                  <a href={c.url} target="_blank" rel="noopener noreferrer" className="mt-4 inline-flex items-center gap-1.5 text-xs font-semibold text-amber-500 hover:text-amber-400">
+                    terraminex.net <ExternalLink className="w-3.5 h-3.5" />
+                  </a>
+                )}
+              </motion.div>
+            ))}
+          </div>
+          <div className="text-center mt-10">
+            <Button size="lg" variant="outline" className="rounded-full px-8" asChild>
+              <Link href="/group">{t("group.home.cta")} <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* 4. Pourquoi SecureFlow existe */}
       <section className="py-16 relative overflow-hidden bg-background">
         <div className="absolute top-0 right-0 w-1/2 h-full bg-[radial-gradient(circle_at_80%_20%,rgba(var(--primary-rgb),0.05),transparent_70%)] pointer-events-none"></div>
@@ -443,7 +491,7 @@ export default function Home() {
         <div className="absolute inset-0 secureflow-technical-grid opacity-60" aria-hidden="true" />
         <div className="relative z-10 container px-5 md:px-8 mx-auto mb-6 max-w-7xl">
           <div className="flex items-center gap-4">
-            <span className="eyebrow whitespace-nowrap">{t("footer.partners")}</span>
+            <span className="eyebrow whitespace-nowrap">{t("home.gallery")}</span>
             <div className="h-px flex-1 bg-border"></div>
             <span className="hidden sm:block text-[10px] uppercase tracking-[0.18em] text-muted-foreground">SecureFlow / 01</span>
           </div>
@@ -457,7 +505,7 @@ export default function Home() {
                 <img 
                   src={img} 
                   alt={`SecureFlow operations ${i + 1}`}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
+                  className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${img === founderHelicopter ? "object-[50%_18%]" : ""}`}
                 />
               </div>
             ))}

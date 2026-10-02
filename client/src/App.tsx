@@ -27,6 +27,7 @@ import BlogPost from "@/pages/BlogPost";
 import BlogArticlePage from "@/pages/BlogArticlePage";
 import Contact from "@/pages/Contact";
 import Legal from "@/pages/Legal";
+import Group from "@/pages/Group";
 import NotFound from "@/pages/not-found";
 
 // Admin Pages
@@ -57,6 +58,7 @@ function PublicRouter() {
           <Route path="/founder" component={Founder} />
           <Route path="/services" component={Services} />
           <Route path="/sectors" component={Sectors} />
+          <Route path="/group" component={Group} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/article/:slug" component={BlogArticlePage} />
           <Route path="/blog/:id" component={BlogPost} />

@@ -11,14 +11,14 @@ export function Footer() {
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(var(--primary-rgb),0.05),transparent_70%)]"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-6 pb-4 border-b border-white/10 flex flex-wrap justify-center items-center gap-4 text-xs text-gray-400">
-          <span className="font-semibold uppercase tracking-wider">{t("footer.partners")}:</span>
-          <span className="text-white/60">FEXIM FINANCE</span>
+          <Link href="/group" className="font-semibold uppercase tracking-wider hover:text-white transition-colors">{t("group.badge")}:</Link>
+          <span className="text-white/60">SECUREFLOW SARL</span>
           <span className="text-white/30">•</span>
-          <span className="text-white/60">BTTTC</span>
+          <span className="text-white/60">SECUREFLOW TANZANIA LTD</span>
           <span className="text-white/30">•</span>
-          <span className="text-white/60">AFRI-LOGISTIQUE</span>
+          <a href="https://terraminex.net/" target="_blank" rel="noopener noreferrer" className="text-white/60 hover:text-white transition-colors">TERRAMINEX</a>
           <span className="text-white/30">•</span>
-          <span className="text-white/60">GLOBAL TRADING</span>
+          <span className="text-white/60">FORTRICHE INTERPRISE</span>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
@@ -56,6 +56,7 @@ export function Footer() {
             <ul className="space-y-2 text-sm text-gray-400">
               <li><Link href="/about" className="hover:text-white transition-colors" data-testid="link-footer-about">{t("footer.about")}</Link></li>
               <li><Link href="/sectors" className="hover:text-white transition-colors" data-testid="link-footer-sectors">{t("footer.sectors")}</Link></li>
+              <li><Link href="/group" className="hover:text-white transition-colors" data-testid="link-footer-group">{t("nav.group")}</Link></li>
               <li><Link href="/blog" className="hover:text-white transition-colors" data-testid="link-footer-news">{t("footer.news")}</Link></li>
               <li><Link href="/contact" className="hover:text-white transition-colors" data-testid="link-footer-contact">{t("footer.contact")}</Link></li>
             </ul>
@@ -81,7 +82,7 @@ export function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-6 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-gray-400">
-          <p data-testid="text-footer-copyright">© {new Date().getFullYear()} SecureFlow International. {t("footer.copyright")}</p>
+          <p data-testid="text-footer-copyright">© {new Date().getFullYear()} SecureFlow SARL. {t("footer.copyright")}</p>
           <div className="flex gap-6">
             <Link href="/legal" className="hover:text-white transition-colors" data-testid="link-footer-legal">{t("footer.legal")}</Link>
             <Link href="/contact" className="hover:text-white transition-colors" data-testid="link-footer-contact-bottom">{t("footer.contact")}</Link>
@@ -89,19 +90,10 @@ export function Footer() {
         </div>
 
         <div className="mt-6 pt-4 border-t border-white/5 flex justify-center items-center">
-          <a 
-            href="https://webtrust.com" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="group flex items-center gap-2 text-[10px] text-gray-500 hover:text-gray-300 transition-all"
-            data-testid="link-webtrust-signature"
-          >
-            <span className="opacity-60 group-hover:opacity-100 transition-opacity">{t("footer.madeWith")}</span>
-            <span className="font-semibold text-primary/70 group-hover:text-primary transition-colors tracking-wider">WebTrust</span>
-            <svg className="w-3 h-3 text-primary/50 group-hover:text-primary transition-colors" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-              <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z" />
-            </svg>
-          </a>
+          <p className="flex items-center gap-1.5 text-[10px] text-gray-500" data-testid="text-made-by">
+            <span className="opacity-60">{t("footer.madeWith")}</span>
+            <span className="font-semibold text-gray-400 tracking-wider">Nexabri Technologie</span>
+          </p>
         </div>
       </div>
     </footer>

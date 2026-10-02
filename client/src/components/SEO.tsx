@@ -97,21 +97,27 @@ export const seoConfig = {
   },
   founder: {
     title: "Notre Fondateur",
-    description: "Rencontrez le fondateur de SecureFlow, expert reconnu dans la sécurisation du commerce international avec plus de 15 ans d'expérience dans le domaine.",
+    description: "Rencontrez le fondateur de SecureFlow, avec plus de 9 ans d'expérience opérationnelle dans l'import-export, les transactions complexes et la gestion des risques.",
     keywords: "fondateur SecureFlow, leadership, expertise commerce international, vision entreprise",
     canonical: "/founder",
   },
   services: {
     title: "Nos Services de Sécurisation",
-    description: "Découvrez nos services complets : vérification de fournisseurs, inspection de marchandises, sécurisation des transactions, supervision logistique et gestion des risques pour votre commerce international.",
+    description: "Découvrez nos services complets : vérification de fournisseurs, inspection sur site, sécurisation des transactions, supervision logistique, gestion des risques, financement de projets et commerce international.",
     keywords: "services sécurisation, vérification fournisseurs, inspection marchandises, transactions sécurisées, supervision logistique, gestion risques, due diligence, audit commercial",
     canonical: "/services",
   },
   sectors: {
     title: "Secteurs d'Activité",
-    description: "SecureFlow intervient dans de nombreux secteurs : import-export, énergie, mines, BTP, santé, aviation, pétrole & gaz et commerce international. Solutions adaptées à chaque industrie.",
+    description: "SecureFlow intervient dans de nombreux secteurs : agriculture, mines, énergie, pétrole & gaz, santé, aviation, BTP, environnement, éducation et financement de projets. Solutions adaptées à chaque industrie.",
     keywords: "secteurs activité, import export, énergie, mines, BTP, santé, aviation, pétrole gaz, commerce international, industrie",
     canonical: "/sectors",
+  },
+  group: {
+    title: "Le Groupe SecureFlow",
+    description: "Le groupe SecureFlow : SecureFlow SARL (Bénin), SecureFlow Tanzania Ltd, Terraminex Trading Inspection and Investment Ltd, pôle minier, et Fortriche Interprise.",
+    keywords: "groupe SecureFlow, Terraminex, SecureFlow Tanzania, Fortriche, mines, or, ressources minières, financement de projets",
+    canonical: "/group",
   },
   blog: {
     title: "Blog et Actualités",

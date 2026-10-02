@@ -805,8 +805,7 @@ export default function BlogPost() {
                 <ul className="list-disc pl-6 space-y-2">
                   <li>Accès direct aux raffineries et terminaux du Golfe</li>
                   <li>Négociation de contrats en temps réel avec les traders</li>
-                  <li>Surveillance 24/7 des expéditions maritimes</li>
-                  <li>Réduction des délais de transaction de 40%</li>
+                  <li>Suivi continu des expéditions maritimes</li>
                 </ul>
               </div>
 
@@ -2892,7 +2891,7 @@ export default function BlogPost() {
                 <div className="glass-card p-6 rounded-xl border-primary/20 text-center">
                   <Handshake className="w-12 h-12 text-primary mx-auto mb-4" />
                   <h3 className="text-foreground font-bold text-lg mb-2">Réactivité AOG</h3>
-                  <p className="text-sm">Service d'urgence 24/7 pour les situations Aircraft On Ground critiques</p>
+                  <p className="text-sm">Mobilisation rapide pour les situations Aircraft On Ground critiques</p>
                 </div>
               </div>
 
@@ -3217,8 +3216,8 @@ export default function BlogPost() {
                 </div>
                 <div className="glass-card p-6 rounded-xl border-primary/20 text-center">
                   <Handshake className="w-12 h-12 text-primary mx-auto mb-4" />
-                  <h3 className="text-foreground font-bold text-lg mb-2">Service 24/7</h3>
-                  <p className="text-sm">Équipe dédiée disponible en permanence pour les opérations critiques et urgences</p>
+                  <h3 className="text-foreground font-bold text-lg mb-2">Réactivité</h3>
+                  <p className="text-sm">Équipe mobilisable rapidement pour les opérations critiques</p>
                 </div>
               </div>
 
@@ -3247,6 +3246,24 @@ export default function BlogPost() {
   }
 
   if (id === "15") {
+    const pillars = [
+      { icon: BarChart3, title: "Structuration financière", text: "Montage financier adapté à chaque projet : besoins, calendrier, garanties et répartition des risques." },
+      { icon: Search, title: "Recherche et mobilisation de fonds", text: "Identification et mobilisation des ressources financières nécessaires au lancement et au développement du projet." },
+      { icon: TrendingUp, title: "Gestion d'investissements", text: "Suivi des investissements et prise de participations dans des projets industriels, énergétiques, miniers ou d'infrastructures." },
+      { icon: ShieldCheck, title: "Sécurisation des flux", text: "Monétisation d'instruments bancaires et assurance des flux commerciaux, avec la rigueur de vérification propre à SECUREFLOW." },
+    ];
+    const domains = [
+      { title: "Projets industriels", items: ["Équipements et unités de production", "Fourniture de machines agricoles et d'extraction minière"] },
+      { title: "Énergie", items: ["Projets énergétiques, pétroliers et gaziers", "Barrages électriques"] },
+      { title: "Mines", items: ["Projets miniers, portés avec notre pôle Terraminex", "Extraction, sécurité et transport minier"] },
+      { title: "Infrastructures & BTP", items: ["Bâtiment et travaux publics", "Projets d'infrastructure multi-acteurs"] },
+    ];
+    const steps = [
+      ["Analyse", "Étude du projet, de ses besoins financiers et de ses risques"],
+      ["Vérification", "Due diligence des parties prenantes et des documents"],
+      ["Structuration", "Montage financier et contractuel du projet"],
+      ["Suivi", "Supervision de l'exécution et des flux financiers"],
+    ];
     return (
       <div className="min-h-screen pt-24 pb-16">
         <div className="container px-4 mx-auto max-w-4xl">
@@ -3256,28 +3273,19 @@ export default function BlogPost() {
             </button>
           </Link>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            className="space-y-8"
-          >
-            <div className="relative aspect-video rounded-3xl overflow-hidden border-2 border-amber-500/50 shadow-2xl shadow-amber-500/10">
-              <img src={africaInvestment} alt="Investissement en Afrique" className="w-full h-full object-cover" />
+          <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
+            <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+              <img src={africaInvestment} alt="Financement de projets et investissement" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-              <Badge className="absolute top-6 right-6 bg-gradient-to-r from-amber-500 to-amber-600 text-white border-none px-4 py-2 text-sm font-bold uppercase tracking-wider">
-                Exclusif
-              </Badge>
             </div>
 
             <div className="space-y-6">
-              <Badge variant="outline" className="bg-amber-500/10 text-amber-400 border-amber-500/30">
-                Investissement Afrique
-              </Badge>
+              <Badge variant="outline" className="bg-primary/10 text-primary border-primary/30">Financement & Investissement</Badge>
               <h1 className="text-4xl md:text-5xl font-display font-bold text-foreground leading-tight">
-                Investissement en Afrique : Votre Porte d'Entrée Stratégique
+                Financement de Projets & Investissement : Structurer et Sécuriser vos Projets
               </h1>
               <p className="text-xl text-primary font-medium italic">
-                Partenariats exclusifs avec des chefs d'État et accès privilégié aux opportunités d'investissement
+                Un projet solide commence par un financement bien structuré et des partenaires vérifiés.
               </p>
               <div className="flex items-center gap-4 text-muted-foreground">
                 <User className="w-4 h-4 text-primary" />
@@ -3287,194 +3295,61 @@ export default function BlogPost() {
 
             <div className="prose prose-invert prose-lg max-w-none text-muted-foreground leading-relaxed">
               <p className="text-xl leading-relaxed">
-                L'Afrique représente le dernier grand marché émergent au monde, avec un <strong className="text-foreground">potentiel de croissance exceptionnel</strong> dans tous les secteurs économiques. Cependant, investir en Afrique requiert bien plus que du capital : il faut des <strong className="text-foreground">connexions de haut niveau</strong>, une compréhension profonde des contextes locaux et un partenaire de confiance pour naviguer les complexités administratives et réglementaires.
+                Les projets industriels, énergétiques, miniers et d'infrastructure demandent bien plus que du capital. Ils exigent une <strong className="text-foreground">structuration financière rigoureuse</strong>, des partenaires fiables et un suivi constant des flux. C'est précisément ce que SECUREFLOW apporte à ses clients et partenaires.
               </p>
 
-              <div className="glass-card p-8 rounded-2xl border-amber-500/20 my-12 bg-gradient-to-r from-amber-500/10 to-transparent">
-                <h2 className="text-foreground text-2xl font-bold mb-6 flex items-center gap-3">
-                  <ShieldCheck className="text-amber-400 w-8 h-8" /> Notre Position Unique
-                </h2>
-                <p>
-                  SECUREFLOW dispose de <strong className="text-foreground">partenariats exclusifs avec des chefs d'État africains</strong> et des hauts fonctionnaires gouvernementaux, offrant à nos clients un accès privilégié aux opportunités d'investissement les plus stratégiques du continent.
+              <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">Ce que nous faisons</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                {pillars.map((p) => (
+                  <div key={p.title} className="glass-card p-6 rounded-xl border-primary/20">
+                    <h3 className="text-foreground font-bold text-lg mb-3 flex items-center gap-2">
+                      <p.icon className="text-primary w-5 h-5" /> {p.title}
+                    </h3>
+                    <p className="text-sm">{p.text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">Les projets que nous accompagnons</h2>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-8">
+                {domains.map((d) => (
+                  <div key={d.title} className="glass-card p-6 rounded-2xl border-primary/20">
+                    <h3 className="text-foreground text-xl font-bold mb-3 flex items-center gap-3">
+                      <Globe className="text-primary" /> {d.title}
+                    </h3>
+                    <ul className="list-disc pl-6 space-y-2 text-sm">
+                      {d.items.map((i) => <li key={i}>{i}</li>)}
+                    </ul>
+                  </div>
+                ))}
+              </div>
+
+              <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">Notre processus d'accompagnement</h2>
+              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-8">
+                {steps.map(([title, text], i) => (
+                  <div key={title} className="glass-card p-6 rounded-xl border-primary/20 text-center">
+                    <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 text-primary font-bold text-xl">{i + 1}</div>
+                    <h3 className="text-foreground font-bold mb-2">{title}</h3>
+                    <p className="text-xs text-muted-foreground">{text}</p>
+                  </div>
+                ))}
+              </div>
+
+              <div className="glass-card p-6 rounded-xl border-primary/20 my-8 text-sm">
+                <p className="m-0">
+                  SECUREFLOW intervient en qualité de tiers de confiance et de facilitateur. SECUREFLOW n'est ni assureur ni garant financier : chaque intervention est encadrée par les contrats conclus entre les parties.
                 </p>
               </div>
-
-              <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">
-                Pourquoi Investir en Afrique avec SECUREFLOW ?
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
-                <div className="glass-card p-6 rounded-xl border-amber-500/20">
-                  <h3 className="text-foreground font-bold text-lg mb-3 flex items-center gap-2">
-                    <Landmark className="text-amber-400 w-5 h-5" /> Connexions Gouvernementales
-                  </h3>
-                  <p className="text-sm">
-                    Relations directes avec les plus hautes autorités politiques de plusieurs pays africains pour faciliter vos projets d'investissement.
-                  </p>
-                </div>
-                <div className="glass-card p-6 rounded-xl border-purple-500/20">
-                  <h3 className="text-foreground font-bold text-lg mb-3 flex items-center gap-2">
-                    <FileCheck className="text-purple-400 w-5 h-5" /> Facilitation Administrative
-                  </h3>
-                  <p className="text-sm">
-                    Accompagnement complet dans les procédures administratives : licences, permis, autorisations et conformité réglementaire.
-                  </p>
-                </div>
-                <div className="glass-card p-6 rounded-xl border-blue-500/20">
-                  <h3 className="text-foreground font-bold text-lg mb-3 flex items-center gap-2">
-                    <ShieldCheck className="text-blue-400 w-5 h-5" /> Sécurisation Juridique
-                  </h3>
-                  <p className="text-sm">
-                    Protection légale et contractuelle de vos investissements avec des structures juridiques adaptées à chaque juridiction.
-                  </p>
-                </div>
-                <div className="glass-card p-6 rounded-xl border-green-500/20">
-                  <h3 className="text-foreground font-bold text-lg mb-3 flex items-center gap-2">
-                    <TrendingUp className="text-green-400 w-5 h-5" /> Protection Financière
-                  </h3>
-                  <p className="text-sm">
-                    Structuration financière sécurisée et mécanismes de protection du capital pour minimiser les risques d'investissement.
-                  </p>
-                </div>
-              </div>
-
-              <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">
-                Secteurs d'Investissement Prioritaires
-              </h2>
-              <p className="mb-8">SECUREFLOW accompagne les investisseurs dans les secteurs les plus dynamiques du continent africain :</p>
-
-              <div className="space-y-8 my-12">
-                <div className="glass-card p-8 rounded-2xl border-amber-500/20">
-                  <h3 className="text-foreground text-xl font-bold mb-4 flex items-center gap-3">
-                    <Globe className="text-amber-400" /> Mines & Ressources Naturelles
-                  </h3>
-                  <ul className="list-disc pl-6 space-y-2 text-sm">
-                    <li>Or, diamant, cobalt, lithium, manganèse et autres minerais stratégiques</li>
-                    <li>Partenariats avec les ministères des mines</li>
-                    <li>Accès aux concessions minières exclusives</li>
-                    <li>Due diligence et conformité internationale</li>
-                  </ul>
-                </div>
-
-                <div className="glass-card p-8 rounded-2xl border-yellow-500/20">
-                  <h3 className="text-foreground text-xl font-bold mb-4 flex items-center gap-3">
-                    <BarChart3 className="text-yellow-400" /> Énergie & Infrastructure
-                  </h3>
-                  <ul className="list-disc pl-6 space-y-2 text-sm">
-                    <li>Projets d'électrification et énergies renouvelables</li>
-                    <li>Partenariats Public-Privé (PPP) avec les gouvernements</li>
-                    <li>Routes, ports, aéroports et infrastructures critiques</li>
-                    <li>Accès aux appels d'offres gouvernementaux</li>
-                  </ul>
-                </div>
-
-                <div className="glass-card p-8 rounded-2xl border-green-500/20">
-                  <h3 className="text-foreground text-xl font-bold mb-4 flex items-center gap-3">
-                    <Handshake className="text-green-400" /> Agriculture & Agro-industrie
-                  </h3>
-                  <ul className="list-disc pl-6 space-y-2 text-sm">
-                    <li>Terres agricoles et projets agro-industriels</li>
-                    <li>Chaînes de valeur agricoles intégrées</li>
-                    <li>Export de produits agricoles vers les marchés internationaux</li>
-                    <li>Transformation locale et création de valeur ajoutée</li>
-                  </ul>
-                </div>
-
-                <div className="glass-card p-8 rounded-2xl border-purple-500/20">
-                  <h3 className="text-foreground text-xl font-bold mb-4 flex items-center gap-3">
-                    <Landmark className="text-purple-400" /> Immobilier & Développement Urbain
-                  </h3>
-                  <ul className="list-disc pl-6 space-y-2 text-sm">
-                    <li>Projets immobiliers dans les capitales africaines</li>
-                    <li>Zones économiques spéciales et parcs industriels</li>
-                    <li>Développement hôtelier et touristique</li>
-                    <li>Centres commerciaux et espaces de bureaux premium</li>
-                  </ul>
-                </div>
-              </div>
-
-              <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">
-                Notre Processus d'Accompagnement
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-4 gap-4 my-12">
-                <div className="glass-card p-6 rounded-xl border-primary/20 text-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 text-primary font-bold text-xl">1</div>
-                  <h3 className="text-foreground font-bold mb-2">Analyse</h3>
-                  <p className="text-xs text-muted-foreground">Évaluation de votre projet et identification des opportunités adaptées</p>
-                </div>
-                <div className="glass-card p-6 rounded-xl border-primary/20 text-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 text-primary font-bold text-xl">2</div>
-                  <h3 className="text-foreground font-bold mb-2">Connexion</h3>
-                  <p className="text-xs text-muted-foreground">Introduction aux partenaires gouvernementaux et locaux clés</p>
-                </div>
-                <div className="glass-card p-6 rounded-xl border-primary/20 text-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 text-primary font-bold text-xl">3</div>
-                  <h3 className="text-foreground font-bold mb-2">Structuration</h3>
-                  <p className="text-xs text-muted-foreground">Montage juridique et financier sécurisé pour votre investissement</p>
-                </div>
-                <div className="glass-card p-6 rounded-xl border-primary/20 text-center">
-                  <div className="h-12 w-12 rounded-full bg-primary/20 flex items-center justify-center mx-auto mb-4 text-primary font-bold text-xl">4</div>
-                  <h3 className="text-foreground font-bold mb-2">Exécution</h3>
-                  <p className="text-xs text-muted-foreground">Accompagnement opérationnel et supervision de votre projet</p>
-                </div>
-              </div>
-
-              <div className="glass-card p-8 rounded-2xl border-primary/20 my-12 bg-gradient-to-r from-amber-500/10 to-transparent">
-                <h2 className="text-foreground text-2xl font-bold mb-6 flex items-center gap-2">
-                  <ShieldCheck className="text-primary" /> Pays Couverts
-                </h2>
-                <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Bénin</span>
-                    <p className="text-xs text-muted-foreground">Afrique de l'Ouest</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Côte d'Ivoire</span>
-                    <p className="text-xs text-muted-foreground">Afrique de l'Ouest</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Sénégal</span>
-                    <p className="text-xs text-muted-foreground">Afrique de l'Ouest</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Togo</span>
-                    <p className="text-xs text-muted-foreground">Afrique de l'Ouest</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Ghana</span>
-                    <p className="text-xs text-muted-foreground">Afrique de l'Ouest</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Cameroun</span>
-                    <p className="text-xs text-muted-foreground">Afrique Centrale</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">RDC</span>
-                    <p className="text-xs text-muted-foreground">Afrique Centrale</p>
-                  </div>
-                  <div className="text-center p-4">
-                    <span className="text-foreground font-medium text-sm block">Et plus...</span>
-                    <p className="text-xs text-muted-foreground">Sur demande</p>
-                  </div>
-                </div>
-              </div>
-
-              <blockquote className="text-xl text-foreground italic bg-amber-500/5 p-6 rounded-xl border-l-4 border-amber-500">
-                "Investir en Afrique avec SECUREFLOW, c'est bénéficier d'un accès privilégié aux plus hautes sphères décisionnelles et d'une protection totale de vos capitaux. Notre réseau unique de partenariats gouvernementaux transforme les opportunités en succès concrets."
-              </blockquote>
             </div>
 
             <div className="pt-12 border-t border-white/10 flex flex-col items-center gap-6">
-              <h3 className="text-2xl font-display font-bold text-foreground text-center">
-                Prêt à investir en Afrique ?
-              </h3>
+              <h3 className="text-2xl font-display font-bold text-foreground text-center">Un projet à financer ou à sécuriser ?</h3>
               <div className="flex flex-wrap justify-center gap-4">
-                <Button size="lg" className="rounded-full px-8 h-14 text-lg bg-gradient-to-r from-amber-500 to-amber-600 hover:from-amber-600 hover:to-amber-700" asChild>
-                  <Link href="/contact">Devenir partenaire</Link>
+                <Button size="lg" className="rounded-full px-8 h-14 text-lg" asChild>
+                  <Link href="/contact">Parler à SECUREFLOW</Link>
                 </Button>
-                <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-lg border-amber-500/30 hover:bg-amber-500/10" asChild>
-                  <Link href="/sectors">Voir nos secteurs</Link>
+                <Button size="lg" variant="outline" className="rounded-full px-8 h-14 text-lg" asChild>
+                  <Link href="/group">Découvrir le groupe</Link>
                 </Button>
               </div>
             </div>

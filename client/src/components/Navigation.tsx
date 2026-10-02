@@ -28,6 +28,7 @@ export function Navigation() {
     { href: "/about", label: t("nav.about") },
     { href: "/services", label: t("nav.services") },
     { href: "/sectors", label: t("nav.sectors") },
+    { href: "/group", label: t("nav.group") },
     { href: "/founder", label: t("nav.founder") },
     { href: "/blog", label: t("nav.blog") },
     { href: "/contact", label: t("nav.contact") },

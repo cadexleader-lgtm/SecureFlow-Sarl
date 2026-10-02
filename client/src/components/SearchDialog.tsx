@@ -216,19 +216,51 @@ const searchData: SearchItem[] = [
   },
   {
     title: "Bénin - Cotonou",
-    description: "Notre siège au Port de Cotonou, Bénin",
+    description: "Notre siège à Cotonou, Bénin",
     href: "/contact",
     category: "Localisation",
     keywords: ["bénin", "cotonou", "port", "afrique", "siège", "bureau"],
     icon: Globe
   },
   {
-    title: "Dubaï - UAE",
-    description: "Notre bureau régional aux Émirats Arabes Unis",
-    href: "/contact",
+    title: "Tanzanie - SecureFlow Tanzania Ltd",
+    description: "La présence du groupe SecureFlow en Tanzanie",
+    href: "/group",
     category: "Localisation",
-    keywords: ["dubaï", "dubai", "uae", "émirats", "moyen-orient", "bureau"],
+    keywords: ["tanzanie", "tanzania", "afrique de l'est", "east africa", "filiale"],
     icon: Globe
+  },
+  {
+    title: "Le Groupe SecureFlow",
+    description: "SecureFlow SARL, SecureFlow Tanzania Ltd, Terraminex, Fortriche Interprise",
+    href: "/group",
+    category: "Pages",
+    keywords: ["groupe", "group", "sociétés", "filiales", "fortriche", "secureflow tanzania"],
+    icon: Building2
+  },
+  {
+    title: "Terraminex - Pôle minier",
+    description: "Trading, inspection et investissement dans l'or et les ressources minières",
+    href: "/group",
+    category: "Groupe",
+    keywords: ["terraminex", "mines", "or", "gold", "minerais", "extraction", "machines minières"],
+    icon: Building2
+  },
+  {
+    title: "Financement de projets & investissement",
+    description: "Structuration financière, mobilisation de fonds, prise de participations",
+    href: "/services",
+    category: "Services",
+    keywords: ["financement", "investissement", "fonds", "participations", "instruments bancaires", "assurance"],
+    icon: Briefcase
+  },
+  {
+    title: "Secteur Environnement & Recyclage",
+    description: "Collecte, transport et recyclage des déchets",
+    href: "/sectors",
+    category: "Secteurs",
+    keywords: ["environnement", "déchets", "recyclage", "ordures ménagères"],
+    icon: Building2
   }
 ];
 

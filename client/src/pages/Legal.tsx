@@ -48,6 +48,34 @@ export default function Legal() {
           variants={fadeInUp}
           className="space-y-12"
         >
+          <section className="glass-card p-8 rounded-2xl border-primary/20" data-testid="section-company-info">
+            <div className="flex items-start gap-4 mb-6">
+              <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                <ShieldCheck className="w-6 h-6 text-primary" />
+              </div>
+              <h2 className="text-2xl font-display font-bold text-foreground mt-2">{t("legal.companyInfo")}</h2>
+            </div>
+            <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm">
+              {[
+                [t("legal.companyName"), "SECUREFLOW (SecureFlow SARL)"],
+                [t("legal.legalForm"), "Société à Responsabilité Limitée (SARL)"],
+                [t("legal.capital"), "5 000 000 FCFA"],
+                [t("legal.registration"), "RCCM RB/COT/26 B 41799 · IFU 3202677480120"],
+                [t("legal.headquarters"), "Ilot 1480, Quartier Kouhounou, Cotonou, Bénin"],
+                [t("legal.director"), "Éric Brunnel QUENUM, Gérant"],
+              ].map(([label, value]) => (
+                <div key={label} className="p-4 bg-secondary dark:bg-white/5 rounded-xl">
+                  <dt className="text-xs uppercase tracking-wider text-muted-foreground mb-1">{label}</dt>
+                  <dd className="text-foreground font-medium">{value}</dd>
+                </div>
+              ))}
+            </dl>
+            <div className="mt-6 p-4 bg-secondary dark:bg-white/5 rounded-xl text-sm">
+              <h3 className="text-xs uppercase tracking-wider text-muted-foreground mb-2">{t("legal.activities")}</h3>
+              <p className="text-foreground/90 leading-relaxed">{t("legal.activitiesText")}</p>
+            </div>
+          </section>
+
           <section className="glass-card p-8 rounded-2xl border-primary/20">
             <div className="flex items-start gap-4 mb-6">
               <div className="w-12 h-12 bg-primary/10 rounded-xl flex items-center justify-center flex-shrink-0">

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/SectionHeading";
 import { SEO, seoConfig } from "@/components/SEO";
-import { ShieldCheck, Search, Ship, FileCheck, Landmark, BarChart3, ArrowRight } from "lucide-react";
+import { ShieldCheck, Search, Ship, FileCheck, Landmark, BarChart3, ArrowRight, TrendingUp, Globe2 } from "lucide-react";
 import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
@@ -11,6 +11,8 @@ import logistiqueImg from "@assets/stock_images/professional_cargo_i_20329aee.jp
 import securiteImg from "@assets/stock_images/secure_high_value_tr_1b60de34.jpg";
 import minesImg from "@assets/stock_images/mining_project_infra_8026ebfd.jpg";
 import risqueImg from "@assets/stock_images/modern_security_audi_4d6abb64.jpg";
+import financeImg from "@/assets/finance-partnership.jpg";
+import tradeImg from "@assets/stock_images/international_busine_34a5b756.jpg";
 
 export default function Services() {
   const { t } = useLanguage();
@@ -79,6 +81,32 @@ export default function Services() {
         t("services.risks.f2"),
         t("services.risks.f3"),
         t("services.risks.f4")
+      ]
+    },
+    {
+      id: "finance",
+      icon: TrendingUp,
+      image: financeImg,
+      title: t("services.finance.title"),
+      desc: t("services.finance.desc"),
+      features: [
+        t("services.finance.f1"),
+        t("services.finance.f2"),
+        t("services.finance.f3"),
+        t("services.finance.f4")
+      ]
+    },
+    {
+      id: "trade",
+      icon: Globe2,
+      image: tradeImg,
+      title: t("services.trade.title"),
+      desc: t("services.trade.desc"),
+      features: [
+        t("services.trade.f1"),
+        t("services.trade.f2"),
+        t("services.trade.f3"),
+        t("services.trade.f4")
       ]
     }
   ];

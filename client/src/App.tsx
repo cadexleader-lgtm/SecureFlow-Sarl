@@ -33,6 +33,7 @@ import Group from "@/pages/Group";
 import ServiceDetail from "@/pages/ServiceDetail";
 import Guides from "@/pages/Guides";
 import Guide from "@/pages/Guide";
+import International from "@/pages/International";
 import NotFound from "@/pages/not-found";
 
 // Admin : chargé à part, jamais téléchargé par les visiteurs du site public
@@ -66,6 +67,7 @@ function PublicRouter() {
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/sectors" component={Sectors} />
           <Route path="/group" component={Group} />
+          <Route path="/international" component={International} />
           <Route path="/guides" component={Guides} />
           <Route path="/guides/:slug" component={Guide} />
           <Route path="/blog" component={Blog} />

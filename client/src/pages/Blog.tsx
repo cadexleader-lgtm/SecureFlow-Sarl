@@ -9,7 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 import { STATIC_POSTS } from "@/lib/blog-posts";
-import { GUIDES } from "@/lib/guides";
+import { GUIDES, guideText } from "@/lib/guides";
 import { blogPath } from "@shared/blog-slugs";
 import blogHero from "@/assets/img/trade-security-hero.webp";
 
@@ -24,7 +24,7 @@ interface BlogArticle {
 }
 
 export default function Blog() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
 
   const posts = STATIC_POSTS;
 
@@ -63,12 +63,12 @@ export default function Blog() {
       <div className="container px-4 mx-auto relative z-10">
         <SectionHeading as="h1" title={t("blog.hero.title")} subtitle={t("blog.hero.subtitle")} />
         <div className="mb-12 rounded-3xl p-6 md:p-8 border border-primary/20 bg-primary/5">
-          <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-4">Guides pratiques</h2>
+          <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-4">{language === "en" ? "Practical guides" : "Guides pratiques"}</h2>
           <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {GUIDES.map((g) => (
               <li key={g.slug}>
-                <Link href={`~/guides/${g.slug}`} className="flex items-start gap-2 text-foreground hover:text-primary font-medium">
-                  <ArrowRight className="w-4 h-4 mt-1 text-primary shrink-0" />{g.title}
+                <Link href={`/guides/${g.slug}`} className="flex items-start gap-2 text-foreground hover:text-primary font-medium">
+                  <ArrowRight className="w-4 h-4 mt-1 text-primary shrink-0" />{guideText(g, language).title}
                 </Link>
               </li>
             ))}

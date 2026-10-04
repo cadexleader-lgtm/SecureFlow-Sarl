@@ -567,7 +567,7 @@ const translations: Record<string, string> = {
   "legal.activitiesText": "Import-export of food, agricultural, agro-pastoral and staple products; integrated maritime, port and air logistics; securing flows of goods, people, data and capital; energy, oil, gas and mineral resources; project finance and investment; mining extraction, security and transport; healthcare and pharmaceuticals; aviation and aeronautical services; international trade, commercial representation, advisory, audit, training and technical assistance; monetisation of bank instruments; trade flow insurance; agriculture, education, agricultural and mining machinery; waste collection, transport and recycling; medical equipment; e-commerce; building and public works.",
 
   // FAQ accueil (affichée + balisage FAQPage)
-  "home.h1": "SecureFlow — Securing international trade from Cotonou, Benin",
+  "home.h1": "SecureFlow — International trade and transaction security, worldwide",
   "home.faq.title": "Frequently asked questions",
   "home.faq.subtitle": "Everything about SecureFlow",
   "home.faq.q1": "What does SecureFlow do?",
@@ -584,6 +584,11 @@ const translations: Record<string, string> = {
   "home.faq.a6": "No. SecureFlow acts as a trusted third party and facilitator: we greatly reduce risk, but we are neither an insurer nor a financial guarantor. Every engagement is governed by a contract.",
   "home.faq.q7": "How can I contact SecureFlow?",
   "home.faq.a7": "By phone on +229 50 63 63 63, on WhatsApp on +229 50 36 36 36, by email at infosecureflowco@gmail.com or through the Contact page form. All requests are handled confidentially.",
+
+  "home.intl.badge": "International clients",
+  "home.intl.title": "Based in Europe, North America, the Middle East or Asia?",
+  "home.intl.text": "We verify, inspect and secure your operation on the ground, for you. Everything is handled remotely, in English or French.",
+  "home.intl.cta": "How it works",
 
   // Common
   "common.loading": "Loading...",

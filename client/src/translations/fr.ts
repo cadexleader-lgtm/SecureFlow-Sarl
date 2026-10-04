@@ -567,7 +567,7 @@ const translations: Record<string, string> = {
   "legal.activitiesText": "Import-export de produits alimentaires, agricoles, agropastoraux et vivriers ; logistique intégrée maritime, portuaire et aérienne ; sécurisation des flux de marchandises, de personnes, de données et de capitaux ; énergie, pétrole, gaz et ressources minières ; financement de projets et investissement ; extraction, sécurité et transport minier ; santé et produits pharmaceutiques ; aviation et services aéronautiques ; commerce international, représentation commerciale, conseil, audit, formation et assistance technique ; monétisation d'instruments bancaires ; assurance des flux commerciaux ; agriculture, éducation, machines agricoles et d'extraction minière ; collecte, transport et recyclage des déchets ; équipements de santé ; e-commerce ; bâtiment et travaux publics.",
 
   // FAQ accueil (affichée + balisage FAQPage)
-  "home.h1": "SecureFlow — Sécurisation du commerce international à Cotonou, Bénin",
+  "home.h1": "SecureFlow — Sécurisation du commerce international et des transactions, partout dans le monde",
   "home.faq.title": "Questions fréquentes",
   "home.faq.subtitle": "Tout savoir sur SecureFlow",
   "home.faq.q1": "Que fait SecureFlow ?",
@@ -584,6 +584,11 @@ const translations: Record<string, string> = {
   "home.faq.a6": "Non. SecureFlow intervient comme tiers de confiance et facilitateur : nous réduisons fortement les risques, mais nous ne sommes ni assureur ni garant financier. Chaque intervention est encadrée par un contrat.",
   "home.faq.q7": "Comment contacter SecureFlow ?",
   "home.faq.a7": "Par téléphone au +229 50 63 63 63, sur WhatsApp au +229 50 36 36 36, par email à infosecureflowco@gmail.com ou via le formulaire de la page Contact. Toutes les demandes sont traitées en toute confidentialité.",
+
+  "home.intl.badge": "Clients internationaux",
+  "home.intl.title": "Vous êtes en France, en Suisse, au Canada ou ailleurs ?",
+  "home.intl.text": "Nous vérifions, inspectons et sécurisons votre opération sur le terrain, pour vous. Tout le suivi se fait à distance, en français ou en anglais.",
+  "home.intl.cta": "Comment ça marche",
 
   // Common
   "common.loading": "Chargement...",

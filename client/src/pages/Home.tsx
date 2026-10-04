@@ -420,6 +420,23 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Clients internationaux */}
+      <section className="py-10 bg-background">
+        <div className="container px-4 mx-auto max-w-6xl">
+          <div className="rounded-3xl p-8 md:p-12 border border-primary/20 bg-gradient-to-br from-primary/10 to-transparent flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+            <Globe className="w-12 h-12 text-primary shrink-0" />
+            <div className="flex-grow space-y-2">
+              <div className="text-xs font-bold uppercase tracking-widest text-primary">{t("home.intl.badge")}</div>
+              <h2 className="text-xl md:text-3xl font-display font-semibold text-foreground">{t("home.intl.title")}</h2>
+              <p className="text-muted-foreground md:text-lg">{t("home.intl.text")}</p>
+            </div>
+            <Button size="lg" className="rounded-full px-8 shrink-0" asChild>
+              <Link href="/international">{t("home.intl.cta")} <ArrowRight className="ml-2 w-4 h-4" /></Link>
+            </Button>
+          </div>
+        </div>
+      </section>
+
       {/* Le Groupe */}
       <section className="py-16 relative overflow-hidden bg-background">
         <div className="container px-4 mx-auto max-w-6xl relative z-10">

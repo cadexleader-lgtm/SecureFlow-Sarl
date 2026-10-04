@@ -5,6 +5,7 @@ import verificationImg from "@/assets/img/verification-fournisseur-accord.webp";
 import inspectionImg from "@/assets/img/cargaison-securisee-remorqueur.webp";
 import fraudImg from "@/assets/img/transaction-securisee.webp";
 import cotonouImg from "@/assets/img/port-cotonou.webp";
+import { GUIDES_EN } from "./guides-en";
 
 export interface GuideSection {
   h2: string;
@@ -12,22 +13,28 @@ export interface GuideSection {
   list?: string[];
 }
 
-export interface Guide {
-  slug: string;
+export interface GuideText {
   title: string;
   metaTitle: string;
   description: string;
-  image: string;
   intro: string;
   sections: GuideSection[];
   faq: { q: string; a: string }[];
+}
+
+export interface Guide extends GuideText {
+  slug: string;
+  image: string;
   /** Service SecureFlow le plus proche (/services/<slug>). */
   service: string;
+  /** Version anglaise (/en/guides/<slug>). */
+  en: GuideText;
 }
 
 export const GUIDES: Guide[] = [
   {
     slug: "verifier-fournisseur-chinois",
+    en: GUIDES_EN["verifier-fournisseur-chinois"],
     title: "Comment vérifier un fournisseur chinois avant de payer",
     metaTitle: "Comment vérifier un fournisseur chinois avant de payer (guide)",
     description: "Licence d'entreprise, code de crédit social, compte bancaire, usine ou intermédiaire : les vérifications à faire avant de payer un fournisseur en Chine.",
@@ -79,6 +86,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "inspection-avant-expedition",
+    en: GUIDES_EN["inspection-avant-expedition"],
     title: "Inspection avant expédition : à quoi ça sert et comment ça se passe",
     metaTitle: "Inspection avant expédition : à quoi ça sert, comment ça marche",
     description: "Pourquoi faire inspecter sa marchandise avant expédition, ce qui est contrôlé, à quel moment la faire et comment lire le rapport d'inspection.",
@@ -124,6 +132,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "arnaque-fournisseur-import-signaux-alerte",
+    en: GUIDES_EN["arnaque-fournisseur-import-signaux-alerte"],
     title: "Arnaques à l'import : les signaux d'alerte à connaître",
     metaTitle: "Arnaque fournisseur à l'import : les signaux d'alerte",
     description: "Prix trop bas, paiement sur compte personnel, changement de RIB par email, pression sur les délais : comment repérer une arnaque fournisseur avant de payer.",
@@ -169,6 +178,7 @@ export const GUIDES: Guide[] = [
   },
   {
     slug: "importer-port-de-cotonou",
+    en: GUIDES_EN["importer-port-de-cotonou"],
     title: "Importer via le port de Cotonou : sécuriser sa marchandise de l'achat à la livraison",
     metaTitle: "Importer via le port de Cotonou en sécurité : le guide",
     description: "Documents, étapes, points de vigilance : comment sécuriser une importation par le port de Cotonou, de la commande au fournisseur jusqu'à la livraison finale.",
@@ -219,4 +229,9 @@ export const GUIDES: Guide[] = [
 
 export function guideBySlug(slug: string | undefined) {
   return GUIDES.find((g) => g.slug === slug);
+}
+
+/** Textes du guide dans la langue demandée. */
+export function guideText(guide: Guide, language: "fr" | "en"): GuideText {
+  return language === "en" ? guide.en : guide;
 }

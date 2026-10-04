@@ -52,7 +52,16 @@ export const organizationSchema = {
     addressCountry: "BJ",
   },
   geo: { "@type": "GeoCoordinates", latitude: 6.3654, longitude: 2.4183 },
-  areaServed: ["Bénin", "Afrique de l'Ouest", "Afrique", "International"],
+  // Clients partout dans le monde ; siège et équipes terrain en Afrique.
+  areaServed: [
+    { "@type": "Place", name: "Worldwide" },
+    { "@type": "Continent", name: "Africa" },
+    { "@type": "Continent", name: "Europe" },
+    { "@type": "Continent", name: "Asia" },
+    { "@type": "Place", name: "Middle East" },
+    { "@type": "Continent", name: "North America" },
+  ],
+  knowsLanguage: ["fr", "en"],
   contactPoint: [
     { "@type": "ContactPoint", contactType: "customer service", telephone: "+22950636363", availableLanguage: ["French", "English"] },
     { "@type": "ContactPoint", contactType: "customer service", telephone: "+22950363636", contactOption: "WhatsApp", availableLanguage: ["French", "English"] },
@@ -156,15 +165,11 @@ export function SEO({
       {keywords && <meta name="keywords" content={keywords} />}
       <meta name="robots" content={noindex ? "noindex, nofollow" : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1"} />
       <meta name="author" content="SecureFlow" />
-      <meta name="geo.region" content="BJ-LI" />
-      <meta name="geo.placename" content="Cotonou" />
-      <meta name="geo.position" content="6.3654;2.4183" />
-      <meta name="ICBM" content="6.3654, 2.4183" />
 
       <link rel="canonical" href={fullUrl} />
       {alternates && <link rel="alternate" hrefLang="fr" href={frUrl} />}
       {alternates && <link rel="alternate" hrefLang="en" href={enUrl} />}
-      {alternates && <link rel="alternate" hrefLang="x-default" href={frUrl} />}
+      {alternates && <link rel="alternate" hrefLang="x-default" href={enUrl} />}
 
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
@@ -192,14 +197,14 @@ export function SEO({
 // métier + lieu (Bénin, Cotonou, Afrique) + noms propres (SecureFlow, Terraminex, fondateur).
 export const seoConfig = {
   home: {
-    title: "SecureFlow | Sécurisation du commerce international au Bénin",
-    description: "SecureFlow, à Cotonou (Bénin) : vérification de fournisseurs, inspection sur site, sécurisation des paiements et supervision logistique du port à la livraison.",
-    keywords: "SecureFlow, sécurisation commerce international, vérification fournisseur, due diligence Afrique, inspection marchandises Cotonou, supervision logistique Bénin, import export Bénin, financement de projets Afrique, Terraminex",
+    title: "SecureFlow | Sécurisation du commerce international et des transactions",
+    description: "Où que vous soyez, SecureFlow sécurise vos opérations internationales : vérification de fournisseurs, inspection sur site, paiements sécurisés, supervision logistique.",
+    keywords: "SecureFlow, sécurisation commerce international, sécuriser transaction internationale, due diligence fournisseur, entreprise de sécurisation des affaires, vérification fournisseur, due diligence Afrique, inspection marchandises Cotonou, supervision logistique Bénin, import export Bénin, financement de projets Afrique, Terraminex",
     canonical: "/",
   },
   about: {
     title: "Qui sommes-nous : tiers de confiance du commerce international",
-    description: "SecureFlow SARL, société béninoise basée à Cotonou, sécurise les flux de marchandises, de capitaux, de personnes et de données pour les entreprises, traders et investisseurs.",
+    description: "SecureFlow sécurise les flux de marchandises, de capitaux, de personnes et de données pour les entreprises, traders et investisseurs du monde entier. Siège à Cotonou.",
     keywords: "SecureFlow Bénin, tiers de confiance commerce international, société sécurisation Cotonou, gestion des risques Afrique",
     canonical: "/about",
     breadcrumb: "Qui sommes-nous",
@@ -240,8 +245,8 @@ export const seoConfig = {
     breadcrumb: "Blog",
   },
   contact: {
-    title: "Contact : SecureFlow à Cotonou, Bénin",
-    description: "Contactez SecureFlow à Cotonou : +229 50 63 63 63 (appels), +229 50 36 36 36 (WhatsApp). Parlez-nous de votre opération à sécuriser, en toute confidentialité.",
+    title: "Contact : parlez de votre opération à SecureFlow",
+    description: "Où que vous soyez, contactez SecureFlow : +229 50 63 63 63 (appels), +229 50 36 36 36 (WhatsApp), formulaire en ligne. Réponse confidentielle, en français ou en anglais.",
     keywords: "contact SecureFlow, SecureFlow Cotonou, SecureFlow WhatsApp, sécuriser une opération",
     canonical: "/contact",
     breadcrumb: "Contact",
@@ -258,12 +263,12 @@ export const seoConfig = {
 /** Métadonnées des pages en anglais (/en/...), indexées par chemin français. */
 export const SEO_EN: Record<string, { title: string; description: string; breadcrumb?: string }> = {
   "/": {
-    title: "SecureFlow | Securing international trade from Benin",
-    description: "SecureFlow, Cotonou (Benin): supplier verification, on-site inspection, secure payments and logistics supervision from port to final delivery.",
+    title: "SecureFlow | International trade security and transaction protection",
+    description: "Wherever you are, SecureFlow secures your cross-border deals: supplier verification and due diligence, on-site inspection, secure payments, logistics supervision.",
   },
   "/about": {
     title: "About us: a trusted third party for international trade",
-    description: "SecureFlow SARL, a Benin-based company in Cotonou, secures flows of goods, capital, people and data for companies, traders and investors.",
+    description: "SecureFlow secures flows of goods, capital, people and data for companies, traders and investors worldwide, with headquarters and field teams in Africa.",
     breadcrumb: "About us",
   },
   "/founder": {
@@ -292,8 +297,8 @@ export const SEO_EN: Record<string, { title: string; description: string; breadc
     breadcrumb: "Blog",
   },
   "/contact": {
-    title: "Contact SecureFlow in Cotonou, Benin",
-    description: "Contact SecureFlow in Cotonou: +229 50 63 63 63 (calls), +229 50 36 36 36 (WhatsApp). Tell us about the operation you need to secure, in confidence.",
+    title: "Contact SecureFlow: discuss your operation",
+    description: "Wherever you are, reach SecureFlow on +229 50 63 63 63 (calls), +229 50 36 36 36 (WhatsApp) or via the online form. Confidential replies in English or French.",
     breadcrumb: "Contact",
   },
   "/legal": {

@@ -5,7 +5,7 @@ import { Button } from "@/components/ui/button";
 import { SEO, SITE_URL } from "@/components/SEO";
 import { useLanguage, useHomeHref } from "@/contexts/LanguageContext";
 import { SERVICES, serviceBySlug } from "@/lib/services-content";
-import { GUIDES } from "@/lib/guides";
+import { GUIDES, guideText } from "@/lib/guides";
 import NotFound from "@/pages/not-found";
 
 const LABELS = {
@@ -152,10 +152,10 @@ export default function ServiceDetail() {
 
         {GUIDES.some((g) => g.service === service.slug) && (
           <section className="mb-14">
-            <h2 className="text-xl font-display font-bold text-foreground mb-4">{language === "en" ? "Practical guides (in French)" : "Guides pratiques"}</h2>
+            <h2 className="text-xl font-display font-bold text-foreground mb-4">{language === "en" ? "Practical guides" : "Guides pratiques"}</h2>
             <ul className="space-y-2">
               {GUIDES.filter((g) => g.service === service.slug).map((g) => (
-                <li key={g.slug}><Link href={`~/guides/${g.slug}`} className="text-primary hover:underline">{g.title}</Link></li>
+                <li key={g.slug}><Link href={`/guides/${g.slug}`} className="text-primary hover:underline">{guideText(g, language).title}</Link></li>
               ))}
             </ul>
           </section>

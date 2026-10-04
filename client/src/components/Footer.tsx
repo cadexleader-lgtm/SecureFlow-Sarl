@@ -1,5 +1,5 @@
 import { Link } from "wouter";
-import { Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
+import { Mail, MapPin, Phone, Linkedin } from "lucide-react";
 import logo from "@/assets/img/secureflow-logo.webp";
 import { useLanguage, useHomeHref } from "@/contexts/LanguageContext";
 
@@ -8,7 +8,7 @@ export function Footer() {
   const homeHref = useHomeHref();
 
   return (
-    <footer className="bg-[#0a0a0f] border-t border-white/10 pt-10 pb-6 relative overflow-hidden">
+    <footer className="bg-[#0a0a0f] border-t border-white/10 pt-10 pb-20 md:pb-6 relative overflow-hidden">
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_50%_0%,rgba(var(--primary-rgb),0.05),transparent_70%)]"></div>
       <div className="container mx-auto px-4 md:px-6 relative z-10">
         <div className="mb-6 pb-4 border-b border-white/10 flex flex-wrap justify-center items-center gap-4 text-xs text-gray-400">
@@ -31,14 +31,8 @@ export function Footer() {
               {t("footer.description")}
             </p>
             <div className="flex gap-3">
-              <a href="https://www.linkedin.com/in/eric-brunnel-quenum-8b99703a4" target="_blank" rel="noopener noreferrer" className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all" data-testid="link-footer-linkedin">
+              <a href="https://www.linkedin.com/in/eric-brunnel-quenum-8b99703a4" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn d'Éric Brunnel QUENUM" className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all" data-testid="link-footer-linkedin">
                 <Linkedin className="w-4 h-4" />
-              </a>
-              <a href="#" className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all" data-testid="link-footer-twitter">
-                <Twitter className="w-4 h-4" />
-              </a>
-              <a href="#" className="h-8 w-8 rounded-full bg-white/5 flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 transition-all" data-testid="link-footer-facebook">
-                <Facebook className="w-4 h-4" />
               </a>
             </div>
           </div>

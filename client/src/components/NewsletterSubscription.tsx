@@ -144,7 +144,7 @@ export function FloatingNewsletterBell() {
     <>
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className="fixed bottom-6 left-6 z-50 h-14 w-14 rounded-full bg-primary text-primary-foreground shadow-2xl shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform"
+        className="fixed bottom-4 left-4 md:bottom-6 md:left-6 z-50 h-11 w-11 md:h-14 md:w-14 rounded-full bg-primary text-primary-foreground shadow-2xl shadow-primary/30 flex items-center justify-center hover:scale-110 transition-transform"
         data-testid="button-floating-newsletter"
       >
         <Bell className="w-6 h-6" />
@@ -152,7 +152,7 @@ export function FloatingNewsletterBell() {
       </button>
 
       {isOpen && (
-        <div className="fixed bottom-24 left-6 z-50 w-80 glass-card p-6 rounded-2xl border border-white/10 shadow-2xl animate-in slide-in-from-bottom-5">
+        <div className="fixed bottom-20 left-4 right-4 md:right-auto md:bottom-24 md:left-6 z-50 md:w-80 glass-card p-6 rounded-2xl border border-white/10 shadow-2xl animate-in slide-in-from-bottom-5">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-3">
               <Bell className="w-6 h-6 text-primary" />

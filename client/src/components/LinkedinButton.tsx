@@ -8,7 +8,7 @@ export function LinkedinButton() {
       href={linkedinUrl}
       target="_blank"
       rel="noopener noreferrer"
-      className="fixed bottom-24 right-6 z-50 bg-[#0077B5] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 flex items-center justify-center group"
+      className="fixed bottom-24 right-6 z-50 bg-[#0077B5] text-white p-4 rounded-full shadow-lg hover:scale-110 transition-transform duration-300 hidden md:flex items-center justify-center group"
       aria-label="Suivez-nous sur LinkedIn"
     >
       <Linkedin className="w-6 h-6 fill-current" />

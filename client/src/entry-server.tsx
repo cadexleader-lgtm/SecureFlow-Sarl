@@ -5,7 +5,7 @@ import { renderToPipeableStream } from "react-dom/server";
 import { Writable } from "stream";
 import App from "./App";
 
-export function render(url: string): Promise<{ html: string; head: string }> {
+export function render(url: string): Promise<{ html: string; head: string; htmlAttrs: string }> {
   const helmetContext: { helmet?: Record<string, { toString(): string }> } = {};
   return new Promise((resolve, reject) => {
     let html = "";
@@ -17,7 +17,7 @@ export function render(url: string): Promise<{ html: string; head: string }> {
       final(cb) {
         const h = helmetContext.helmet;
         const head = h ? ["title", "meta", "link", "script"].map((k) => h[k]?.toString() ?? "").join("\n    ") : "";
-        resolve({ html, head });
+        resolve({ html, head, htmlAttrs: h?.htmlAttributes?.toString() ?? "" });
         cb();
       },
     });

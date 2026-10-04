@@ -21,7 +21,8 @@ const fadeInUp = {
 };
 
 export default function Legal() {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
+  const en = language === "en";
 
   return (
     <div className="min-h-screen pt-24 pb-16">
@@ -58,11 +59,11 @@ export default function Legal() {
             <dl className="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-4 text-sm">
               {[
                 [t("legal.companyName"), "SECUREFLOW (SecureFlow SARL)"],
-                [t("legal.legalForm"), "Société à Responsabilité Limitée (SARL)"],
+                [t("legal.legalForm"), en ? "Limited liability company (SARL)" : "Société à Responsabilité Limitée (SARL)"],
                 [t("legal.capital"), "5 000 000 FCFA"],
                 [t("legal.registration"), "RCCM RB/COT/26 B 41799 · IFU 3202677480120"],
-                [t("legal.headquarters"), "Ilot 1480, Quartier Kouhounou, Cotonou, Bénin"],
-                [t("legal.director"), "Éric Brunnel QUENUM, Gérant"],
+                [t("legal.headquarters"), en ? "Ilot 1480, Kouhounou district, Cotonou, Benin" : "Ilot 1480, Quartier Kouhounou, Cotonou, Bénin"],
+                [t("legal.director"), en ? "Éric Brunnel QUENUM, Managing Director" : "Éric Brunnel QUENUM, Gérant"],
               ].map(([label, value]) => (
                 <div key={label} className="p-4 bg-secondary dark:bg-white/5 rounded-xl">
                   <dt className="text-xs uppercase tracking-wider text-muted-foreground mb-1">{label}</dt>

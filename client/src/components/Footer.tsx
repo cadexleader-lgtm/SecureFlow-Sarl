@@ -1,10 +1,11 @@
 import { Link } from "wouter";
 import { Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
 import logo from "@/assets/img/secureflow-logo.webp";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage, useHomeHref } from "@/contexts/LanguageContext";
 
 export function Footer() {
   const { t } = useLanguage();
+  const homeHref = useHomeHref();
 
   return (
     <footer className="bg-[#0a0a0f] border-t border-white/10 pt-10 pb-6 relative overflow-hidden">
@@ -23,7 +24,7 @@ export function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
-            <Link href="/" className="flex items-center cursor-pointer group" data-testid="link-footer-logo">
+            <Link href={homeHref} className="flex items-center cursor-pointer group" data-testid="link-footer-logo">
               <img loading="lazy" decoding="async" src={logo} alt="SECUREFLOW" className="h-12 w-auto transition-transform group-hover:scale-105 rounded-lg" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed" data-testid="text-footer-description">

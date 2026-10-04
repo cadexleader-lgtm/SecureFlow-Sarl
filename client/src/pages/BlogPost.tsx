@@ -108,7 +108,7 @@ export default function BlogPost() {
 function BlogPostSEO({ id }: { id?: string }) {
   const { t } = useLanguage();
   const post = id ? staticPost(id) : undefined;
-  if (!post) return <SEO title="Article introuvable" description="Cet article n'existe pas ou a été déplacé." canonical="/blog" noindex />;
+  if (!post) return <SEO title="Article introuvable" description="Cet article n'existe pas ou a été déplacé." canonical="/blog" noindex alternates={false} />;
   const title = t(post.titleKey);
   const description = t(post.excerptKey);
   const url = `${SITE_URL}${blogPath(post.id)}`;
@@ -120,6 +120,7 @@ function BlogPostSEO({ id }: { id?: string }) {
       ogImage={post.image}
       ogType="article"
       breadcrumb={title}
+      alternates={false}
       structuredData={{
         "@type": "Article",
         "@id": `${url}#article`,

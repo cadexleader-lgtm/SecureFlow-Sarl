@@ -3,7 +3,7 @@ import { Link, useParams } from "wouter";
 import { ArrowRight, CheckCircle2, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { SEO, SITE_URL } from "@/components/SEO";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage, useHomeHref } from "@/contexts/LanguageContext";
 import { SERVICES, serviceBySlug } from "@/lib/services-content";
 import NotFound from "@/pages/not-found";
 
@@ -38,6 +38,7 @@ const LABELS = {
 
 export default function ServiceDetail() {
   const { language } = useLanguage();
+  const homeHref = useHomeHref();
   const service = serviceBySlug(useParams().slug);
   if (!service) return <NotFound />;
   const c = service[language];
@@ -72,7 +73,7 @@ export default function ServiceDetail() {
       />
       <div className="container px-4 mx-auto max-w-5xl">
         <nav aria-label="Fil d'Ariane" className="text-sm text-muted-foreground mb-6">
-          <Link href="/" className="hover:text-primary">SecureFlow</Link> <span aria-hidden>/</span>{" "}
+          <Link href={homeHref} className="hover:text-primary">SecureFlow</Link> <span aria-hidden>/</span>{" "}
           <Link href="/services" className="hover:text-primary">{L.services}</Link> <span aria-hidden>/</span>{" "}
           <span className="text-foreground">{c.name}</span>
         </nav>

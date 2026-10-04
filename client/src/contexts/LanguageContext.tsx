@@ -1,60 +1,57 @@
-import { createContext, useContext, useState, useEffect, ReactNode } from "react";
-// Le français est la langue par défaut : chargé immédiatement pour que la première
-// page affichée (et le HTML prérendu lu par les moteurs de recherche) contienne
-// le vrai texte, jamais les clés de traduction.
+import { createContext, useContext, useEffect, ReactNode } from "react";
+import { useLocation } from "wouter";
+// Les deux langues sont chargées d'emblée : le HTML prérendu de chaque URL
+// (/... en français, /en/... en anglais) doit contenir le vrai texte.
 import fr from "../translations/fr";
+import en from "../translations/en";
 
-type Language = "fr" | "en";
+export type Language = "fr" | "en";
 
 interface LanguageContextType {
   language: Language;
   setLanguage: (lang: Language) => void;
   t: (key: string) => string;
+  /** Préfixe d'URL de la langue courante ("" ou "/en"). */
+  prefix: string;
 }
 
 const LanguageContext = createContext<LanguageContextType | undefined>(undefined);
-const STORAGE_KEY = "secureflow-language";
+const DICTS: Record<Language, Record<string, string>> = { fr, en };
 
-function readSavedLanguage(): Language {
-  if (typeof window === "undefined") return "fr";
-  try {
-    return window.localStorage.getItem(STORAGE_KEY) === "en" ? "en" : "fr";
-  } catch {
-    return "fr";
-  }
+/** La langue est portée par l'URL : /en/... = anglais, tout le reste = français. */
+export function languageFromPath(path: string): Language {
+  return path === "/en" || path.startsWith("/en/") ? "en" : "fr";
 }
 
-export function LanguageProvider({ children }: { children: ReactNode }) {
-  const [language, setLanguageState] = useState<Language>(readSavedLanguage);
-  const [translations, setTranslations] = useState<Record<string, string>>(fr);
+/** Même page dans l'autre langue (ex. /services ⇄ /en/services). */
+export function switchLanguagePath(path: string, target: Language): string {
+  const base = path.replace(/^\/en(?=\/|$)/, "") || "/";
+  if (target === "fr") return base;
+  return base === "/" ? "/en" : `/en${base}`;
+}
+
+export function LanguageProvider({ language, children }: { language: Language; children: ReactNode }) {
+  const [location, navigate] = useLocation();
 
   useEffect(() => {
-    try {
-      window.localStorage.setItem(STORAGE_KEY, language);
-    } catch {
-      /* stockage indisponible : on garde la langue en mémoire */
-    }
     document.documentElement.lang = language;
-    if (language === "fr") {
-      setTranslations(fr);
-      return;
-    }
-    let cancelled = false;
-    import("../translations/en").then((module) => {
-      if (!cancelled) setTranslations(module.default);
-    });
-    return () => {
-      cancelled = true;
-    };
   }, [language]);
 
-  const t = (key: string): string => translations[key] || fr[key] || key;
+  const t = (key: string): string => DICTS[language][key] || fr[key] || key;
+  const setLanguage = (lang: Language) => {
+    if (lang !== language) navigate(switchLanguagePath(location, lang));
+  };
 
   return (
-    <LanguageContext.Provider value={{ language, setLanguage: setLanguageState, t }}>
+    <LanguageContext.Provider value={{ language, setLanguage, t, prefix: language === "en" ? "/en" : "" }}>
       {children}
     </LanguageContext.Provider>
   );
+}
+
+/** Lien vers l'accueil de la langue courante ("/" ou "/en", sans barre finale). */
+export function useHomeHref() {
+  return useLanguage().language === "en" ? "~/en" : "/";
 }
 
 export function useLanguage() {

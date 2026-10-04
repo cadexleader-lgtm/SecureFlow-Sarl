@@ -8,7 +8,7 @@ import { useEffect, lazy, Suspense } from "react";
 
 // Components
 import { Navigation } from "@/components/Navigation";
-import { LanguageProvider } from "@/contexts/LanguageContext";
+import { LanguageProvider, languageFromPath } from "@/contexts/LanguageContext";
 import { Footer } from "@/components/Footer";
 import { WhatsAppButton } from "@/components/WhatsAppButton";
 import { LinkedinButton } from "@/components/LinkedinButton";
@@ -117,19 +117,34 @@ function App({ ssrPath, helmetContext }: AppProps = {}) {
     <MotionConfig reducedMotion="always">
       <HelmetProvider context={helmetContext}>
         <QueryClientProvider client={queryClient}>
-          <LanguageProvider>
-            <ThemeProvider>
-              <TooltipProvider>
-                <Toaster />
-                <WouterRouter ssrPath={ssrPath}>
-                  <Router />
-                </WouterRouter>
-              </TooltipProvider>
-            </ThemeProvider>
-          </LanguageProvider>
+          <WouterRouter ssrPath={ssrPath}>
+            <LocalizedApp />
+          </WouterRouter>
         </QueryClientProvider>
       </HelmetProvider>
     </MotionConfig>
+  );
+}
+
+/** La langue vient de l'URL : sous /en, toutes les routes et tous les liens sont préfixés. */
+function LocalizedApp() {
+  const [location] = useLocation();
+  const language = languageFromPath(location);
+  return (
+    <LanguageProvider language={language}>
+      <ThemeProvider>
+        <TooltipProvider>
+          <Toaster />
+          {language === "en" ? (
+            <WouterRouter base="/en">
+              <Router />
+            </WouterRouter>
+          ) : (
+            <Router />
+          )}
+        </TooltipProvider>
+      </ThemeProvider>
+    </LanguageProvider>
   );
 }
 

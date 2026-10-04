@@ -6,7 +6,7 @@ import logo from "@/assets/img/secureflow-logo.webp";
 import { SearchDialog } from "./SearchDialog";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage, useHomeHref } from "@/contexts/LanguageContext";
 
 export function Navigation() {
   const [location] = useLocation();
@@ -14,6 +14,8 @@ export function Navigation() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const [isSearchOpen, setIsSearchOpen] = useState(false);
   const { t } = useLanguage();
+  const homeHref = useHomeHref();
+  const isActive = (href: string) => location === (href === "~/en" ? "/" : href);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -24,7 +26,7 @@ export function Navigation() {
   }, []);
 
   const links = [
-    { href: "/", label: t("nav.home") },
+    { href: homeHref, label: t("nav.home") },
     { href: "/about", label: t("nav.about") },
     { href: "/services", label: t("nav.services") },
     { href: "/sectors", label: t("nav.sectors") },
@@ -45,7 +47,7 @@ export function Navigation() {
     >
       <div className="container mx-auto px-5 md:px-8 max-w-7xl">
         <div className="flex items-center gap-4">
-          <Link href="/" className="flex items-center group cursor-pointer shrink-0">
+          <Link href={homeHref} className="flex items-center group cursor-pointer shrink-0">
             <div className={cn(
               "relative overflow-hidden transition-all duration-300 flex items-center justify-center rounded-xl",
               isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
@@ -67,7 +69,7 @@ export function Navigation() {
                   href={link.href}
                   className={cn(
                     "text-[11px] font-semibold transition-colors px-3.5 py-2 rounded-full whitespace-nowrap",
-                    location === link.href 
+                    isActive(link.href) 
                       ? "text-primary-foreground bg-primary shadow-sm" 
                       : "text-muted-foreground hover:text-foreground hover:bg-secondary dark:hover:bg-white/10"
                   )}
@@ -127,7 +129,7 @@ export function Navigation() {
               href={link.href}
               className={cn(
                 "text-base font-semibold p-3 rounded-xl hover:bg-secondary",
-                location === link.href ? "text-primary bg-secondary" : "text-muted-foreground"
+                isActive(link.href) ? "text-primary bg-secondary" : "text-muted-foreground"
               )}
               onClick={() => setIsMobileMenuOpen(false)}
             >

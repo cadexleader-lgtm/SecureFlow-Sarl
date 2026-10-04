@@ -316,7 +316,7 @@ export default function Home() {
                 <Link href="/services">{t("home.mission.cta1")}</Link>
               </Button>
               <Button size="lg" variant="outline" className="rounded-full px-8 md:px-10 h-12 md:h-14 text-base md:text-lg border-white/10 hover:bg-white/5 w-full sm:w-auto" asChild>
-                <Link href="/blog/pourquoi-securiser-commerce-international">{t("home.mission.cta2")}</Link>
+                <Link href="~/blog/pourquoi-securiser-commerce-international">{t("home.mission.cta2")}</Link>
               </Button>
             </div>
             </motion.div>

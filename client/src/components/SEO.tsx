@@ -1,4 +1,5 @@
 import { Helmet } from "react-helmet-async";
+import { useLanguage } from "@/contexts/LanguageContext";
 
 interface SEOProps {
   title: string;
@@ -14,6 +15,8 @@ interface SEOProps {
   /** Niveau intermédiaire du fil d'Ariane (ex. Services pour une page service). */
   parentCrumb?: { name: string; path: string };
   noindex?: boolean;
+  /** false = page disponible en français uniquement (articles du blog) : pas de hreflang, canonique FR. */
+  alternates?: boolean;
 }
 
 export const SITE_NAME = "SecureFlow";
@@ -103,14 +106,27 @@ export function SEO({
   breadcrumb,
   parentCrumb,
   noindex,
+  alternates = true,
 }: SEOProps) {
-  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
+  const { language } = useLanguage();
   const path = canonical && canonical !== "/" ? canonical : "";
-  const fullUrl = `${SITE_URL}${path || "/"}`;
+  // Version anglaise : métadonnées traduites (sauf si la page fournit déjà ses textes EN)
+  const en = language === "en" && alternates ? SEO_EN[path || "/"] : undefined;
+  if (en) {
+    title = en.title;
+    description = en.description;
+    breadcrumb = en.breadcrumb ?? en.title;
+  }
+  const isEn = language === "en" && alternates;
+  const frUrl = `${SITE_URL}${path || "/"}`;
+  const enUrl = `${SITE_URL}/en${path}`;
+  const fullUrl = isEn ? enUrl : frUrl;
+  const local = (p: string) => `${SITE_URL}${isEn ? (p === "/" ? "/en" : `/en${p}`) : p}`;
+  const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
   const fullImage = ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;
 
-  const crumbs: object[] = [{ "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` }];
-  if (parentCrumb) crumbs.push({ "@type": "ListItem", position: 2, name: parentCrumb.name, item: `${SITE_URL}${parentCrumb.path}` });
+  const crumbs: object[] = [{ "@type": "ListItem", position: 1, name: isEn ? "Home" : "Accueil", item: local("/") }];
+  if (parentCrumb) crumbs.push({ "@type": "ListItem", position: 2, name: parentCrumb.name, item: local(parentCrumb.path) });
   else if (path.startsWith("/blog/")) crumbs.push({ "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` });
   if (path) crumbs.push({ "@type": "ListItem", position: crumbs.length + 1, name: breadcrumb ?? title, item: fullUrl });
 
@@ -123,7 +139,7 @@ export function SEO({
       url: fullUrl,
       name: fullTitle,
       description,
-      inLanguage: "fr-FR",
+      inLanguage: isEn ? "en" : "fr-FR",
       isPartOf: { "@id": `${SITE_URL}/#website` },
       about: { "@id": ORG_ID },
       primaryImageOfPage: fullImage,
@@ -134,7 +150,7 @@ export function SEO({
 
   return (
     <Helmet>
-      <html lang="fr" />
+      <html lang={isEn ? "en" : "fr"} />
       <title>{fullTitle}</title>
       <meta name="description" content={description} />
       {keywords && <meta name="keywords" content={keywords} />}
@@ -146,6 +162,9 @@ export function SEO({
       <meta name="ICBM" content="6.3654, 2.4183" />
 
       <link rel="canonical" href={fullUrl} />
+      {alternates && <link rel="alternate" hrefLang="fr" href={frUrl} />}
+      {alternates && <link rel="alternate" hrefLang="en" href={enUrl} />}
+      {alternates && <link rel="alternate" hrefLang="x-default" href={frUrl} />}
 
       <meta property="og:type" content={ogType} />
       <meta property="og:title" content={fullTitle} />
@@ -156,8 +175,8 @@ export function SEO({
       <meta property="og:image:alt" content={title} />
       <meta property="og:url" content={fullUrl} />
       <meta property="og:site_name" content={SITE_NAME} />
-      <meta property="og:locale" content="fr_FR" />
-      <meta property="og:locale:alternate" content="en_US" />
+      <meta property="og:locale" content={isEn ? "en_US" : "fr_FR"} />
+      {alternates && <meta property="og:locale:alternate" content={isEn ? "fr_FR" : "en_US"} />}
 
       <meta name="twitter:card" content="summary_large_image" />
       <meta name="twitter:title" content={fullTitle} />
@@ -233,5 +252,53 @@ export const seoConfig = {
     keywords: "mentions légales SecureFlow, RCCM SecureFlow, IFU SecureFlow",
     canonical: "/legal",
     breadcrumb: "Mentions légales",
+  },
+};
+
+/** Métadonnées des pages en anglais (/en/...), indexées par chemin français. */
+export const SEO_EN: Record<string, { title: string; description: string; breadcrumb?: string }> = {
+  "/": {
+    title: "SecureFlow | Securing international trade from Benin",
+    description: "SecureFlow, Cotonou (Benin): supplier verification, on-site inspection, secure payments and logistics supervision from port to final delivery.",
+  },
+  "/about": {
+    title: "About us: a trusted third party for international trade",
+    description: "SecureFlow SARL, a Benin-based company in Cotonou, secures flows of goods, capital, people and data for companies, traders and investors.",
+    breadcrumb: "About us",
+  },
+  "/founder": {
+    title: "Éric Brunnel QUENUM, founder and CEO of SecureFlow",
+    description: "Éric Brunnel QUENUM, founder and CEO of SecureFlow and its group (Terraminex, SecureFlow Tanzania): 9+ years in import-export and complex transactions.",
+    breadcrumb: "Founder",
+  },
+  "/services": {
+    title: "Services: supplier verification, inspection, logistics",
+    description: "Supplier verification, on-site inspection and compliance, transaction security, logistics supervision, risk management, project finance and import-export.",
+    breadcrumb: "Services",
+  },
+  "/sectors": {
+    title: "Sectors: mining, energy, oil, agriculture, healthcare",
+    description: "SecureFlow secures operations in agriculture, mining and gold, energy, oil and gas, healthcare, aviation, construction, environment, education and project finance.",
+    breadcrumb: "Sectors",
+  },
+  "/group": {
+    title: "The SecureFlow Group: Terraminex, SecureFlow Tanzania, Fortriche",
+    description: "The group founded by Éric Brunnel QUENUM: SecureFlow SARL (Benin), SecureFlow Tanzania Ltd, Terraminex (gold and mineral resources) and Fortriche Interprise.",
+    breadcrumb: "The Group",
+  },
+  "/blog": {
+    title: "Blog: international trade, mining, energy, logistics",
+    description: "Field insights from SecureFlow: securing China-Africa trade, mining, energy, oil, healthcare, aviation, infrastructure and project finance (articles in French).",
+    breadcrumb: "Blog",
+  },
+  "/contact": {
+    title: "Contact SecureFlow in Cotonou, Benin",
+    description: "Contact SecureFlow in Cotonou: +229 50 63 63 63 (calls), +229 50 36 36 36 (WhatsApp). Tell us about the operation you need to secure, in confidence.",
+    breadcrumb: "Contact",
+  },
+  "/legal": {
+    title: "Legal notice and terms of engagement",
+    description: "Legal notice of SECUREFLOW SARL: RCCM RB/COT/26 B 41799, IFU 3202677480120, headquarters in Cotonou, and SecureFlow's terms of engagement.",
+    breadcrumb: "Legal notice",
   },
 };

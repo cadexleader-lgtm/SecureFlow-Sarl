@@ -81,8 +81,9 @@ async function prerender() {
   // Coquille vide pour les URL dynamiques (admin, articles en base) : jamais le contenu de l'accueil.
   await writeFile("dist/public/spa.html", template);
   for (const route of PRERENDER_ROUTES) {
-    const { html, head } = await render(route);
+    const { html, head, htmlAttrs } = await render(route);
     const page = template
+      .replace(/<html[^>]*>/, htmlAttrs ? `<html ${htmlAttrs}>` : "$&")
       .replace(/<meta name="description"[^>]*>\s*/, head ? "" : "$&")
       .replace(/<title>[\s\S]*?<\/title>/, head || "$&")
       .replace('<div id="root"></div>', `<div id="root">${html}</div>`);

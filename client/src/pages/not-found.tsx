@@ -2,10 +2,11 @@ import { Card, CardContent } from "@/components/ui/card";
 import { AlertCircle, ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "wouter";
-import { useLanguage } from "@/contexts/LanguageContext";
+import { useLanguage, useHomeHref } from "@/contexts/LanguageContext";
 
 export default function NotFound() {
   const { t } = useLanguage();
+  const homeHref = useHomeHref();
 
   return (
     <div className="min-h-screen w-full flex items-center justify-center bg-background">
@@ -23,7 +24,7 @@ export default function NotFound() {
             {t("notFound.text")}
           </p>
 
-          <Link href="/">
+          <Link href={homeHref}>
             <Button className="rounded-full px-6">
               <ArrowLeft className="w-4 h-4 mr-2" />
               {t("notFound.back")}

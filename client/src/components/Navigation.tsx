@@ -2,7 +2,7 @@ import { Link, useLocation } from "wouter";
 import { useState, useEffect } from "react";
 import { Menu, X, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
-import logo from "@assets/Design_sans_titre_20260119_043520_0000_1768870231497.png";
+import logo from "@/assets/img/secureflow-logo.webp";
 import { SearchDialog } from "./SearchDialog";
 import { ThemeToggle } from "./ThemeToggle";
 import { LanguageToggle } from "./LanguageToggle";
@@ -50,7 +50,7 @@ export function Navigation() {
               "relative overflow-hidden transition-all duration-300 flex items-center justify-center rounded-xl",
               isScrolled ? "h-8 md:h-9" : "h-9 md:h-10"
             )}>
-              <img 
+              <img loading="eager" decoding="async" 
                 src={logo} 
                 alt="SECUREFLOW Logo" 
                 className="h-full w-auto object-contain rounded-xl" 

@@ -1,6 +1,6 @@
 import { Link } from "wouter";
 import { Mail, MapPin, Phone, Linkedin, Twitter, Facebook } from "lucide-react";
-import logo from "@assets/Design_sans_titre_20260119_043520_0000_1768870231497.png";
+import logo from "@/assets/img/secureflow-logo.webp";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 export function Footer() {
@@ -24,7 +24,7 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-8">
           <div className="space-y-4">
             <Link href="/" className="flex items-center cursor-pointer group" data-testid="link-footer-logo">
-              <img src={logo} alt="SECUREFLOW" className="h-12 w-auto transition-transform group-hover:scale-105 rounded-lg" />
+              <img loading="lazy" decoding="async" src={logo} alt="SECUREFLOW" className="h-12 w-auto transition-transform group-hover:scale-105 rounded-lg" />
             </Link>
             <p className="text-gray-400 text-sm leading-relaxed" data-testid="text-footer-description">
               {t("footer.description")}

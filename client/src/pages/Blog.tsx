@@ -10,7 +10,7 @@ import { useLanguage } from "@/contexts/LanguageContext";
 
 import { STATIC_POSTS } from "@/lib/blog-posts";
 import { blogPath } from "@shared/blog-slugs";
-import blogHero from "@/assets/trade-security-hero.jpg";
+import blogHero from "@/assets/img/trade-security-hero.webp";
 
 interface BlogArticle {
   id: number;
@@ -89,7 +89,7 @@ export default function Blog() {
                 )}
                 <Link href={post.isFromDb ? `/blog/article/${post.slug}` : blogPath(String(post.id))} className="block overflow-hidden cursor-pointer relative aspect-video" data-testid={`link-blog-image-${post.id}`}>
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-10 transition-opacity z-10" />
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={post.image} 
                     alt={post.title}
                     className="object-cover w-full h-full transform group-hover:scale-110 transition-transform duration-1000"

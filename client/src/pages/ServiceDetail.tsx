@@ -93,7 +93,7 @@ export default function ServiceDetail() {
           </div>
         </motion.header>
 
-        <img src={service.image} alt={c.name} width={1280} height={720} className="w-full aspect-video object-cover rounded-3xl border border-border mb-14" />
+        <img loading="eager" decoding="async" src={service.image} alt={c.name} width={1280} height={720} className="w-full aspect-video object-cover rounded-3xl border border-border mb-14" />
 
         <section className="mb-14">
           <h2 className="text-2xl md:text-3xl font-display font-bold text-foreground mb-6">{L.what}</h2>

@@ -4,7 +4,7 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { SEO, seoConfig } from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
-import founderPhoto from "@assets/WhatsApp_Image_2026-01-18_at_12.52.37_(1)_1768789362654.jpeg";
+import founderPhoto from "@/assets/img/eric-brunnel-quenum-fondateur-secureflow.webp";
 
 export default function Founder() {
   const { t } = useLanguage();
@@ -77,7 +77,7 @@ export default function Founder() {
             >
               <div className="absolute -inset-10 bg-primary/20 blur-[120px] rounded-full opacity-30"></div>
               <div className="relative z-10 p-2 rounded-[3rem] border border-white/10 bg-white/5 backdrop-blur-sm">
-                <img 
+                <img loading="eager" decoding="async" 
                   src={founderPhoto} 
                   alt="Éric Brunnel QUENUM" 
                   className="rounded-[2.5rem] shadow-2xl w-full transition-all duration-700"

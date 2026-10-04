@@ -3,7 +3,7 @@ import { useQuery } from "@tanstack/react-query";
 import { motion } from "framer-motion";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import blogHero from "../assets/trade-security-hero.jpg";
+import blogHero from "@/assets/img/trade-security-hero.webp";
 
 interface BlogArticle {
   id: number;
@@ -71,7 +71,7 @@ export default function BlogArticlePage() {
         </Link>
 
         <div className="relative aspect-video rounded-2xl overflow-hidden mb-8">
-          <img
+          <img loading="lazy" decoding="async"
             src={article.imageUrl || blogHero}
             alt={article.title}
             className="w-full h-full object-cover"

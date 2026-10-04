@@ -9,91 +9,91 @@ import { blogPath, blogIdFromSlug } from "@shared/blog-slugs";
 import { ArrowLeft, ShieldCheck, Search, Ship, CheckCircle2, Landmark, BarChart3, Globe, Handshake, TrendingUp, FileCheck, User, AlertTriangle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
-import blog3 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.48_1768785394569.jpeg";
-import blog4 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.46_(1)_1768785394703.jpeg";
-import blog5 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.48_1768785394569.jpeg";
-import blogHero from "../assets/trade-security-hero.jpg";
-import blog1 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.13_1768785288045.jpeg";
-import blog2 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.10_1768785288250.jpeg";
-import mining_mockup1 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.48_1769165070500.jpeg";
-import mining_mockup2 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_1769165079313.jpeg";
-import mining_real from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_(1)_1769165079212.jpeg";
-import china1 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.14_1769163276809.jpeg";
-import china2 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.12_1769163276885.jpeg";
-import china3 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.11_1769163276911.jpeg";
-import china4 from "@assets/WhatsApp_Image_2026-01-18_at_12.52.35_(1)_1769163276941.jpeg";
-import china5 from "@assets/WhatsApp_Image_2026-01-18_at_12.52.35_1769163276961.jpeg";
-import portCotonou from "../assets/port-cotonou.jpg";
-import chinaHandshake from "@assets/WhatsApp_Image_2026-01-23_at_12.07.24_1769172827019.jpeg";
-import dubaiOil1 from "../assets/dubai-oil-1.jpg";
-import dubaiOil2 from "../assets/dubai-oil-2.jpg";
-import miningEquip1 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_(1)_1769173262534.jpeg";
-import miningEquip2 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_1769173262566.jpeg";
-import miningHeavy from "../assets/mining-heavy-equipment.jpg";
-import goldResources from "../assets/gold-resources.jpg";
-import mineralCobalt from "@assets/detailed-image-cobalt-ore-samples-382355897_1769181454241.jpg";
-import mineralBauxite from "@assets/téléchargement_(1)_1769181454370.jpeg";
-import mineralManganese from "@assets/téléchargement_1769181454489.jpeg";
-import mineralDiamond from "@assets/images_1769181454517.jpeg";
-import mineralGold from "@assets/carat-d-or_1769181454549.jpg";
-import mineralLithium from "@assets/téléchargement_(2)_1769182252236.jpeg";
-import mineralCopper from "@assets/images_(1)_1769182300693.jpeg";
-import mineralIron from "@assets/images_(2)_1769182300585.jpeg";
-import energyHero from "../assets/energy-hero.jpg";
-import energyTransmission from "../assets/energy-transmission.jpg";
-import energySolar from "../assets/energy-solar.jpg";
-import energyThermal from "../assets/energy-thermal.jpg";
-import energyHydro from "../assets/energy-hydro.jpg";
-import energyWind from "../assets/energy-wind.jpg";
-import energySubstation from "../assets/energy-substation.jpg";
-import energyGenerator from "../assets/energy-generator.jpg";
-import energyStorage from "../assets/energy-storage.jpg";
-import eximFinance from "@assets/WhatsApp_Image_2026-01-18_at_13.26.09_(1)_1769173630906.jpeg";
-import financePartnership from "../assets/finance-partnership.jpg";
-import agricultureExport from "../assets/agriculture-export.jpg";
-import agriculturePort from "../assets/agriculture-port.jpg";
-import productRubber from "@assets/istockphoto-883099928-612x612_1769175407851.jpg";
-import productCacao from "@assets/cacao_700-a3b45db_1769175407909.jpg";
-import productShea from "@assets/GettyImages-930427238_1769175407937.jpg";
-import productPeanut from "@assets/shutterstock_1094889128-600x400_1769175407959.jpg";
-import productPalmOil from "@assets/Huile-Rouge-Palme-512x430_1769175407978.jpg";
-import productCashewRaw from "@assets/depositphotos_128175078-stock-photo-nut-tree-cashew-growing-nu_1769175408007.jpg";
-import productCashew from "@assets/depositphotos_680538178-stock-photo-photo-lots-cashew-nuts-whi_1769175408033.jpg";
-import productRice from "@assets/grain-long-heap-GJX5N8_1769177411392.jpg";
-import productPeppers from "@assets/Photos-pour-blog-largeur-13_1769177411392.jpg";
-import healthHero from "../assets/health-hero.jpg";
-import healthPharma from "../assets/health-pharma.jpg";
-import healthDevices from "../assets/health-devices.jpg";
-import healthColdchain from "../assets/health-coldchain.jpg";
-import healthSurgical from "../assets/health-surgical.jpg";
-import healthLab from "../assets/health-lab.jpg";
-import healthConsumables from "../assets/health-consumables.jpg";
-import healthTraditional from "../assets/health-traditional.jpg";
-import aviationHero from "../assets/aviation-hero.jpg";
-import airportTerminal from "../assets/airport-terminal.jpg";
-import aviationParts from "../assets/aviation-parts.jpg";
-import aviationCargo from "../assets/aviation-cargo.jpg";
-import aviationHelicopter from "../assets/aviation-helicopter.jpg";
-import aviationDrone from "../assets/aviation-drone.jpg";
-import aviationGround from "../assets/aviation-ground.jpg";
-import infraHero from "../assets/infra-hero.jpg";
-import infraRoad from "../assets/infra-road.jpg";
-import infraBridge from "../assets/infra-bridge.jpg";
-import infraPort from "../assets/infra-port.jpg";
-import infraWater from "../assets/infra-water.jpg";
-import infraBuilding from "../assets/infra-building.jpg";
-import oilRefinery from "../assets/oil-refinery.jpg";
-import oilTanker from "../assets/oil-tanker.jpg";
-import africaInvestment from "../assets/africa-investment.jpg";
-import oilPipeline from "../assets/oil-pipeline.jpg";
-import oilPlatform from "../assets/oil-platform.jpg";
-import crudeOil from "@assets/main-coupee-personne-du-petrole-brut_1048944-25013837_1769192435875.jpg";
-import carburantsImg from "@assets/depositphotos_45730357-stock-photo-pipe-line-transportation-in_1769192467454.jpg";
-import fuelLourdImg from "@assets/fuel-lourd-bandeau-17-06_1769192599862.jpg";
-import gazNaturelImg from "@assets/grande-usine-détail-de-nuit_1769192599918.jpg";
-import lubrifiantsImg from "@assets/Photo_article_(10)_1769192976971.png";
-import bitumeImg from "@assets/bitume-dans-un-tube-métallique-noir-liquide-cylindre-en-métal-_1769192977030.jpg";
-import petrochimieImg from "@assets/Maquette_froide_Eluxyl_Petrochimie_1769193078255.jpg";
+import blog3 from "@/assets/img/installation-miniere-terrain.webp";
+import blog4 from "@/assets/img/secureflow-paris-reseau-europeen.webp";
+import blog5 from "@/assets/img/installation-miniere-terrain.webp";
+import blogHero from "@/assets/img/trade-security-hero.webp";
+import blog1 from "@/assets/img/secureflow-chambre-commerce-chine.webp";
+import blog2 from "@/assets/img/secureflow-dubai-rencontre.webp";
+import mining_mockup1 from "@/assets/img/maquette-installation-miniere-1.webp";
+import mining_mockup2 from "@/assets/img/maquette-installation-miniere-2.webp";
+import mining_real from "@/assets/img/equipement-minier-terrain.webp";
+import china1 from "@/assets/img/secureflow-chine-rencontre-investisseurs-1.webp";
+import china2 from "@/assets/img/secureflow-chine-rencontre-investisseurs-2.webp";
+import china3 from "@/assets/img/secureflow-chine-rencontre-investisseurs-3.webp";
+import china4 from "@/assets/img/secureflow-chine-rencontre-investisseurs-4.webp";
+import china5 from "@/assets/img/secureflow-chine-rencontre-investisseurs-5.webp";
+import portCotonou from "@/assets/img/port-cotonou.webp";
+import chinaHandshake from "@/assets/img/secureflow-chine-accord-partenaire.webp";
+import dubaiOil1 from "@/assets/img/dubai-oil-1.webp";
+import dubaiOil2 from "@/assets/img/dubai-oil-2.webp";
+import miningEquip1 from "@/assets/img/machine-extraction-miniere-1.webp";
+import miningEquip2 from "@/assets/img/machine-extraction-miniere-2.webp";
+import miningHeavy from "@/assets/img/mining-heavy-equipment.webp";
+import goldResources from "@/assets/img/gold-resources.webp";
+import mineralCobalt from "@/assets/img/minerai-cobalt.webp";
+import mineralBauxite from "@/assets/img/bauxite.webp";
+import mineralManganese from "@/assets/img/manganese.webp";
+import mineralDiamond from "@/assets/img/diamant-brut.webp";
+import mineralGold from "@/assets/img/or-pepites.webp";
+import mineralLithium from "@/assets/img/lithium.webp";
+import mineralCopper from "@/assets/img/minerai-cuivre.webp";
+import mineralIron from "@/assets/img/minerai-fer.webp";
+import energyHero from "@/assets/img/energy-hero.webp";
+import energyTransmission from "@/assets/img/energy-transmission.webp";
+import energySolar from "@/assets/img/energy-solar.webp";
+import energyThermal from "@/assets/img/energy-thermal.webp";
+import energyHydro from "@/assets/img/energy-hydro.webp";
+import energyWind from "@/assets/img/energy-wind.webp";
+import energySubstation from "@/assets/img/energy-substation.webp";
+import energyGenerator from "@/assets/img/energy-generator.webp";
+import energyStorage from "@/assets/img/energy-storage.webp";
+import eximFinance from "@/assets/img/secureflow-partenariat-exim-finance.webp";
+import financePartnership from "@/assets/img/finance-partnership.webp";
+import agricultureExport from "@/assets/img/agriculture-export.webp";
+import agriculturePort from "@/assets/img/agriculture-port.webp";
+import productRubber from "@/assets/img/caoutchouc-naturel.webp";
+import productCacao from "@/assets/img/cacao-feves.webp";
+import productShea from "@/assets/img/karite-beurre.webp";
+import productPeanut from "@/assets/img/arachide.webp";
+import productPalmOil from "@/assets/img/huile-de-palme.webp";
+import productCashewRaw from "@/assets/img/noix-de-cajou-arbre.webp";
+import productCashew from "@/assets/img/noix-de-cajou.webp";
+import productRice from "@/assets/img/riz-long-grain.webp";
+import productPeppers from "@/assets/img/piments-export.webp";
+import healthHero from "@/assets/img/health-hero.webp";
+import healthPharma from "@/assets/img/health-pharma.webp";
+import healthDevices from "@/assets/img/health-devices.webp";
+import healthColdchain from "@/assets/img/health-coldchain.webp";
+import healthSurgical from "@/assets/img/health-surgical.webp";
+import healthLab from "@/assets/img/health-lab.webp";
+import healthConsumables from "@/assets/img/health-consumables.webp";
+import healthTraditional from "@/assets/img/health-traditional.webp";
+import aviationHero from "@/assets/img/aviation-hero.webp";
+import airportTerminal from "@/assets/img/airport-terminal.webp";
+import aviationParts from "@/assets/img/aviation-parts.webp";
+import aviationCargo from "@/assets/img/aviation-cargo.webp";
+import aviationHelicopter from "@/assets/img/aviation-helicopter.webp";
+import aviationDrone from "@/assets/img/aviation-drone.webp";
+import aviationGround from "@/assets/img/aviation-ground.webp";
+import infraHero from "@/assets/img/infra-hero.webp";
+import infraRoad from "@/assets/img/infra-road.webp";
+import infraBridge from "@/assets/img/infra-bridge.webp";
+import infraPort from "@/assets/img/infra-port.webp";
+import infraWater from "@/assets/img/infra-water.webp";
+import infraBuilding from "@/assets/img/infra-building.webp";
+import oilRefinery from "@/assets/img/oil-refinery.webp";
+import oilTanker from "@/assets/img/oil-tanker.webp";
+import africaInvestment from "@/assets/img/africa-investment.webp";
+import oilPipeline from "@/assets/img/oil-pipeline.webp";
+import oilPlatform from "@/assets/img/oil-platform.webp";
+import crudeOil from "@/assets/img/petrole-brut.webp";
+import carburantsImg from "@/assets/img/pipeline-carburants.webp";
+import fuelLourdImg from "@/assets/img/fuel-lourd.webp";
+import gazNaturelImg from "@/assets/img/usine-gaz-naturel.webp";
+import lubrifiantsImg from "@/assets/img/lubrifiants-industriels.webp";
+import bitumeImg from "@/assets/img/bitume.webp";
+import petrochimieImg from "@/assets/img/usine-petrochimique.webp";
 
 export default function BlogPost() {
   const id = blogIdFromSlug(useParams().slug);
@@ -155,7 +155,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={agricultureExport} alt="Agriculture et Agro-alimentaire" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={agricultureExport} alt="Agriculture et Agro-alimentaire" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -232,7 +232,7 @@ function BlogPostContent() {
               </div>
 
               <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl my-12 group">
-                <img src={agriculturePort} alt="Export agricole au port" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img loading="lazy" decoding="async" src={agriculturePort} alt="Export agricole au port" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
               <p className="text-sm text-center text-muted-foreground italic -mt-6 mb-12">
                 Supervision des opérations d'exportation agricole dans les principaux ports
@@ -302,7 +302,7 @@ function BlogPostContent() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 my-12">
                 <div className="glass-card rounded-2xl overflow-hidden border-green-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productCashewRaw} alt="Noix de Cajou Brutes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productCashewRaw} alt="Noix de Cajou Brutes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Noix de Cajou Brutes</h3>
@@ -312,7 +312,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-amber-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productCashew} alt="Noix de Cajou Transformées" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productCashew} alt="Noix de Cajou Transformées" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Noix de Cajou Transformées</h3>
@@ -322,7 +322,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-orange-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productShea} alt="Karité" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productShea} alt="Karité" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Karité</h3>
@@ -332,7 +332,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-yellow-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productPeanut} alt="Arachide" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productPeanut} alt="Arachide" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Arachide</h3>
@@ -342,7 +342,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-red-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productPalmOil} alt="Huile de Palme" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productPalmOil} alt="Huile de Palme" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Huile de Palme</h3>
@@ -352,7 +352,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-emerald-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productRubber} alt="Hévéa" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productRubber} alt="Hévéa" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Hévéa (Caoutchouc)</h3>
@@ -362,7 +362,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-stone-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productCacao} alt="Cacao" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productCacao} alt="Cacao" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Cacao</h3>
@@ -372,7 +372,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-slate-400/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productRice} alt="Riz" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productRice} alt="Riz" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Riz</h3>
@@ -382,7 +382,7 @@ function BlogPostContent() {
 
                 <div className="glass-card rounded-2xl overflow-hidden border-rose-500/20 group">
                   <div className="aspect-[4/3] overflow-hidden">
-                    <img src={productPeppers} alt="Piments" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
+                    <img loading="lazy" decoding="async" src={productPeppers} alt="Piments" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" />
                   </div>
                   <div className="p-5">
                     <h3 className="text-foreground font-bold text-lg">Piments & Épices</h3>
@@ -490,7 +490,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={eximFinance} alt="Partenariat EXIM Finance" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={eximFinance} alt="Partenariat EXIM Finance" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -532,7 +532,7 @@ function BlogPostContent() {
               </p>
 
               <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl my-12 group">
-                <img src={financePartnership} alt="Partenariat financier international" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                <img loading="lazy" decoding="async" src={financePartnership} alt="Partenariat financier international" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-3 gap-6 my-12">
@@ -655,16 +655,16 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={chinaHandshake} alt="Chambre de Commerce de Chine" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={chinaHandshake} alt="Chambre de Commerce de Chine" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                <img src={china1} alt="Réunion Chambre de Commerce" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={china1} alt="Réunion Chambre de Commerce" className="w-full h-full object-cover" />
               </div>
               <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                <img src={china2} alt="Investisseurs Chinois" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={china2} alt="Investisseurs Chinois" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -703,7 +703,7 @@ function BlogPostContent() {
               </p>
 
               <div className="rounded-2xl overflow-hidden border border-white/10 shadow-lg my-8 flex justify-center bg-black/20">
-                <img src={china3} alt="Délégation SecureFlow à Pékin" className="max-h-[600px] w-auto object-contain" />
+                <img loading="lazy" decoding="async" src={china3} alt="Délégation SecureFlow à Pékin" className="max-h-[600px] w-auto object-contain" />
               </div>
 
               <h2 className="text-3xl font-display font-bold text-foreground mt-12 mb-6">
@@ -769,7 +769,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={dubaiOil1} alt="Secteur pétrolier à Dubaï" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={dubaiOil1} alt="Secteur pétrolier à Dubaï" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -801,7 +801,7 @@ function BlogPostContent() {
               </div>
 
               <div className="relative aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl my-12">
-                <img src={dubaiOil2} alt="Transport pétrolier maritime" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={dubaiOil2} alt="Transport pétrolier maritime" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
               </div>
 
@@ -901,7 +901,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={blog3} alt="Infrastructures Minières" className="w-full h-full object-cover bg-black/40" />
+              <img loading="lazy" decoding="async" src={blog3} alt="Infrastructures Minières" className="w-full h-full object-cover bg-black/40" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -947,10 +947,10 @@ function BlogPostContent() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
-                  <img src={miningEquip1} alt="Équipement d'extraction minière" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={miningEquip1} alt="Équipement d'extraction minière" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
-                  <img src={miningEquip2} alt="Schéma du processus d'extraction" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={miningEquip2} alt="Schéma du processus d'extraction" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
 
@@ -1009,7 +1009,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={blog4} alt="Présence Diplomatique à Paris" className="w-full h-full object-cover bg-black/40" />
+              <img loading="lazy" decoding="async" src={blog4} alt="Présence Diplomatique à Paris" className="w-full h-full object-cover bg-black/40" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -1096,7 +1096,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={portCotonou} alt="Port Autonome de Cotonou" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={portCotonou} alt="Port Autonome de Cotonou" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -1179,27 +1179,27 @@ function BlogPostContent() {
             className="space-y-8"
           >
               <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-                <img src={blog1} alt="Partenariats Asie" className="w-full h-full object-contain bg-black/40" />
+                <img loading="lazy" decoding="async" src={blog1} alt="Partenariats Asie" className="w-full h-full object-contain bg-black/40" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
               </div>
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-4 my-8">
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                  <img src={china1} alt="Partenariat Chine BTTC" className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={china1} alt="Partenariat Chine BTTC" className="w-full h-full object-cover" />
                 </div>
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                  <img src={china2} alt="Négociations Chine" className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={china2} alt="Négociations Chine" className="w-full h-full object-cover" />
                 </div>
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                  <img src={china4} alt="Réunion de travail Chine" className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={china4} alt="Réunion de travail Chine" className="w-full h-full object-cover" />
                 </div>
                 <div className="aspect-[4/3] rounded-2xl overflow-hidden border border-white/10 shadow-lg">
-                  <img src={china5} alt="Signature Partenariat Chine" className="w-full h-full object-cover" />
+                  <img loading="lazy" decoding="async" src={china5} alt="Signature Partenariat Chine" className="w-full h-full object-cover" />
                 </div>
               </div>
 
               <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-lg my-8">
-                <img src={china3} alt="Délégation SecureFlow en Chine" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={china3} alt="Délégation SecureFlow en Chine" className="w-full h-full object-cover" />
               </div>
 
             <div className="space-y-6">
@@ -1299,7 +1299,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={blogHero} alt="Sécurité commerce international" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={blogHero} alt="Sécurité commerce international" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -1419,7 +1419,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={miningHeavy} alt="Secteur Minier - Équipements Lourds" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={miningHeavy} alt="Secteur Minier - Équipements Lourds" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -1542,10 +1542,10 @@ function BlogPostContent() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
                 <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
-                  <img src={miningEquip1} alt="Équipements d'extraction minière" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={miningEquip1} alt="Équipements d'extraction minière" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
-                  <img src={goldResources} alt="Ressources minérales - Or" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={goldResources} alt="Ressources minérales - Or" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
 
@@ -1559,56 +1559,56 @@ function BlogPostContent() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-12">
                 <div className="glass-card p-4 rounded-xl text-center border-yellow-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-yellow-500/20">
-                    <img src={mineralGold} alt="Or - Pépites d'or" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralGold} alt="Or - Pépites d'or" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Or</span>
                   <p className="text-xs text-muted-foreground">Lingots, pépites, concentrés</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-cyan-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-cyan-500/20">
-                    <img src={mineralDiamond} alt="Diamant brut" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralDiamond} alt="Diamant brut" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Diamants</span>
                   <p className="text-xs text-muted-foreground">Bruts, certifiés Kimberley</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-gray-400/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-gray-400/20">
-                    <img src={mineralManganese} alt="Minerai de manganèse" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralManganese} alt="Minerai de manganèse" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Manganèse</span>
                   <p className="text-xs text-muted-foreground">Minerai, alliages</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-red-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-red-500/20">
-                    <img src={mineralBauxite} alt="Bauxite" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralBauxite} alt="Bauxite" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Bauxite</span>
                   <p className="text-xs text-muted-foreground">Alumine, aluminium</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-blue-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-blue-500/20">
-                    <img src={mineralCobalt} alt="Minerai de cobalt" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralCobalt} alt="Minerai de cobalt" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Cobalt</span>
                   <p className="text-xs text-muted-foreground">Batteries, électronique</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-green-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-green-500/20">
-                    <img src={mineralLithium} alt="Minerai de lithium" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralLithium} alt="Minerai de lithium" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Lithium</span>
                   <p className="text-xs text-muted-foreground">Transition énergétique</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-orange-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-orange-500/20">
-                    <img src={mineralCopper} alt="Minerai de cuivre" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralCopper} alt="Minerai de cuivre" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Cuivre</span>
                   <p className="text-xs text-muted-foreground">Câbles, électricité</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-amber-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-amber-500/20">
-                    <img src={mineralIron} alt="Minerai de fer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={mineralIron} alt="Minerai de fer" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Fer</span>
                   <p className="text-xs text-muted-foreground">Sidérurgie, construction</p>
@@ -1709,7 +1709,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={energyHero} alt="Secteur Énergie & Électricité" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={energyHero} alt="Secteur Énergie & Électricité" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -1824,10 +1824,10 @@ function BlogPostContent() {
 
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
                 <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
-                  <img src={energyTransmission} alt="Lignes de transmission électrique" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={energyTransmission} alt="Lignes de transmission électrique" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
                 <div className="aspect-video rounded-2xl overflow-hidden border border-white/10 shadow-xl group">
-                  <img src={energySolar} alt="Panneaux solaires - Énergie renouvelable" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
+                  <img loading="lazy" decoding="async" src={energySolar} alt="Panneaux solaires - Énergie renouvelable" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700" />
                 </div>
               </div>
 
@@ -1841,56 +1841,56 @@ function BlogPostContent() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-12">
                 <div className="glass-card p-4 rounded-xl text-center border-yellow-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-yellow-500/20">
-                    <img src={energyThermal} alt="Centrale thermique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energyThermal} alt="Centrale thermique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Centrales Thermiques</span>
                   <p className="text-xs text-muted-foreground">Gaz, charbon, fuel</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-blue-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-blue-500/20">
-                    <img src={energyHydro} alt="Barrage hydroélectrique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energyHydro} alt="Barrage hydroélectrique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Hydroélectricité</span>
                   <p className="text-xs text-muted-foreground">Barrages, turbines</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-green-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-green-500/20">
-                    <img src={energySolar} alt="Panneaux solaires" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energySolar} alt="Panneaux solaires" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Solaire</span>
                   <p className="text-xs text-muted-foreground">PV, CSP, stockage</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-cyan-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-cyan-500/20">
-                    <img src={energyWind} alt="Éoliennes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energyWind} alt="Éoliennes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Éolien</span>
                   <p className="text-xs text-muted-foreground">Onshore, offshore</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-orange-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-orange-500/20">
-                    <img src={energyTransmission} alt="Réseaux haute tension" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energyTransmission} alt="Réseaux haute tension" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Réseaux HT/MT</span>
                   <p className="text-xs text-muted-foreground">Lignes, transformateurs</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-purple-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-purple-500/20">
-                    <img src={energySubstation} alt="Poste source électrique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energySubstation} alt="Poste source électrique" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Postes Sources</span>
                   <p className="text-xs text-muted-foreground">Distribution électrique</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-red-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-red-500/20">
-                    <img src={energyGenerator} alt="Groupe électrogène industriel" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energyGenerator} alt="Groupe électrogène industriel" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Groupes Électrogènes</span>
                   <p className="text-xs text-muted-foreground">Industrie, secours</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-amber-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-amber-500/20">
-                    <img src={energyStorage} alt="Système de stockage d'énergie" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={energyStorage} alt="Système de stockage d'énergie" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Stockage</span>
                   <p className="text-xs text-muted-foreground">Batteries, BESS</p>
@@ -2032,7 +2032,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={healthHero} alt="Santé & Équipements Médicaux" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={healthHero} alt="Santé & Équipements Médicaux" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -2159,49 +2159,49 @@ function BlogPostContent() {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-12">
                 <div className="glass-card p-4 rounded-xl text-center border-red-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-red-500/20">
-                    <img src={healthPharma} alt="Produits pharmaceutiques" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthPharma} alt="Produits pharmaceutiques" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Pharmaceutiques</span>
                   <p className="text-xs text-muted-foreground">Médicaments, vaccins, insuline</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-blue-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-blue-500/20">
-                    <img src={healthDevices} alt="Dispositifs médicaux" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthDevices} alt="Dispositifs médicaux" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Imagerie Médicale</span>
                   <p className="text-xs text-muted-foreground">IRM, Scanner, Échographes</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-cyan-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-cyan-500/20">
-                    <img src={healthColdchain} alt="Chaîne du froid" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthColdchain} alt="Chaîne du froid" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Chaîne du Froid</span>
                   <p className="text-xs text-muted-foreground">Transport réfrigéré, stockage</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-green-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-green-500/20">
-                    <img src={healthSurgical} alt="Instruments chirurgicaux" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthSurgical} alt="Instruments chirurgicaux" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Chirurgie</span>
                   <p className="text-xs text-muted-foreground">Instruments, implants, prothèses</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-purple-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-purple-500/20">
-                    <img src={healthLab} alt="Équipements de laboratoire" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthLab} alt="Équipements de laboratoire" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Laboratoire</span>
                   <p className="text-xs text-muted-foreground">Analyseurs, réactifs, tests</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-amber-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-amber-500/20">
-                    <img src={healthConsumables} alt="Consommables médicaux" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthConsumables} alt="Consommables médicaux" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Consommables</span>
                   <p className="text-xs text-muted-foreground">Gants, seringues, masques</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-emerald-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-emerald-500/20">
-                    <img src={healthTraditional} alt="Médecine traditionnelle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={healthTraditional} alt="Médecine traditionnelle" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Médecine Traditionnelle</span>
                   <p className="text-xs text-muted-foreground">Plantes, extraits naturels</p>
@@ -2374,7 +2374,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={infraHero} alt="Infrastructures & Projets" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={infraHero} alt="Infrastructures & Projets" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -2501,35 +2501,35 @@ function BlogPostContent() {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-12">
                 <div className="glass-card p-4 rounded-xl text-center border-slate-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-slate-500/20">
-                    <img src={infraRoad} alt="Routes et autoroutes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={infraRoad} alt="Routes et autoroutes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Routes & Autoroutes</span>
                   <p className="text-xs text-muted-foreground">Construction, réhabilitation</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-blue-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-blue-500/20">
-                    <img src={infraBridge} alt="Ponts et ouvrages d'art" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={infraBridge} alt="Ponts et ouvrages d'art" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Ponts & Ouvrages</span>
                   <p className="text-xs text-muted-foreground">Génie civil, structures</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-cyan-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-cyan-500/20">
-                    <img src={infraPort} alt="Ports et infrastructures maritimes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={infraPort} alt="Ports et infrastructures maritimes" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Ports & Maritime</span>
                   <p className="text-xs text-muted-foreground">Quais, terminaux, dragages</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-teal-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-teal-500/20">
-                    <img src={infraWater} alt="Réseaux d'eau" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={infraWater} alt="Réseaux d'eau" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Eau & Assainissement</span>
                   <p className="text-xs text-muted-foreground">Barrages, stations, réseaux</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-amber-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-amber-500/20">
-                    <img src={infraBuilding} alt="Bâtiments" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={infraBuilding} alt="Bâtiments" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Bâtiments</span>
                   <p className="text-xs text-muted-foreground">Hôpitaux, écoles, bureaux</p>
@@ -2677,7 +2677,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={airportTerminal} alt="Aviation & Transport Spécialisé" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={airportTerminal} alt="Aviation & Transport Spécialisé" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 
@@ -2804,35 +2804,35 @@ function BlogPostContent() {
               <div className="grid grid-cols-2 md:grid-cols-3 gap-4 my-12">
                 <div className="glass-card p-4 rounded-xl text-center border-indigo-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-indigo-500/20">
-                    <img src={aviationParts} alt="Pièces aéronautiques" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={aviationParts} alt="Pièces aéronautiques" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Pièces Détachées</span>
                   <p className="text-xs text-muted-foreground">Moteurs, APU, trains d'atterrissage</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-blue-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-blue-500/20">
-                    <img src={aviationCargo} alt="Fret aérien" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={aviationCargo} alt="Fret aérien" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Fret Aérien</span>
                   <p className="text-xs text-muted-foreground">Cargaisons de valeur, AOG</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-cyan-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-cyan-500/20">
-                    <img src={aviationHelicopter} alt="Hélicoptères" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={aviationHelicopter} alt="Hélicoptères" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Hélicoptères</span>
                   <p className="text-xs text-muted-foreground">Civil, offshore, médical</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-purple-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-purple-500/20">
-                    <img src={aviationDrone} alt="Drones industriels" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={aviationDrone} alt="Drones industriels" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Drones & UAV</span>
                   <p className="text-xs text-muted-foreground">Inspection, surveillance, cargo</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl text-center border-amber-500/30 group">
                   <div className="aspect-square rounded-lg overflow-hidden mb-3 border border-amber-500/20">
-                    <img src={aviationGround} alt="Équipements sol" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <img loading="lazy" decoding="async" src={aviationGround} alt="Équipements sol" className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                   </div>
                   <span className="text-foreground font-bold text-base">Équipements Sol</span>
                   <p className="text-xs text-muted-foreground">GSE, tracteurs, passerelles</p>
@@ -2980,7 +2980,7 @@ function BlogPostContent() {
             className="space-y-8"
           >
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={oilRefinery} alt="Pétrole et Gaz - Raffinerie" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={oilRefinery} alt="Pétrole et Gaz - Raffinerie" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
               <div className="absolute bottom-0 left-0 right-0 p-8">
                 <Badge className="mb-4 bg-yellow-500/20 text-yellow-400 border-yellow-500/30">Secteur Stratégique</Badge>
@@ -3031,7 +3031,7 @@ function BlogPostContent() {
               </p>
 
               <div className="relative aspect-video rounded-2xl overflow-hidden my-8 border border-white/10">
-                <img src={oilPlatform} alt="Plateforme pétrolière offshore" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={oilPlatform} alt="Plateforme pétrolière offshore" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-white text-sm">Plateformes offshore : extraction et première transformation</p>
@@ -3083,7 +3083,7 @@ function BlogPostContent() {
               </ul>
 
               <div className="relative aspect-video rounded-2xl overflow-hidden my-8 border border-white/10">
-                <img src={oilTanker} alt="Pétrolier transport maritime" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={oilTanker} alt="Pétrolier transport maritime" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-white text-sm">Transport maritime : supervision des cargaisons pétrolières</p>
@@ -3135,7 +3135,7 @@ function BlogPostContent() {
               </ul>
 
               <div className="relative aspect-video rounded-2xl overflow-hidden my-8 border border-white/10">
-                <img src={oilPipeline} alt="Pipeline pétrole et gaz" className="w-full h-full object-cover" />
+                <img loading="lazy" decoding="async" src={oilPipeline} alt="Pipeline pétrole et gaz" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent" />
                 <div className="absolute bottom-4 left-4 right-4">
                   <p className="text-white text-sm">Pipelines : infrastructure critique pour le transport terrestre</p>
@@ -3149,49 +3149,49 @@ function BlogPostContent() {
               <div className="grid grid-cols-2 md:grid-cols-4 gap-4 my-8">
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={crudeOil} alt="Pétrole brut" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={crudeOil} alt="Pétrole brut" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Pétrole Brut</h4>
                   <p className="text-xs text-muted-foreground">Brent, WTI, Bonny Light</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={carburantsImg} alt="Carburants" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={carburantsImg} alt="Carburants" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Carburants</h4>
                   <p className="text-xs text-muted-foreground">Essence, Diesel, Kérosène</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={gazNaturelImg} alt="Gaz Naturel" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={gazNaturelImg} alt="Gaz Naturel" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Gaz Naturel</h4>
                   <p className="text-xs text-muted-foreground">GNL, GPL, Propane</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={fuelLourdImg} alt="Fuel Lourd" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={fuelLourdImg} alt="Fuel Lourd" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Fuel Lourd</h4>
                   <p className="text-xs text-muted-foreground">HFO, VLSFO, Mazout</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={bitumeImg} alt="Bitume" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={bitumeImg} alt="Bitume" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Bitume</h4>
                   <p className="text-xs text-muted-foreground">Routes, construction</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={lubrifiantsImg} alt="Lubrifiants" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={lubrifiantsImg} alt="Lubrifiants" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Lubrifiants</h4>
                   <p className="text-xs text-muted-foreground">Huiles moteur, industriels</p>
                 </div>
                 <div className="glass-card p-4 rounded-xl border-white/10 text-center overflow-hidden">
                   <div className="w-full h-20 rounded-lg overflow-hidden mb-3">
-                    <img src={petrochimieImg} alt="Pétrochimie" className="w-full h-full object-cover" />
+                    <img loading="lazy" decoding="async" src={petrochimieImg} alt="Pétrochimie" className="w-full h-full object-cover" />
                   </div>
                   <h4 className="text-foreground font-bold mb-1">Pétrochimie</h4>
                   <p className="text-xs text-muted-foreground">Naphta, Éthylène</p>
@@ -3320,7 +3320,7 @@ function BlogPostContent() {
 
           <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} className="space-y-8">
             <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
-              <img src={africaInvestment} alt="Financement de projets et investissement" className="w-full h-full object-cover" />
+              <img loading="lazy" decoding="async" src={africaInvestment} alt="Financement de projets et investissement" className="w-full h-full object-cover" />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
             </div>
 

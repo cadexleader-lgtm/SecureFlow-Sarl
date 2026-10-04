@@ -1,19 +1,19 @@
 // Articles statiques du blog : partagés par la liste (/blog) et les pages article (SEO, aperçus).
-import blog3 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.48_1768785394569.jpeg";
-import blog4 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.46_(1)_1768785394703.jpeg";
-import blogHero from "@/assets/trade-security-hero.jpg";
-import portCotonou2 from "@/assets/port-cotonou-2.jpg";
-import chinaHandshake from "@assets/WhatsApp_Image_2026-01-23_at_12.07.24_1769172827019.jpeg";
-import dubaiOil1 from "@/assets/dubai-oil-1.jpg";
-import eximFinance from "@assets/WhatsApp_Image_2026-01-18_at_13.26.09_(1)_1769173630906.jpeg";
-import agricultureExport from "@/assets/agriculture-export.jpg";
-import miningHeavy from "@/assets/mining-heavy-equipment.jpg";
-import energyHero from "@/assets/energy-hero.jpg";
-import oilRefinery from "@/assets/oil-refinery.jpg";
-import africaInvestment from "@/assets/africa-investment.jpg";
-import healthHero from "@/assets/health-hero.jpg";
-import airportTerminal from "@/assets/airport-terminal.jpg";
-import infraHero from "@/assets/infra-hero.jpg";
+import blog3 from "@/assets/img/installation-miniere-terrain.webp";
+import blog4 from "@/assets/img/secureflow-paris-reseau-europeen.webp";
+import blogHero from "@/assets/img/trade-security-hero.webp";
+import portCotonou2 from "@/assets/img/port-cotonou-2.webp";
+import chinaHandshake from "@/assets/img/secureflow-chine-accord-partenaire.webp";
+import dubaiOil1 from "@/assets/img/dubai-oil-1.webp";
+import eximFinance from "@/assets/img/secureflow-partenariat-exim-finance.webp";
+import agricultureExport from "@/assets/img/agriculture-export.webp";
+import miningHeavy from "@/assets/img/mining-heavy-equipment.webp";
+import energyHero from "@/assets/img/energy-hero.webp";
+import oilRefinery from "@/assets/img/oil-refinery.webp";
+import africaInvestment from "@/assets/img/africa-investment.webp";
+import healthHero from "@/assets/img/health-hero.webp";
+import airportTerminal from "@/assets/img/airport-terminal.webp";
+import infraHero from "@/assets/img/infra-hero.webp";
 
 
 export const STATIC_POSTS = [

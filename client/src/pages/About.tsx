@@ -3,8 +3,8 @@ import { TrendingUp, Shield, Users, Target, Lock, Award, CheckCircle2, Quote, Gl
 import { SectionHeading } from "@/components/SectionHeading";
 import { SEO, seoConfig } from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
-import techImg from "@assets/stock_images/global_logistics_sec_b02e54b9.jpg";
-import inspectionImg from "@assets/stock_images/secure_cargo_shipmen_b52976fe.jpg";
+import techImg from "@/assets/img/logistique-securisee.webp";
+import inspectionImg from "@/assets/img/cargaison-securisee-remorqueur.webp";
 
 export default function About() {
   const { t } = useLanguage();
@@ -85,7 +85,7 @@ export default function About() {
             >
               <div className="absolute -inset-8 bg-primary/20 blur-[80px] rounded-full opacity-30"></div>
               <div className="relative z-10 p-2 rounded-3xl border border-white/10 bg-white/5 backdrop-blur-sm">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={techImg} 
                   alt="Centre de Sécurité Logistique" 
                   className="rounded-2xl shadow-xl object-cover aspect-[4/3]"
@@ -114,7 +114,7 @@ export default function About() {
             >
               <div className="absolute -inset-4 bg-gradient-to-tr from-primary/20 to-blue-500/10 blur-2xl rounded-3xl opacity-30"></div>
               <div className="relative rounded-2xl overflow-hidden border border-white/10 shadow-xl bg-card">
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={inspectionImg} 
                   alt="Inspection Sécurisée" 
                   className="w-full h-auto"

@@ -2,13 +2,13 @@
 // Chaque service correspond à une activité déclarée au RCCM ; ne rien ajouter
 // qui n'y figure pas. Les slugs sont publiés : ne jamais les renommer.
 import { Search, FileCheck, Landmark, Ship, BarChart3, TrendingUp, Globe2, type LucideIcon } from "lucide-react";
-import verificationImg from "@assets/stock_images/international_trade__1311510f.jpg";
-import inspectionImg from "@assets/stock_images/modern_security_audi_4d6abb64.jpg";
-import transactionImg from "@assets/stock_images/secure_high_value_tr_1b60de34.jpg";
-import logisticsImg from "@assets/stock_images/professional_cargo_i_20329aee.jpg";
-import risksImg from "@assets/stock_images/mining_project_infra_8026ebfd.jpg";
-import financeImg from "@/assets/finance-partnership.jpg";
-import tradeImg from "@assets/stock_images/international_busine_34a5b756.jpg";
+import verificationImg from "@/assets/img/verification-fournisseur-accord.webp";
+import inspectionImg from "@/assets/img/audit-securite-infrastructure.webp";
+import transactionImg from "@/assets/img/transaction-securisee.webp";
+import logisticsImg from "@/assets/img/navire-porte-conteneurs.webp";
+import risksImg from "@/assets/img/projet-minier-infrastructure.webp";
+import financeImg from "@/assets/img/finance-partnership.webp";
+import tradeImg from "@/assets/img/commerce-international-accord.webp";
 
 export interface ServiceText {
   name: string;

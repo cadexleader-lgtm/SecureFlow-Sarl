@@ -378,7 +378,7 @@ export default function AdminArticles() {
                     
                     {formData.imageUrl && (
                       <div className="relative border border-border rounded-lg overflow-hidden max-w-xs">
-                        <img
+                        <img loading="lazy" decoding="async"
                           src={formData.imageUrl}
                           alt="Aperçu"
                           className="w-full h-32 object-cover"

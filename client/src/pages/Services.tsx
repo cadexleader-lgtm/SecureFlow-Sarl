@@ -6,13 +6,13 @@ import { Link } from "wouter";
 import { Button } from "@/components/ui/button";
 import { useLanguage } from "@/contexts/LanguageContext";
 
-import verificationImg from "@assets/stock_images/international_trade__1311510f.jpg";
-import logistiqueImg from "@assets/stock_images/professional_cargo_i_20329aee.jpg";
-import securiteImg from "@assets/stock_images/secure_high_value_tr_1b60de34.jpg";
-import minesImg from "@assets/stock_images/mining_project_infra_8026ebfd.jpg";
-import risqueImg from "@assets/stock_images/modern_security_audi_4d6abb64.jpg";
-import financeImg from "@/assets/finance-partnership.jpg";
-import tradeImg from "@assets/stock_images/international_busine_34a5b756.jpg";
+import verificationImg from "@/assets/img/verification-fournisseur-accord.webp";
+import logistiqueImg from "@/assets/img/navire-porte-conteneurs.webp";
+import securiteImg from "@/assets/img/transaction-securisee.webp";
+import minesImg from "@/assets/img/projet-minier-infrastructure.webp";
+import risqueImg from "@/assets/img/audit-securite-infrastructure.webp";
+import financeImg from "@/assets/img/finance-partnership.webp";
+import tradeImg from "@/assets/img/commerce-international-accord.webp";
 
 // Identifiant interne du service → page dédiée (/services/<slug>)
 const SERVICE_PAGE: Record<string, string> = {
@@ -143,7 +143,7 @@ export default function Services() {
               <div className="flex-1 w-full">
                 <div className="relative aspect-video rounded-3xl overflow-hidden border border-white/10 shadow-2xl group">
                   <div className="absolute inset-0 bg-primary/20 group-hover:bg-primary/10 transition-colors z-10"></div>
-                  <img 
+                  <img loading="lazy" decoding="async" 
                     src={service.image} 
                     alt={service.title}
                     className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700"

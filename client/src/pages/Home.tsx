@@ -8,23 +8,23 @@ import { SEO, seoConfig } from "@/components/SEO";
 import { useState, useEffect } from "react";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { useGroupCompanies } from "@/pages/Group";
-import founderHelicopter from "@assets/founder-helicopter.jpg";
-import heroImg from "@assets/stock_images/professional_cargo_i_20329aee.jpg";
-import goldImg from "@assets/stock_images/gold_bars_and_precio_1456b62f.jpg";
-import miningImg from "@assets/stock_images/mining_project_infra_8026ebfd.jpg";
-import partnerPhoto from "@assets/WhatsApp_Image_2026-01-18_at_12.52.37_(1)_1768789362654.jpeg";
-import securityImg from "@assets/stock_images/modern_security_audi_4d6abb64.jpg";
-import transactionImg from "@assets/stock_images/secure_high_value_tr_1b60de34.jpg";
-import china1 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.14_1769163276809.jpeg";
-import china2 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.12_1769163276885.jpeg";
-import china3 from "@assets/WhatsApp_Image_2026-01-18_at_13.26.11_1769163276911.jpeg";
-import china4 from "@assets/WhatsApp_Image_2026-01-18_at_12.52.35_(1)_1769163276941.jpeg";
-import china5 from "@assets/WhatsApp_Image_2026-01-18_at_12.52.35_1769163276961.jpeg";
+import founderHelicopter from "@/assets/img/eric-brunnel-quenum-helicoptere.webp";
+import heroImg from "@/assets/img/navire-porte-conteneurs.webp";
+import goldImg from "@/assets/img/lingots-or.webp";
+import miningImg from "@/assets/img/projet-minier-infrastructure.webp";
+import partnerPhoto from "@/assets/img/eric-brunnel-quenum-fondateur-secureflow.webp";
+import securityImg from "@/assets/img/audit-securite-infrastructure.webp";
+import transactionImg from "@/assets/img/transaction-securisee.webp";
+import china1 from "@/assets/img/secureflow-chine-rencontre-investisseurs-1.webp";
+import china2 from "@/assets/img/secureflow-chine-rencontre-investisseurs-2.webp";
+import china3 from "@/assets/img/secureflow-chine-rencontre-investisseurs-3.webp";
+import china4 from "@/assets/img/secureflow-chine-rencontre-investisseurs-4.webp";
+import china5 from "@/assets/img/secureflow-chine-rencontre-investisseurs-5.webp";
 
-import mining1 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.48_1768871869816.jpeg";
-import mining2 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_(1)_1768871869883.jpeg";
-import mining3 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_1768871869902.jpeg";
-import mining4 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.46_1768871869926.jpeg";
+import mining1 from "@/assets/img/equipement-minier-1.webp";
+import mining2 from "@/assets/img/equipement-minier-2.webp";
+import mining3 from "@/assets/img/equipement-minier-3.webp";
+import mining4 from "@/assets/img/equipement-minier-4.webp";
 
 export default function Home() {
   const { t } = useLanguage();
@@ -99,7 +99,22 @@ export default function Home() {
     }
   ];
 
-  const carouselImages = [founderHelicopter, mining1, mining2, mining3, mining4, china1, china2, china3, china4, china5, goldImg, miningImg, securityImg, transactionImg];
+  const carouselImages = [
+    { src: founderHelicopter, alt: "Éric Brunnel QUENUM, fondateur de SecureFlow, sur le terrain" },
+    { src: mining1, alt: "Installation de traitement minier suivie par Terraminex" },
+    { src: mining2, alt: "Équipement d'extraction minière sur site" },
+    { src: mining3, alt: "Schéma d'une installation de traitement de minerai" },
+    { src: mining4, alt: "Équipement minier industriel" },
+    { src: china1, alt: "SecureFlow en rendez-vous d'affaires en Chine" },
+    { src: china2, alt: "Rencontre avec des partenaires chinois" },
+    { src: china3, alt: "Échanges avec des investisseurs en Chine" },
+    { src: china4, alt: "SecureFlow lors d'une cérémonie de partenariat en Chine" },
+    { src: china5, alt: "Remise de distinction à SecureFlow en Chine" },
+    { src: goldImg, alt: "Lingots d'or : sécurisation des transactions sur les métaux précieux" },
+    { src: miningImg, alt: "Projet d'infrastructure minière" },
+    { src: securityImg, alt: "Audit de sécurité d'une infrastructure" },
+    { src: transactionImg, alt: "Sécurisation d'une transaction internationale" },
+  ];
 
   return (
     <div className="flex flex-col">
@@ -122,10 +137,13 @@ export default function Home() {
             transition={{ duration: 1.5, ease: "easeInOut" }}
             className="absolute inset-0 z-0"
           >
-            <img 
+            <img
+              loading={currentSlide === 0 ? "eager" : "lazy"}
+              fetchPriority={currentSlide === 0 ? "high" : "auto"}
+              decoding="async"
               src={heroSlides[currentSlide].image} 
               className="w-full h-full object-cover" 
-              alt="Arrière-plan logistique sécurisée" 
+              alt={heroSlides[currentSlide].title} 
             />
             <div className="absolute inset-0 bg-gradient-to-r from-black via-black/80 to-transparent"></div>
             <div className="absolute inset-0 bg-[radial-gradient(circle_at_20%_50%,rgba(var(--primary-rgb),0.15),transparent_50%)]"></div>
@@ -312,7 +330,7 @@ export default function Home() {
               <div className="relative z-10 group">
                 <div className="absolute -inset-4 bg-gradient-to-tr from-primary/30 to-blue-500/20 blur-2xl rounded-[3rem] opacity-40 group-hover:opacity-60 transition-opacity duration-500"></div>
                 <div className="relative rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-card">
-                  <motion.img 
+                  <motion.img loading="lazy" decoding="async" 
                     src={securityImg} 
                     alt="Supervision et sécurité" 
                     className="w-full h-full object-cover aspect-[4/5] transform group-hover:scale-105 transition-transform duration-1000"
@@ -515,11 +533,11 @@ export default function Home() {
           <div className="absolute right-0 top-0 bottom-0 w-20 md:w-32 bg-gradient-to-l from-slate-100 dark:from-slate-950 to-transparent z-10"></div>
           <div className="secureflow-carousel-track flex gap-4">
             {[...carouselImages, ...carouselImages].map((img, i) => (
-              <div key={i} className="shrink-0 w-48 h-32 md:w-64 md:h-44 rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all group">
-                <img 
-                  src={img} 
-                  alt={`SecureFlow operations ${i + 1}`}
-                  className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${img === founderHelicopter ? "object-[50%_18%]" : ""}`}
+              <div key={i} aria-hidden={i >= carouselImages.length ? true : undefined} className="shrink-0 w-48 h-32 md:w-64 md:h-44 rounded-xl overflow-hidden border border-white/5 hover:border-primary/30 transition-all group">
+                <img loading="lazy" decoding="async" 
+                  src={img.src}
+                  alt={i >= carouselImages.length ? "" : img.alt}
+                  className={`w-full h-full object-cover group-hover:scale-110 transition-transform duration-700 ${img.src === founderHelicopter ? "object-[50%_18%]" : ""}`}
                 />
               </div>
             ))}
@@ -555,7 +573,7 @@ export default function Home() {
             <div className="flex justify-center">
               <div className="relative">
                 <div className="absolute -inset-6 bg-primary/20 blur-3xl rounded-full opacity-50"></div>
-                <img 
+                <img loading="lazy" decoding="async" 
                   src={partnerPhoto} 
                   alt={t("home.founder.name")}
                   className="relative w-28 h-28 md:w-36 md:h-36 rounded-full object-cover border-4 border-primary/30 shadow-2xl"

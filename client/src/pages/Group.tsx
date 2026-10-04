@@ -4,9 +4,9 @@ import { ArrowRight, Building2, ExternalLink, Gem, Globe2, Layers, MapPin, Picka
 import { Button } from "@/components/ui/button";
 import { SEO, seoConfig } from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
-import mining1 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.48_1768871869816.jpeg";
-import mining3 from "@assets/WhatsApp_Image_2026-01-18_at_13.32.47_1768871869902.jpeg";
-import goldImg from "@assets/stock_images/gold_bars_and_precio_1456b62f.jpg";
+import mining1 from "@/assets/img/equipement-minier-1.webp";
+import mining3 from "@/assets/img/equipement-minier-3.webp";
+import goldImg from "@/assets/img/lingots-or.webp";
 
 export const TERRAMINEX_URL = "https://terraminex.net/";
 
@@ -138,9 +138,9 @@ export default function Group() {
               </Button>
             </motion.div>
             <motion.div initial={{ opacity: 0, scale: 0.95 }} whileInView={{ opacity: 1, scale: 1 }} viewport={{ once: true }} className="grid grid-cols-2 gap-4">
-              <img src={mining1} alt="Terraminex — équipement minier" className="col-span-2 w-full aspect-[16/9] object-cover rounded-3xl border border-border shadow-xl" />
-              <img src={mining3} alt="Terraminex — projet minier" className="w-full aspect-square object-cover rounded-2xl border border-border" />
-              <img src={goldImg} alt="Or et ressources minières" className="w-full aspect-square object-cover rounded-2xl border border-border" />
+              <img loading="lazy" decoding="async" src={mining1} alt="Terraminex — équipement minier" className="col-span-2 w-full aspect-[16/9] object-cover rounded-3xl border border-border shadow-xl" />
+              <img loading="lazy" decoding="async" src={mining3} alt="Terraminex — projet minier" className="w-full aspect-square object-cover rounded-2xl border border-border" />
+              <img loading="lazy" decoding="async" src={goldImg} alt="Or et ressources minières" className="w-full aspect-square object-cover rounded-2xl border border-border" />
             </motion.div>
           </div>
         </div>

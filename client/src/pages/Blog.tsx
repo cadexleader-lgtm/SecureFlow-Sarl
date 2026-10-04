@@ -9,6 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 import { STATIC_POSTS } from "@/lib/blog-posts";
+import { GUIDES } from "@/lib/guides";
 import { blogPath } from "@shared/blog-slugs";
 import blogHero from "@/assets/img/trade-security-hero.webp";
 
@@ -61,6 +62,18 @@ export default function Blog() {
       <div className="absolute top-0 left-0 w-full h-full bg-[radial-gradient(circle_at_20%_30%,rgba(var(--primary-rgb),0.05),transparent_70%)] pointer-events-none"></div>
       <div className="container px-4 mx-auto relative z-10">
         <SectionHeading as="h1" title={t("blog.hero.title")} subtitle={t("blog.hero.subtitle")} />
+        <div className="mb-12 rounded-3xl p-6 md:p-8 border border-primary/20 bg-primary/5">
+          <h2 className="text-xl md:text-2xl font-display font-bold text-foreground mb-4">Guides pratiques</h2>
+          <ul className="grid grid-cols-1 md:grid-cols-2 gap-3">
+            {GUIDES.map((g) => (
+              <li key={g.slug}>
+                <Link href={`~/guides/${g.slug}`} className="flex items-start gap-2 text-foreground hover:text-primary font-medium">
+                  <ArrowRight className="w-4 h-4 mt-1 text-primary shrink-0" />{g.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </div>
         
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-20 max-w-7xl mx-auto">
           {allPosts.map((post, idx) => (

@@ -31,6 +31,8 @@ import Contact from "@/pages/Contact";
 import Legal from "@/pages/Legal";
 import Group from "@/pages/Group";
 import ServiceDetail from "@/pages/ServiceDetail";
+import Guides from "@/pages/Guides";
+import Guide from "@/pages/Guide";
 import NotFound from "@/pages/not-found";
 
 // Admin : chargé à part, jamais téléchargé par les visiteurs du site public
@@ -64,6 +66,8 @@ function PublicRouter() {
           <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/sectors" component={Sectors} />
           <Route path="/group" component={Group} />
+          <Route path="/guides" component={Guides} />
+          <Route path="/guides/:slug" component={Guide} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/article/:slug" component={BlogArticlePage} />
           <Route path="/blog/:slug" component={BlogPost} />

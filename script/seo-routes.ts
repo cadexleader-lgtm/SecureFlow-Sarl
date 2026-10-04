@@ -2,6 +2,7 @@
 import { writeFile } from "fs/promises";
 import { BLOG_SLUGS, blogPath } from "../shared/blog-slugs";
 import { SERVICE_SLUGS } from "../shared/service-slugs";
+import { GUIDE_SLUGS } from "../shared/guide-slugs";
 
 export const SITE_URL = "https://secureflow.solutions";
 
@@ -16,6 +17,8 @@ const PAGES: { path: string; priority: string; changefreq: string; fr_only?: boo
   { path: "/about", priority: "0.8", changefreq: "monthly" },
   { path: "/founder", priority: "0.7", changefreq: "monthly" },
   { path: "/contact", priority: "0.8", changefreq: "yearly" },
+  { path: "/guides", priority: "0.8", changefreq: "monthly", fr_only: true },
+  ...GUIDE_SLUGS.map((slug) => ({ path: `/guides/${slug}`, priority: "0.8", changefreq: "monthly", fr_only: true })),
   { path: "/blog", priority: "0.8", changefreq: "weekly" },
   ...BLOG_IDS.map((id) => ({ path: blogPath(id), priority: "0.6", changefreq: "yearly", fr_only: true })),
   { path: "/legal", priority: "0.3", changefreq: "yearly" },

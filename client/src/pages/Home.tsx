@@ -63,31 +63,37 @@ export default function Home() {
   const mainServices = [
     {
       icon: Search,
+      href: "/services/verification-fournisseurs",
       title: t("home.services.verification.title"),
       desc: t("home.services.verification.desc")
     },
     {
       icon: FileCheck,
+      href: "/services/inspection-sur-site",
       title: t("home.services.inspection.title"),
       desc: t("home.services.inspection.desc")
     },
     {
       icon: Landmark,
+      href: "/services/securisation-transactions",
       title: t("home.services.transaction.title"),
       desc: t("home.services.transaction.desc")
     },
     {
       icon: Ship,
+      href: "/services/supervision-logistique",
       title: t("home.services.logistics.title"),
       desc: t("home.services.logistics.desc")
     },
     {
       icon: BarChart3,
+      href: "/services/gestion-des-risques",
       title: t("home.services.risk.title"),
       desc: t("home.services.risk.desc")
     },
     {
       icon: TrendingUp,
+      href: "/services/financement-de-projets",
       title: t("home.services.finance.title"),
       desc: t("home.services.finance.desc")
     }
@@ -292,7 +298,7 @@ export default function Home() {
                 <Link href="/services">{t("home.mission.cta1")}</Link>
               </Button>
               <Button size="lg" variant="outline" className="rounded-full px-8 md:px-10 h-12 md:h-14 text-base md:text-lg border-white/10 hover:bg-white/5 w-full sm:w-auto" asChild>
-                <Link href="/blog/5">{t("home.mission.cta2")}</Link>
+                <Link href="/blog/pourquoi-securiser-commerce-international">{t("home.mission.cta2")}</Link>
               </Button>
             </div>
             </motion.div>
@@ -368,7 +374,7 @@ export default function Home() {
                 {/* Decorative background element */}
                 <div className="absolute -inset-2 bg-gradient-to-br from-primary/10 to-transparent blur-2xl rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
                 
-                <div className="relative glass-card p-10 rounded-3xl border-white/5 group-hover:border-primary/30 transition-all duration-500 hover:-translate-y-3 h-full flex flex-col">
+                <Link href={service.href} className="relative glass-card p-10 rounded-3xl border-white/5 group-hover:border-primary/30 transition-all duration-500 hover:-translate-y-3 h-full flex flex-col">
                   <div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity">
                     <service.icon className="w-24 h-24" />
                   </div>
@@ -389,7 +395,7 @@ export default function Home() {
                     <span>{t("home.services.learnMore")}</span>
                     <ArrowRight className="w-4 h-4" />
                   </div>
-                </div>
+                </Link>
               </motion.div>
             ))}
           </div>

@@ -129,7 +129,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Énergie & Pétrole",
     description: "Solutions pour le secteur énergétique et pétrolier",
-    href: "/blog/8",
+    href: "/blog/securiser-operations-petrole-gaz",
     category: "Secteurs",
     keywords: ["énergie", "pétrole", "gaz", "hydrocarbures", "raffinerie", "dubai", "uae"],
     icon: Building2
@@ -137,7 +137,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Mines & Ressources",
     description: "Sécurisation des opérations minières et des ressources naturelles",
-    href: "/blog/9",
+    href: "/blog/securiser-mines-ressources-naturelles",
     category: "Secteurs",
     keywords: ["mines", "minéral", "or", "diamant", "cobalt", "lithium", "cuivre", "fer", "bauxite", "manganèse"],
     icon: Building2
@@ -145,7 +145,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Énergie & Électricité",
     description: "Sécurisation des projets énergétiques : centrales, réseaux, renouvelables",
-    href: "/blog/10",
+    href: "/blog/securiser-projets-energetiques",
     category: "Secteurs",
     keywords: ["énergie", "électricité", "solaire", "éolien", "centrale", "transformateur", "turbine", "renouvelable", "power"],
     icon: Building2
@@ -153,7 +153,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Agriculture",
     description: "Solutions pour le commerce agricole : cacao, café, coton, karité",
-    href: "/blog/7",
+    href: "/blog/securiser-export-agricole",
     category: "Secteurs",
     keywords: ["agriculture", "cacao", "café", "coton", "karité", "arachide", "caoutchouc", "produits agricoles"],
     icon: Building2
@@ -169,7 +169,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Santé & Équipements Médicaux",
     description: "Protection des importations médicales : médicaments, dispositifs, équipements hospitaliers",
-    href: "/blog/11",
+    href: "/blog/securiser-importations-medicales",
     category: "Secteurs",
     keywords: ["santé", "médical", "médicaments", "hôpital", "pharmaceutique", "équipements médicaux", "vaccins", "dispositifs", "laboratoire", "chirurgie", "médecine traditionnelle", "phytothérapie", "plantes médicinales"],
     icon: Building2
@@ -177,7 +177,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Aviation & Transport Spécialisé",
     description: "Sécurisation des flux aéronautiques : pièces détachées, fret aérien, hélicoptères",
-    href: "/blog/12",
+    href: "/blog/securiser-operations-aeriennes",
     category: "Secteurs",
     keywords: ["aviation", "aéronautique", "avion", "hélicoptère", "drone", "fret aérien", "pièces détachées", "transport", "EASA", "FAA"],
     icon: Building2
@@ -185,7 +185,7 @@ const searchData: SearchItem[] = [
   {
     title: "Secteur Infrastructures & Projets",
     description: "Sécurisation des grands projets : routes, ponts, ports, bâtiments, réseaux",
-    href: "/blog/13",
+    href: "/blog/securiser-projets-infrastructures",
     category: "Secteurs",
     keywords: ["infrastructure", "BTP", "construction", "projets", "routes", "ponts", "ports", "bâtiments", "génie civil", "chantier"],
     icon: Building2
@@ -193,7 +193,7 @@ const searchData: SearchItem[] = [
   {
     title: "Article : Commerce Chine-Afrique",
     description: "Guide complet sur la sécurisation du commerce entre la Chine et l'Afrique",
-    href: "/blog/1",
+    href: "/blog/chambre-commerce-chine-apporteur-affaires",
     category: "Blog",
     keywords: ["chine", "afrique", "commerce", "import", "export", "asie", "fournisseurs chinois"],
     icon: FileText
@@ -201,7 +201,7 @@ const searchData: SearchItem[] = [
   {
     title: "Article : Financement Export-Import",
     description: "Solutions de financement pour le commerce international",
-    href: "/blog/6",
+    href: "/blog/securiser-echanges-afrique-ouest-port-cotonou",
     category: "Blog",
     keywords: ["financement", "export", "import", "crédit", "banque", "afreximbank", "boad"],
     icon: FileText

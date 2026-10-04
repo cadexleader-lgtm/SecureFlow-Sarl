@@ -14,6 +14,17 @@ import risqueImg from "@assets/stock_images/modern_security_audi_4d6abb64.jpg";
 import financeImg from "@/assets/finance-partnership.jpg";
 import tradeImg from "@assets/stock_images/international_busine_34a5b756.jpg";
 
+// Identifiant interne du service → page dédiée (/services/<slug>)
+const SERVICE_PAGE: Record<string, string> = {
+  verification: "verification-fournisseurs",
+  inspection: "inspection-sur-site",
+  security: "securisation-transactions",
+  logistics: "supervision-logistique",
+  risks: "gestion-des-risques",
+  finance: "financement-de-projets",
+  trade: "commerce-international-conseil",
+};
+
 export default function Services() {
   const { t } = useLanguage();
 
@@ -157,12 +168,15 @@ export default function Services() {
                   ))}
                 </div>
 
-                <div className="pt-4">
-                  <Link href="/contact">
-                    <Button size="lg" className="rounded-full px-8 group">
-                      {t("services.cta")} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
-                    </Button>
-                  </Link>
+                <div className="pt-4 flex flex-col sm:flex-row gap-3">
+                  <Button size="lg" className="rounded-full px-8 group" asChild>
+                    <Link href={`/services/${SERVICE_PAGE[service.id]}`}>
+                      {t("sectors.learnMore")} : {service.title} <ArrowRight className="ml-2 w-4 h-4 group-hover:translate-x-1 transition-transform" />
+                    </Link>
+                  </Button>
+                  <Button size="lg" variant="outline" className="rounded-full px-8" asChild>
+                    <Link href="/contact">{t("services.cta")}</Link>
+                  </Button>
                 </div>
               </div>
             </motion.div>

@@ -45,9 +45,9 @@ export function Footer() {
           <div>
             <h4 className="text-white font-bold text-sm mb-4 uppercase tracking-wider">{t("footer.expertise")}</h4>
             <ul className="space-y-2 text-sm text-gray-400">
-              <li><Link href="/services" className="hover:text-white transition-colors" data-testid="link-footer-logistics">{t("footer.logisticsSecurity")}</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors" data-testid="link-footer-risk">{t("footer.riskManagement")}</Link></li>
-              <li><Link href="/services" className="hover:text-white transition-colors" data-testid="link-footer-inspection">{t("footer.onSiteInspection")}</Link></li>
+              <li><Link href="/services/supervision-logistique" className="hover:text-white transition-colors" data-testid="link-footer-logistics">{t("footer.logisticsSecurity")}</Link></li>
+              <li><Link href="/services/gestion-des-risques" className="hover:text-white transition-colors" data-testid="link-footer-risk">{t("footer.riskManagement")}</Link></li>
+              <li><Link href="/services/inspection-sur-site" className="hover:text-white transition-colors" data-testid="link-footer-inspection">{t("footer.onSiteInspection")}</Link></li>
             </ul>
           </div>
 

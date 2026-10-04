@@ -30,5 +30,82 @@
     }
   ],
   "cleanUrls": true,
-  "trailingSlash": false
+  "trailingSlash": false,
+  "redirects": [
+    {
+      "source": "/blog/1",
+      "destination": "/blog/chambre-commerce-chine-apporteur-affaires",
+      "permanent": true
+    },
+    {
+      "source": "/blog/2",
+      "destination": "/blog/partenariat-petrolier-dubai",
+      "permanent": true
+    },
+    {
+      "source": "/blog/3",
+      "destination": "/blog/infrastructures-minieres-securite-operationnelle",
+      "permanent": true
+    },
+    {
+      "source": "/blog/4",
+      "destination": "/blog/reseau-europeen-paris",
+      "permanent": true
+    },
+    {
+      "source": "/blog/5",
+      "destination": "/blog/pourquoi-securiser-commerce-international",
+      "permanent": true
+    },
+    {
+      "source": "/blog/6",
+      "destination": "/blog/securiser-echanges-afrique-ouest-port-cotonou",
+      "permanent": true
+    },
+    {
+      "source": "/blog/7",
+      "destination": "/blog/partenariat-exim-finance",
+      "permanent": true
+    },
+    {
+      "source": "/blog/8",
+      "destination": "/blog/securiser-export-agricole",
+      "permanent": true
+    },
+    {
+      "source": "/blog/9",
+      "destination": "/blog/securiser-mines-ressources-naturelles",
+      "permanent": true
+    },
+    {
+      "source": "/blog/10",
+      "destination": "/blog/securiser-projets-energetiques",
+      "permanent": true
+    },
+    {
+      "source": "/blog/11",
+      "destination": "/blog/securiser-importations-medicales",
+      "permanent": true
+    },
+    {
+      "source": "/blog/12",
+      "destination": "/blog/securiser-operations-aeriennes",
+      "permanent": true
+    },
+    {
+      "source": "/blog/13",
+      "destination": "/blog/securiser-projets-infrastructures",
+      "permanent": true
+    },
+    {
+      "source": "/blog/14",
+      "destination": "/blog/securiser-operations-petrole-gaz",
+      "permanent": true
+    },
+    {
+      "source": "/blog/15",
+      "destination": "/blog/financement-projets-investissement",
+      "permanent": true
+    }
+  ]
 }

@@ -30,6 +30,7 @@ const BlogArticlePage = lazy(() => import("@/pages/BlogArticlePage"));
 import Contact from "@/pages/Contact";
 import Legal from "@/pages/Legal";
 import Group from "@/pages/Group";
+import ServiceDetail from "@/pages/ServiceDetail";
 import NotFound from "@/pages/not-found";
 
 // Admin : chargé à part, jamais téléchargé par les visiteurs du site public
@@ -60,11 +61,12 @@ function PublicRouter() {
           <Route path="/about" component={About} />
           <Route path="/founder" component={Founder} />
           <Route path="/services" component={Services} />
+          <Route path="/services/:slug" component={ServiceDetail} />
           <Route path="/sectors" component={Sectors} />
           <Route path="/group" component={Group} />
           <Route path="/blog" component={Blog} />
           <Route path="/blog/article/:slug" component={BlogArticlePage} />
-          <Route path="/blog/:id" component={BlogPost} />
+          <Route path="/blog/:slug" component={BlogPost} />
           <Route path="/contact" component={Contact} />
           <Route path="/legal" component={Legal} />
           <Route component={NotFound} />

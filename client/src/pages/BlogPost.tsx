@@ -5,6 +5,7 @@ import { Link, useParams } from "wouter";
 import { SEO, SITE_URL } from "@/components/SEO";
 import { useLanguage } from "@/contexts/LanguageContext";
 import { staticPost } from "@/lib/blog-posts";
+import { blogPath, blogIdFromSlug } from "@shared/blog-slugs";
 import { ArrowLeft, ShieldCheck, Search, Ship, CheckCircle2, Landmark, BarChart3, Globe, Handshake, TrendingUp, FileCheck, User, AlertTriangle } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
@@ -95,7 +96,7 @@ import bitumeImg from "@assets/bitume-dans-un-tube-métallique-noir-liquide-cyli
 import petrochimieImg from "@assets/Maquette_froide_Eluxyl_Petrochimie_1769193078255.jpg";
 
 export default function BlogPost() {
-  const { id } = useParams();
+  const id = blogIdFromSlug(useParams().slug);
   return (
     <>
       <BlogPostSEO id={id} />
@@ -107,15 +108,15 @@ export default function BlogPost() {
 function BlogPostSEO({ id }: { id?: string }) {
   const { t } = useLanguage();
   const post = id ? staticPost(id) : undefined;
-  if (!post) return <SEO title="Article introuvable" description="Cet article n'existe pas ou a été déplacé." canonical={`/blog/${id ?? ""}`} noindex />;
+  if (!post) return <SEO title="Article introuvable" description="Cet article n'existe pas ou a été déplacé." canonical="/blog" noindex />;
   const title = t(post.titleKey);
   const description = t(post.excerptKey);
-  const url = `${SITE_URL}/blog/${post.id}`;
+  const url = `${SITE_URL}${blogPath(post.id)}`;
   return (
     <SEO
       title={title}
       description={description}
-      canonical={`/blog/${post.id}`}
+      canonical={blogPath(post.id)}
       ogImage={post.image}
       ogType="article"
       breadcrumb={title}
@@ -136,7 +137,7 @@ function BlogPostSEO({ id }: { id?: string }) {
 }
 
 function BlogPostContent() {
-  const { id } = useParams();
+  const id = blogIdFromSlug(useParams().slug);
 
   if (id === "8") {
     return (

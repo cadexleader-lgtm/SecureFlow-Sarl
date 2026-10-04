@@ -9,6 +9,7 @@ import { useQuery } from "@tanstack/react-query";
 import { useLanguage } from "@/contexts/LanguageContext";
 
 import { STATIC_POSTS } from "@/lib/blog-posts";
+import { blogPath } from "@shared/blog-slugs";
 import blogHero from "@/assets/trade-security-hero.jpg";
 
 interface BlogArticle {
@@ -86,7 +87,7 @@ export default function Blog() {
                     {t("sectors.africa.exclusive")}
                   </div>
                 )}
-                <Link href={post.isFromDb ? `/blog/article/${post.slug}` : `/blog/${post.id.toString().replace('static-', '')}`} className="block overflow-hidden cursor-pointer relative aspect-video" data-testid={`link-blog-image-${post.id}`}>
+                <Link href={post.isFromDb ? `/blog/article/${post.slug}` : blogPath(String(post.id))} className="block overflow-hidden cursor-pointer relative aspect-video" data-testid={`link-blog-image-${post.id}`}>
                   <div className="absolute inset-0 bg-primary/20 opacity-0 group-hover:opacity-10 transition-opacity z-10" />
                   <img 
                     src={post.image} 
@@ -110,7 +111,7 @@ export default function Blog() {
                     </div>
                   </div>
 
-                  <Link href={post.isFromDb ? `/blog/article/${post.slug}` : `/blog/${post.id.toString().replace('static-', '')}`} className="block mb-3 md:mb-6" data-testid={`link-blog-title-${post.id}`}>
+                  <Link href={post.isFromDb ? `/blog/article/${post.slug}` : blogPath(String(post.id))} className="block mb-3 md:mb-6" data-testid={`link-blog-title-${post.id}`}>
                     <CardTitle className="text-lg md:text-3xl font-display font-bold text-foreground group-hover:text-primary transition-colors duration-300 leading-tight">
                       {post.title}
                     </CardTitle>
@@ -121,7 +122,7 @@ export default function Blog() {
                       {post.excerpt}
                     </p>
                     
-                    <Link href={post.isFromDb ? `/blog/article/${post.slug}` : `/blog/${post.id.toString().replace('static-', '')}`} data-testid={`link-blog-readmore-${post.id}`}>
+                    <Link href={post.isFromDb ? `/blog/article/${post.slug}` : blogPath(String(post.id))} data-testid={`link-blog-readmore-${post.id}`}>
                       <button className="inline-flex items-center gap-2 md:gap-3 text-foreground font-bold text-[10px] md:text-xs uppercase tracking-[0.15em] md:tracking-[0.2em] group/btn" data-testid={`button-readmore-${post.id}`}>
                         <span className="relative">
                           {t("blog.readMore")}

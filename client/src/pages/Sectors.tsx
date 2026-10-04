@@ -21,7 +21,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.learnMore"),
       color: "from-green-500/20 to-emerald-500/5",
-      link: "/blog/8"
+      link: "/blog/securiser-export-agricole"
     },
     {
       icon: Pickaxe,
@@ -49,7 +49,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.learnMore"),
       color: "from-blue-500/20 to-cyan-500/5",
-      link: "/blog/10"
+      link: "/blog/securiser-projets-energetiques"
     },
     {
       icon: HeartPulse,
@@ -63,7 +63,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.learnMore"),
       color: "from-red-500/20 to-rose-500/5",
-      link: "/blog/11"
+      link: "/blog/securiser-importations-medicales"
     },
     {
       icon: Plane,
@@ -77,7 +77,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.discover"),
       color: "from-indigo-500/20 to-blue-500/5",
-      link: "/blog/12"
+      link: "/blog/securiser-operations-aeriennes"
     },
     {
       icon: Building2,
@@ -91,7 +91,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.seeHow"),
       color: "from-slate-500/20 to-gray-500/5",
-      link: "/blog/13"
+      link: "/blog/securiser-projets-infrastructures"
     },
     {
       icon: Fuel,
@@ -105,7 +105,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.learnMore"),
       color: "from-yellow-500/20 to-amber-500/5",
-      link: "/blog/14"
+      link: "/blog/securiser-operations-petrole-gaz"
     },
     {
       icon: Recycle,
@@ -145,7 +145,7 @@ export default function Sectors() {
       ],
       cta: t("sectors.becomePartner"),
       color: "from-purple-500/20 to-violet-500/5",
-      link: "/blog/15",
+      link: "/blog/financement-projets-investissement",
       featured: true
     }
   ];

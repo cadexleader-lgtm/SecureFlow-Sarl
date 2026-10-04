@@ -11,6 +11,8 @@ interface SEOProps {
   structuredData?: object | object[];
   /** Libellé de la page dans le fil d'Ariane (par défaut : le titre). */
   breadcrumb?: string;
+  /** Niveau intermédiaire du fil d'Ariane (ex. Services pour une page service). */
+  parentCrumb?: { name: string; path: string };
   noindex?: boolean;
 }
 
@@ -99,6 +101,7 @@ export function SEO({
   canonical,
   structuredData,
   breadcrumb,
+  parentCrumb,
   noindex,
 }: SEOProps) {
   const fullTitle = title.includes(SITE_NAME) ? title : `${title} | ${SITE_NAME}`;
@@ -107,7 +110,8 @@ export function SEO({
   const fullImage = ogImage.startsWith("http") ? ogImage : `${SITE_URL}${ogImage}`;
 
   const crumbs: object[] = [{ "@type": "ListItem", position: 1, name: "Accueil", item: `${SITE_URL}/` }];
-  if (path.startsWith("/blog/")) crumbs.push({ "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` });
+  if (parentCrumb) crumbs.push({ "@type": "ListItem", position: 2, name: parentCrumb.name, item: `${SITE_URL}${parentCrumb.path}` });
+  else if (path.startsWith("/blog/")) crumbs.push({ "@type": "ListItem", position: 2, name: "Blog", item: `${SITE_URL}/blog` });
   if (path) crumbs.push({ "@type": "ListItem", position: crumbs.length + 1, name: breadcrumb ?? title, item: fullUrl });
 
   const graph = [
